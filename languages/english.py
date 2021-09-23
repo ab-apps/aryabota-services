@@ -46,10 +46,21 @@ tokens = [
     'LTE',
     'GTE',
     'EQUALS',
-    'NOTEQUALS'
+    'NOTEQUALS',
+    'PYTHON',
+    'COMMENT',
 ]
 
 t_ignore = ' \t'
+
+def t_COMMENT(t):
+    r'\#(.)*\n'
+    pass
+
+def t_PYTHON(t):
+    r'python[ ]*begin(.|\n)*python[ ]*end'
+    t.type = 'PYTHON'
+    return t
 
 def t_PLUS(t):
     r'\+'
@@ -187,11 +198,6 @@ def t_TIMES(t):
     t.value = 'TIMES'
     return t
 
-def t_IDENTIFIER(t):
-    r'[a-zA-z_][a-zA-Z0-9]*'
-    t.type = 'IDENTIFIER'
-    return t
-
 def t_LTE(t):
     r'is[ ]*lesser[ ]*than[ ]*or[ ]*equal[ ]*to'
     t.value = 'LTE'
@@ -227,6 +233,11 @@ def t_ASSIGN(t):
     t.value = 'ASSIGN'
     return t
 
+def t_IDENTIFIER(t):
+    r'[a-zA-z_][a-zA-Z0-9]*'
+    t.type = 'IDENTIFIER'
+    return t
+
 def t_newline(t):
     r'\n+'
     t.lexer.lineno += len(t.value)
@@ -256,12 +267,19 @@ def p_command(p):
         | repeat_expr
         | print_expr
         | submit_expr
+        | PYTHON
     '''
     if p[1] in ['TURNLEFT', 'TURNRIGHT', 'PENUP', 'PENDOWN']:
         python_code = convert_english_pseudocode_to_python(p[1])
         p[0] = python_code
     elif len(p) == 2:
-        p[0] = p[1]
+        try:
+            program = p[1]
+            program = program.replace('python begin\n','')
+            program = program.replace('python end','')
+            p[0] = program
+        except:
+            p[0] = p[1]
     elif len(p) == 3:
         python_code = convert_english_pseudocode_to_python(p[1], steps = p[2])
         p[0] = python_code
