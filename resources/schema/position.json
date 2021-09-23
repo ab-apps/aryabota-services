@@ -1,0 +1,20 @@
+{
+    "$id": "position.json",
+    "type": "object",
+    "properties": {
+        "row": {
+            "type": "integer",
+            "maximum": 10,
+            "minimum": 1
+        },
+        "column": {
+            "type": "integer",
+            "maximum": 10,
+            "minimum": 1
+        },
+        "required": [
+            "row",
+            "column"
+        ]
+    }
+}

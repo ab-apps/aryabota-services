@@ -1,0 +1,49 @@
+{
+  "$id": "problem.json",
+  "type": "object",
+  "properties": {
+    "problem": {
+      "type": "object",
+      "properties": {
+        "problem_type": {
+          "type": "string",
+          "enum": [
+            "value_match",
+            "state_match"
+          ]
+        },
+        "statement": {
+          "type": "string"
+        }
+      }
+    },
+    "initial_state": {
+      "$ref": "problem_state.json#"
+    },
+    "answer": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "lenient",
+            "strict"
+          ]
+        },
+        "value_type": {
+          "type": "string",
+          "enum": [
+            "bool",
+            "string",
+            "number"
+          ]
+        },
+        "value": {
+        },
+        "state": {
+          "$ref": "problem_state.json#"
+        }
+      }
+    }
+  }
+}

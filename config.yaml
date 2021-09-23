@@ -1,0 +1,12 @@
+app:
+  language: english
+  level: 0
+  problem_grid: resources/problem-grids/L2_P3.json
+  results: temp/results.json
+levels:
+  '0.1':
+    file: resources/problem-grids/L0_P3.json
+    name: Shortest Path
+  '0.2':
+    file: resources/problem-grids/L0_P2.json
+    name: Go Home

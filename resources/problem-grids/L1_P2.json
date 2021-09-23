@@ -1,0 +1,141 @@
+{
+    "problem": {
+        "problem_type": "value_match",
+        "problem_spec": "Level 1: Problem 2",
+        "statement": "On Monday, the robot takes the shorter path home, and counts the number of coins along the way as C1. On Tuesday, the robot takes the longer path home, and counts the number of coins as C2. What is the difference between C1 and C2?"
+    },
+    "initial_state": {
+        "grid": {
+            "dimensions": {
+                "row": 5,
+                "column": 6
+            },
+            "coins": [
+                {
+                    "position": {
+                        "row": 1,
+                        "column": 4
+                    },
+                    "number": 10
+                },
+                {
+                    "position": {
+                        "row": 2,
+                        "column": 6
+                    },
+                    "number": 5
+                },
+                {
+                    "position": {
+                        "row": 3,
+                        "column": 1
+                    },
+                    "number": 3
+                },
+                {
+                    "position": {
+                        "row": 4,
+                        "column": 5
+                    },
+                    "number": 5
+                },
+                {
+                    "position": {
+                        "row": 5,
+                        "column": 1
+                    },
+                    "number": 2
+                },
+                {
+                    "position": {
+                        "row": 5,
+                        "column": 2
+                    },
+                    "number": 1
+                },
+                {
+                    "position": {
+                        "row": 5,
+                        "column": 5
+                    },
+                    "number": 1
+                }
+            ],
+            "obstacles": [
+                {
+                    "position": {
+                        "row": 2,
+                        "column": 2
+                    }
+                },
+                {
+                    "position": {
+                        "row": 2,
+                        "column": 3
+                    }
+                },
+                {
+                    "position": {
+                        "row": 2,
+                        "column": 5
+                    }
+                },
+                {
+                    "position": {
+                        "row": 3,
+                        "column": 2
+                    }
+                },
+                {
+                    "position": {
+                        "row": 3,
+                        "column": 3
+                    }
+                },
+                {
+                    "position": {
+                        "row": 3,
+                        "column": 4
+                    }
+                },
+                {
+                    "position": {
+                        "row": 3,
+                        "column": 5
+                    }
+                },
+                {
+                    "position": {
+                        "row": 4,
+                        "column": 2
+                    }
+                },
+                {
+                    "position": {
+                        "row": 5,
+                        "column": 4
+                    }
+                }
+            ],
+            "homes": [
+                {
+                    "position": {
+                        "row": 5,
+                        "column": 6
+                    }
+                }
+            ]
+        },
+        "coin_sweeper": {
+            "position": {
+                "row": 1,
+                "column": 1
+            },
+            "dir": "down"
+        }
+    },
+    "answer": {
+        "value_type": "number",
+        "value": 3
+    }
+}
