@@ -3,6 +3,7 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS, cross_origin
 import logging
 import time
+import json
 
 from lexer_parser import understand
 from services import user, problem, mongodb, properties
@@ -26,13 +27,18 @@ def user_endpoint():
     """ Create and Exists operations for User """
     if request.method == 'GET':
         # Checking if user exists
-        email = request.args.get('email')
+        #email = request.args.get("email")
+        record = json.loads(request.data)
+        email = record['email']
+        print(email)
         if user.exists(email):
             return jsonify(True)
         return jsonify(False)
     if request.method == 'POST':
         # Storing user survey details
-        return jsonify(user.create(request.json))
+        record = json.loads(request.data)
+        #return jsonify(user.create(record))
+        return user.create(record)
 
 # Problem Endpoint
 @app.route('/api/problem', methods = ['GET', 'POST'])
