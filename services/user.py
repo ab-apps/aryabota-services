@@ -10,4 +10,4 @@ def create(record):
     return True
 
 def exists(email):
-    return find(email)
+    return find("User", email)
