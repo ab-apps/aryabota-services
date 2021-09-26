@@ -23,6 +23,7 @@ def get_initial_state(problem):
 def setup_grid_and_bot(problem):
     """Initialise the state of the grid"""
     problem_details = problem["problem"]
+    problem_type = problem_details["problem_type"]
     statement = problem_details["statement"]
     problem_spec = problem_details["problem_spec"]
     state = problem["initial_state"]
@@ -32,6 +33,7 @@ def setup_grid_and_bot(problem):
         bot.configure(coin_sweeper_state["position"]["row"], coin_sweeper_state["position"]["column"], coin_sweeper_state["dir"], coin_sweeper_state["pen"])
     else:
         bot.configure(coin_sweeper_state["position"]["row"], coin_sweeper_state["position"]["column"], coin_sweeper_state["dir"], "down")
+    answer = problem["answer"]
     grid = Grid.get_instance()
     grid_state = state["grid"]
     rows = grid_state["dimensions"]["row"]
@@ -47,7 +49,7 @@ def setup_grid_and_bot(problem):
         grid_state["obstacles"] = None
     if not "homes" in grid_state:
         grid_state["homes"] = None
-    grid.configure(rows, columns, grid_state["coins"], coins_per_position, grid_state["obstacles"], obstacles_per_position, grid_state["homes"], statement, problem_spec)
+    grid.configure(rows, columns, grid_state["coins"], coins_per_position, grid_state["obstacles"], obstacles_per_position, grid_state["homes"], statement, problem_spec, problem_type, answer)
 
 def initialise(problem_file_path):
     """Initialises chosen problem"""
