@@ -10,7 +10,7 @@ from services import user, problem, mongodb, properties
 
 app = Flask(__name__)
 CORS(app)
-logging.basicConfig(level=logging.DEBUG, filename="app.log", format="%(levelname)s-%(funcName)s-%(asctime)s: %(message)s")
+logging.basicConfig(level=logging.DEBUG, format="%(levelname)s-%(funcName)s-%(asctime)s: %(message)s")
 
 # Endpoints
 @app.route('/')
@@ -23,22 +23,17 @@ def index():
 @app.route('/api/user', methods = ['POST','GET'])
 @cross_origin()
 def user_endpoint():
-    print("User")
     """ Create and Exists operations for User """
     if request.method == 'GET':
         # Checking if user exists
-        #email = request.args.get("email")
-        record = json.loads(request.data)
-        email = record['email']
-        print(email)
+        email = request.args.get('email')
         if user.exists(email):
             return jsonify(True)
         return jsonify(False)
     if request.method == 'POST':
         # Storing user survey details
         record = json.loads(request.data)
-        #return jsonify(user.create(record))
-        return user.create(record)
+        return jsonify(user.create(record))
 
 # Problem Endpoint
 @app.route('/api/problem', methods = ['GET', 'POST'])
