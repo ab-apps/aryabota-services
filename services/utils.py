@@ -1,4 +1,6 @@
 import json
+from services.grid import Grid
+from copy import deepcopy
 from jsonschema import RefResolver, Draft7Validator
 
 """Common Utilities"""
@@ -64,8 +66,41 @@ def wrap(obj, compare_type):
         obj = ListCompareWrapper(obj, compare_type)
     return obj
 
+def compare_states(answer, submitted_answer):
+        """Comparing states"""
+        reqd_state = deepcopy(answer["state"])
+        submitted_state = deepcopy(submitted_answer)
+        compare_type = answer["type"]
+        return wrap(reqd_state, compare_type) == wrap(submitted_state, compare_type)
+
+def compare_values(answer, submitted_answer):
+    """Comparing values"""
+    if answer["value_type"] != "string":
+        return answer["value"] == submitted_answer
+    else:
+        if not isinstance(submitted_answer, str):
+            return False
+        return answer["value"].lower() == submitted_answer.lower()
+
 def check_answer(submitted_answer):
-    return True
+    """Check Answer"""
+    grid = Grid.get_instance()
+    answer = grid.get_answer()
+    problem_type = grid.get_problem_type()
+    succeeded = False
+    message = "Not implemented yet!"
+    if problem_type == "value_match":
+        succeeded = compare_values(answer, submitted_answer)
+    elif problem_type == "state_match":
+        succeeded = compare_states(answer, submitted_answer)
+    if succeeded:
+        message = 'Correct answer!'
+    else:
+        message = 'Wrong answer, please try again'
+    return {
+        "succeeded": succeeded,
+        "message": message
+    }
 
 # Utils
 def build_schema_and_store():

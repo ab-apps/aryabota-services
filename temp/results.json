@@ -1,1 +1,1 @@
-[{"stateChanges": [{"row": 1, "column": 1, "dir": "down", "trail": [{"row": 1, "column": 1}], "pen": "down"}]}, {"stateChanges": [{"row": 3, "column": 1, "dir": "down", "trail": [{"row": 1, "column": 1}, {"row": 1, "column": 1}, {"row": 2, "column": 1}, {"row": 3, "column": 1}], "pen": "down"}]}, {"stateChanges": [{"row": 3, "column": 1, "dir": "right", "trail": [{"row": 1, "column": 1}, {"row": 1, "column": 1}, {"row": 2, "column": 1}, {"row": 3, "column": 1}], "pen": "down"}]}]
+[{"succeeded": false, "message": "Wrong answer, please try again"}]

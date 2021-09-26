@@ -45,7 +45,6 @@ def problem_endpoint():
         level = request.args.get('level')
         return jsonify(problem.render(level))
     if request.method == 'POST':
-        print('!! post', request.json)
         level = request.json['level']
         problem.render(level)
         user_email = request.json['email']
@@ -58,4 +57,5 @@ def problem_endpoint():
         logging.info(f'Received commands to execute: {to_log}')
         mongodb.insert_one(properties.COMMANDS_COLLECTION, to_log)
         response = understand(commands)
+        print(response)
         return jsonify(response)

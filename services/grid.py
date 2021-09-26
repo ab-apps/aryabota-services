@@ -24,7 +24,7 @@ class Grid:
         self.homes = self.coins = self.coloured = self.coins_per_position = self.obstacles = self.obstacles_per_position = []
         self.statement = self.problem_spec = ""
 
-    def configure(self, rows, columns, coins = None, coins_per_position = None, obstacles = None, obstacles_per_position = None, homes = None, statement = None, problem_spec = None):
+    def configure(self, rows, columns, coins = None, coins_per_position = None, obstacles = None, obstacles_per_position = None, homes = None, statement = None, problem_spec = None, problem_type = None, answer = None):
         """Configure attributes"""
         self.rows = rows
         self.columns = columns
@@ -34,6 +34,8 @@ class Grid:
         self.coloured = []
         self.statement = statement
         self.problem_spec = problem_spec
+        self.answer = answer
+        self.problem_type = problem_type
         if coins is not None:
             self.coins = coins
         if coins_per_position is not None:
@@ -44,6 +46,12 @@ class Grid:
             self.obstacles_per_position = obstacles_per_position
         if homes is not None:
             self.homes = homes
+
+    def get_answer(self):
+        return self.answer
+
+    def get_problem_type(self):
+        return self.problem_type
 
     def colour(self, pos):
         """Colouring the trail as required"""

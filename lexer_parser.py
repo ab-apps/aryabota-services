@@ -83,4 +83,5 @@ def understand(commands):
         "python": python_program,
         "response": response
     }
+    print(response_and_python_program)
     return response_and_python_program
