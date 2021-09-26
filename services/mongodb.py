@@ -16,8 +16,8 @@ def insert_one(collection, document):
 def get_db_instance():
     return db
 
-def find(input_email):
-    record = db.User.find_one({"email": input_email})
+def find(collection, input_email):
+    record = db[collection].find_one({"email": input_email})
     if record:
         return True
     else:
