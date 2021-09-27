@@ -5,8 +5,59 @@ app:
   results: temp/results.json
 levels:
   '0.1':
-    file: resources/problem-grids/L0_P3.json
-    name: Shortest Path
+    file: resources/problem-grids/L0_P1.json
+    name: Go home
+    space:   
+        - IPS
   '0.2':
     file: resources/problem-grids/L0_P2.json
-    name: Go Home
+    name: All homes
+    space: 
+        - PES 
+        - IPS
+  '0.3':
+    file: resources/problem-grids/L0_P3.json
+    name: Shortest Path
+    space: 
+        - PES   
+        - IPS
+  '1.1':
+    file: resources/problem-grids/L1_P1.json
+    name: Total coins in grid
+    space:   
+        - IPS
+  '1.2':
+    file: resources/problem-grids/L1_P2.json
+    name: Difference in coins
+    space:   
+        - IPS
+  '1.5.1':
+    file: resources/problem-grids/L1.5_P1.json
+    name: Colour boundary
+    space:   
+        - IPS
+  '1.5.2':
+    file: resources/problem-grids/L1.5_P2.json
+    name: Colour alternate boxes
+    space:   
+        - IPS
+  '1.5.3':
+    file: resources/problem-grids/L1.5_P3.json
+    name: Colour boxes that has coin stacks
+    space:   
+        - IPS
+  '2.1':
+    file: resources/problem-grids/L2_P1.json
+    name: Total number of coins in alternate boxes
+    space:   
+        - IPS
+  '2.2':
+    file: resources/problem-grids/L2_P2.json
+    name: Total number of coins in this grid is greater than 10
+    space:   
+        - IPS
+  '2.3':
+    file: resources/problem-grids/L2_P3.json
+    name: Total number of coins in this grid is lesser than 30
+    space:   
+        - IPS
