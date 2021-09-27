@@ -39,14 +39,6 @@
                     },
                     "number": 2
                 }
-            ],
-            "obstacles": [
-                {
-                    "position": {
-                        "row": 2,
-                        "column": 1
-                    }
-                }
             ]
         },
         "coin_sweeper": {
@@ -58,7 +50,7 @@
         }
     },
     "answer": {
-        "value_type": "number",
-        "value": 9
+        "value_type": "bool",
+        "value": true
     }
 }

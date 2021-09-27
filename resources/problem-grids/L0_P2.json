@@ -7,25 +7,9 @@
     "initial_state": {
         "grid": {
             "dimensions": {
-                "row": 3,
-                "column": 3
+                "row": 4,
+                "column": 5
             },
-            "coins": [
-                {
-                    "position": {
-                        "row": 1,
-                        "column": 2
-                    },
-                    "number": 5
-                },
-                {
-                    "position": {
-                        "row": 2,
-                        "column": 2
-                    },
-                    "number": 2
-                }
-            ],
             "obstacles": [
                 {
                     "position": {
@@ -35,8 +19,32 @@
                 },
                 {
                     "position": {
+                        "row": 2,
+                        "column": 2
+                    }
+                },
+                {
+                    "position": {
+                        "row": 2,
+                        "column": 4
+                    }
+                },
+                {
+                    "position": {
                         "row": 3,
                         "column": 1
+                    }
+                },
+                {
+                    "position": {
+                        "row": 3,
+                        "column": 3
+                    }
+                },
+                {
+                    "position": {
+                        "row": 3,
+                        "column": 4
                     }
                 }
             ],
@@ -44,19 +52,19 @@
                 {
                     "position": {
                         "row": 1,
-                        "column": 3
+                        "column": 5
                     }
                 },
                 {
                     "position": {
-                        "row": 2,
-                        "column": 3
+                        "row": 4,
+                        "column": 1
                     }
                 },
                 {
                     "position": {
-                        "row": 3,
-                        "column": 3
+                        "row": 4,
+                        "column": 5
                     }
                 }
             ]
@@ -75,12 +83,18 @@
         "state": {
             "coin_sweeper": {
                 "position": {
-                    "row": 3,
-                    "column": 3
+                    "row": 4,
+                    "column": 1
                 }
             },
             "grid": {
                 "coloured": [
+                    {
+                        "position": {
+                            "row": 1,
+                            "column": 2
+                        }
+                    },
                     {
                         "position": {
                             "row": 1,
@@ -89,14 +103,56 @@
                     },
                     {
                         "position": {
+                            "row": 1,
+                            "column": 4
+                        }
+                    },
+                    {
+                        "position": {
+                            "row": 1,
+                            "column": 5
+                        }
+                    },
+                    {
+                        "position": {
                             "row": 2,
-                            "column": 3
+                            "column": 5
                         }
                     },
                     {
                         "position": {
                             "row": 3,
+                            "column": 5
+                        }
+                    },
+                    {
+                        "position": {
+                            "row": 4,
+                            "column": 5
+                        }
+                    },
+                    {
+                        "position": {
+                            "row": 4,
+                            "column": 4
+                        }
+                    },
+                    {
+                        "position": {
+                            "row": 4,
                             "column": 3
+                        }
+                    },
+                    {
+                        "position": {
+                            "row": 4,
+                            "column": 2
+                        }
+                    },
+                    {
+                        "position": {
+                            "row": 4,
+                            "column": 1
                         }
                     }
                 ]
