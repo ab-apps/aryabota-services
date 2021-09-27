@@ -31,8 +31,32 @@
                 },
                 {
                     "position": {
+                        "row": 2,
+                        "column": 5
+                    }
+                },
+                {
+                    "position": {
+                        "row": 2,
+                        "column": 6
+                    }
+                },
+                {
+                    "position": {
+                        "row": 3,
+                        "column": 1
+                    }
+                },
+                {
+                    "position": {
                         "row": 3,
                         "column": 3
+                    }
+                },
+                {
+                    "position": {
+                        "row": 3,
+                        "column": 4
                     }
                 },
                 {
@@ -50,7 +74,19 @@
                 {
                     "position": {
                         "row": 4,
+                        "column": 3
+                    }
+                },
+                {
+                    "position": {
+                        "row": 4,
                         "column": 4
+                    }
+                },
+                {
+                    "position": {
+                        "row": 4,
+                        "column": 7
                     }
                 },
                 {
@@ -63,6 +99,24 @@
                     "position": {
                         "row": 6,
                         "column": 1
+                    }
+                },
+                {
+                    "position": {
+                        "row": 6,
+                        "column": 2
+                    }
+                },
+                {
+                    "position": {
+                        "row": 6,
+                        "column": 3
+                    }
+                },
+                {
+                    "position": {
+                        "row": 6,
+                        "column": 4
                     }
                 },
                 {
@@ -87,7 +141,7 @@
                 "row": 1,
                 "column": 1
             },
-            "dir": "right"
+            "dir": "down"
         }
     },
     "answer": {
@@ -121,56 +175,56 @@
                     },
                     {
                         "position": {
-                            "row": 2,
-                            "column": 3
-                        }
-                    },
-                    {
-                        "position": {
-                            "row": 2,
-                            "column": 4
-                        }
-                    },
-                    {
-                        "position": {
-                            "row": 2,
-                            "column": 5
-                        }
-                    },
-                    {
-                        "position": {
-                            "row": 2,
-                            "column": 6
-                        }
-                    },
-                    {
-                        "position": {
-                            "row": 2,
-                            "column": 7
-                        }
-                    },
-                    {
-                        "position": {
-                            "row": 2,
-                            "column": 8
-                        }
-                    },
-                    {
-                        "position": {
                             "row": 3,
-                            "column": 8
+                            "column": 2
                         }
                     },
                     {
                         "position": {
                             "row": 4,
-                            "column": 8
+                            "column": 2
                         }
                     },
                     {
                         "position": {
                             "row": 5,
-                            "column": 8
+                            "column": 2
+                        }
+                    },
+                    {
+                        "position": {
+                            "row": 5,
+                            "column": 3
+                        }
+                    },
+                    {
+                        "position": {
+                            "row": 5,
+                            "column": 4
+                        }
+                    },
+                    {
+                        "position": {
+                            "row": 5,
+                            "column": 5
+                        }
+                    },
+                    {
+                        "position": {
+                            "row": 5,
+                            "column": 6
+                        }
+                    },
+                    {
+                        "position": {
+                            "row": 6,
+                            "column": 6
+                        }
+                    },
+                    {
+                        "position": {
+                            "row": 6,
+                            "column": 7
                         }
                     },
                     {
