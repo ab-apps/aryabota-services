@@ -65,6 +65,7 @@ def problem_endpoint():
 @app.route('/api/level', methods = ['GET'])
 @cross_origin()
 def level_endpoint():
+    """Get levels list for space """
     if request.method == 'GET':
         levels_list = list()
         space = request.args.get('space')
@@ -74,5 +75,4 @@ def level_endpoint():
             for level in levels:
                 if space in levels[level]['space']:
                     levels_list.append(level)
-            print(levels_list)
             return jsonify(levels_list)
