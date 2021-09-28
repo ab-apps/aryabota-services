@@ -4,6 +4,7 @@ from flask_cors import CORS, cross_origin
 import logging
 import time
 import json
+import yaml
 
 from lexer_parser import understand
 from services import user, problem, mongodb, properties
@@ -59,3 +60,19 @@ def problem_endpoint():
         response = understand(commands)
         print(response)
         return jsonify(response)
+
+# Level Endpoint
+@app.route('/api/level', methods = ['GET'])
+@cross_origin()
+def level_endpoint():
+    if request.method == 'GET':
+        levels_list = list()
+        space = request.args.get('space')
+        with open('config.yaml') as config_file:
+            config = yaml.load(config_file, Loader=yaml.FullLoader)
+            levels = config['levels']
+            for level in levels:
+                if space in levels[level]['space']:
+                    levels_list.append(level)
+            print(levels_list)
+            return "True"
