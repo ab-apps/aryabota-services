@@ -75,4 +75,4 @@ def level_endpoint():
                 if space in levels[level]['space']:
                     levels_list.append(level)
             print(levels_list)
-            return "True"
+            return jsonify(levels_list)

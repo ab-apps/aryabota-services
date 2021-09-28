@@ -13,7 +13,7 @@ levels:
     file: resources/problem-grids/L0_P2.json
     name: All homes
     space: 
-        - PES 
+        - PES
         - IPS
   '0.3':
     file: resources/problem-grids/L0_P3.json
