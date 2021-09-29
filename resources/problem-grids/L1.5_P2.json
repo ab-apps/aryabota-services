@@ -8,7 +8,7 @@
         "grid": {
             "dimensions": {
                 "row": 1,
-                "column": 10
+                "column": 8
             }
         },
         "coin_sweeper": {
@@ -49,12 +49,6 @@
                         "position": {
                             "row": 1,
                             "column": 7
-                        }
-                    },
-                    {
-                        "position": {
-                            "row": 1,
-                            "column": 9
                         }
                     }
                 ]

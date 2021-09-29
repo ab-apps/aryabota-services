@@ -8,7 +8,7 @@
         "grid": {
             "dimensions": {
                 "row": 1,
-                "column": 10
+                "column": 8
             },
             "coins": [
                 {
