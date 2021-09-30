@@ -50,14 +50,15 @@ def problem_endpoint():
         problem.render(level)
         user_email = request.json['email']
         commands = request.json['commands']
+        response = understand(commands)
         to_log = {
             "email": user_email,
             "timestamp": str(time.time()),
-            "commands": commands
+            "commands": commands,
+            "response": response
         }
-        logging.info(f'Received commands to execute: {to_log}')
+        logging.info(f'Received commands and executed to get response: {to_log}')
         mongodb.insert_one(properties.COMMANDS_COLLECTION, to_log)
-        response = understand(commands)
         return jsonify(response)
 
 # Level Endpoint
