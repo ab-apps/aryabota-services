@@ -16,7 +16,7 @@ GRID = Grid.get_instance()
 results_file_path = config["app"]["results"]
 
 def make_response(response_type, response):
-    """create a response object"""
+    """Create a response object"""
     if response_type == "value":
         return {
             "value": response

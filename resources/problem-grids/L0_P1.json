@@ -106,6 +106,7 @@
             ]
         },
         "coin_sweeper": {
+            "pen": "up",
             "position": {
                 "row": 1,
                 "column": 1

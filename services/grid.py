@@ -79,7 +79,8 @@ class Grid:
                 "obstacles_per_position": self.obstacles_per_position,
                 "homes": self.homes,
                 "statement": self.statement,
-                "problem_spec": self.problem_spec
+                "problem_spec": self.problem_spec,
+                "coloured": self.coloured
             }
         return {}
 

@@ -47,12 +47,13 @@ class CoinSweeper:
 
     def get_state(self):
         """Get current state of the CoinSweeper robot's position wrapped in a dictionary"""
+        grid_state = GRID.get_instance().get_state()
         return {
             "row": self.row,
             "column": self.column,
             "dir": self.dir,
-            "trail": self.trail,
-            "pen": self.pen
+            "pen": self.pen,
+            "coloured": grid_state["coloured"]
         }
 
     def get_state_for_answer(self):
@@ -138,8 +139,6 @@ class CoinSweeper:
                 self.column = curr_column
             else:
                 return [False, boundary_message]
-        if self.pen == "down":
-            self.append_position_to_trail()
         return [True, "Moved!"]
 
     def turn_left(self):

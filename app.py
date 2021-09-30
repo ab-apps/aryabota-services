@@ -58,7 +58,6 @@ def problem_endpoint():
         logging.info(f'Received commands to execute: {to_log}')
         mongodb.insert_one(properties.COMMANDS_COLLECTION, to_log)
         response = understand(commands)
-        print(response)
         return jsonify(response)
 
 # Level Endpoint
