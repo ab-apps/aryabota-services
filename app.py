@@ -67,7 +67,7 @@ def problem_endpoint():
 def level_endpoint():
     """Get levels list for space """
     if request.method == 'GET':
-        levels_list = list()
+        levels_list = []
         space = request.args.get('space')
         with open('config.yaml') as config_file:
             config = yaml.load(config_file, Loader=yaml.FullLoader)

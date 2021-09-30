@@ -4,12 +4,12 @@
     "properties": {
         "row": {
             "type": "integer",
-            "maximum": 10,
+            "maximum": 8,
             "minimum": 1
         },
         "column": {
             "type": "integer",
-            "maximum": 10,
+            "maximum": 8,
             "minimum": 1
         },
         "required": [
