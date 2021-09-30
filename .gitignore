@@ -2,6 +2,7 @@
 **/*githookrc*
 **/parser.out
 **/parsetab.py
+temp_dir/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
