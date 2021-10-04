@@ -286,9 +286,6 @@ def p_command(p):
         python_code = convert_english_pseudocode_to_python(p[1], steps = p[2])
         p[0] = python_code
     global excep, error_flag
-    logging.error("Expr")
-    logging.error(excep)
-    logging.error(error_flag)
     if error_flag == 1:
         p[0] = excep
 
@@ -397,9 +394,7 @@ def p_error(p):
     """Error in parsing command"""
     global excep, error_flag
     excep = "Aryabota doesn't recognize '{word}'".format(word = str(p.value))
-    logging.error(excep)
     error_flag = 1
-    logging.error(error_flag)
     logging.error(f'Syntax error in input: {str(p.value)}')
 
 english_parser = yacc.yacc()

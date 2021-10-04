@@ -61,7 +61,6 @@ def understand(commands):
         try:
             if config["app"]["language"] == "english":
                 python_program = english_parser.parse(commands, lexer=english_lexer)
-                logging.error(python_program)
         except Exception as exception:
             logging.error(f'Exception occured', exc_info=True)
             return []
@@ -72,8 +71,11 @@ def understand(commands):
         try:
             exec(python_program) # pylint: disable=exec-used
         except Exception as e:
-            exception_raised = e
-            logging.error(f'Exception while executing Python program, {e}', exc_info=True)
+            if 'Aryabota' in python_program:
+                exception_raised = python_program
+            else:
+                exception_raised = e
+                logging.error(f'Exception while executing Python program, {e}', exc_info=True)
     with open(config["app"]["results"]) as results_file:
         response = json.loads(results_file.read())
     if exception_raised is not None:
