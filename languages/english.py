@@ -258,6 +258,7 @@ def p_commands(p):
     p[0] = p[1] + "\n" + p[2]
     global excep, error_flag
     logging.error(excep)
+    logging.error(error_flag)
     if error_flag == 1:
         p[0] = excep
 
@@ -397,6 +398,7 @@ def p_error(p):
     excep = "Aryabota doesn't recognize '{word}'".format(word = str(p.value))
     logging.error(excep)
     error_flag = 1
+    logging.error(error_flag)
     logging.error(f'Syntax error in input: {str(p.value)}')
 
 english_parser = yacc.yacc()
