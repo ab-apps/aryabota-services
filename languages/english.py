@@ -255,6 +255,9 @@ def p_commands(p):
     expr : expr expr
     '''
     p[0] = p[1] + "\n" + p[2]
+    global excep
+    if excep!= "":
+        p[0] = excep
 
 def p_command(p):
     '''
@@ -389,7 +392,7 @@ def p_submit_expr(p):
 def p_error(p):
     """Error in parsing command"""
     global excep
-    excep = "Aryabota doesn't recognize "+ str(p.value)
+    excep = "Aryabota doesn't recognize {word} word".format(str(p.value))
     logging.error(f'Syntax error in input: {str(p.value)}')
 
 english_parser = yacc.yacc()
