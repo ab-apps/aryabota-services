@@ -256,8 +256,8 @@ def p_commands(p):
     '''
     p[0] = p[1] + "\n" + p[2]
     global error_flag
-    if error_flag ==1 :
-        p[0] = None
+    #if error_flag ==1 :
+    #    p[0] = None
 
 def p_command(p):
     '''
