@@ -64,6 +64,8 @@ def understand(commands):
         except Exception as exception:
             logging.error(f'Exception occured', exc_info=True)
             return []
+    if 'Aryabota' in python_program:
+        logging.error(python_program)
     if python_program is None:
         exception_raised = "Syntax Error (check the selected language and the corresponding syntax)"
     else:
