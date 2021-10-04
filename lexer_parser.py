@@ -71,7 +71,8 @@ def understand(commands):
         try:
             exec(python_program) # pylint: disable=exec-used
         except Exception as e:
-            exception_raised = e
+            #exception_raised = e
+            exception_raised = python_program
             logging.error(f'Exception while executing Python program, {e}', exc_info=True)
     with open(config["app"]["results"]) as results_file:
         response = json.loads(results_file.read())
