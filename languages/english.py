@@ -256,9 +256,6 @@ def p_commands(p):
     expr : expr expr
     '''
     p[0] = p[1] + "\n" + p[2]
-    global excep, error_flag
-    excep = ""
-    error_flag = 0
 
 def p_command(p):
     '''
@@ -291,6 +288,7 @@ def p_command(p):
     global excep, error_flag
     if error_flag == 1:
         p[0] = excep
+        excep = ""
 
 def p_print_expr(p):
     '''
