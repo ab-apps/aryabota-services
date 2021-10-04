@@ -242,6 +242,7 @@ def t_IDENTIFIER(t):
 def t_newline(t):
     r'\n+'
     t.lexer.lineno += len(t.value)
+    t.lexer.skip(1)
 
 def t_error(t):
     """Error in lexing token"""
@@ -256,8 +257,8 @@ def p_commands(p):
     '''
     p[0] = p[1] + "\n" + p[2]
     global error_flag
-    #if error_flag ==1 :
-    #    p[0] = None
+    if error_flag ==1 :
+        p[0] = None
 
 def p_command(p):
     '''
