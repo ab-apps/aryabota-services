@@ -258,6 +258,7 @@ def p_commands(p):
     global error_flag
     if error_flag ==1 :
         p[0] = None
+        error_flag = 0
 
 def p_command(p):
     '''
