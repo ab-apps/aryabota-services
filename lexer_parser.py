@@ -61,6 +61,7 @@ def understand(commands):
         try:
             if config["app"]["language"] == "english":
                 python_program = english_parser.parse(commands, lexer=english_lexer)
+                logging.error(python_program)
         except Exception as exception:
             logging.error(f'Exception occured', exc_info=True)
             return []

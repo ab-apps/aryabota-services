@@ -256,11 +256,6 @@ def p_commands(p):
     expr : expr expr
     '''
     p[0] = p[1] + "\n" + p[2]
-    global excep, error_flag
-    logging.error(excep)
-    logging.error(error_flag)
-    if error_flag == 1:
-        p[0] = excep
 
 def p_command(p):
     '''
@@ -290,6 +285,12 @@ def p_command(p):
     elif len(p) == 3:
         python_code = convert_english_pseudocode_to_python(p[1], steps = p[2])
         p[0] = python_code
+    global excep, error_flag
+    logging.error("Expr")
+    logging.error(excep)
+    logging.error(error_flag)
+    if error_flag == 1:
+        p[0] = excep
 
 def p_print_expr(p):
     '''
