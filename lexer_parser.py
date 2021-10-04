@@ -64,8 +64,6 @@ def understand(commands):
         except Exception as exception:
             logging.error(f'Exception occured', exc_info=True)
             return []
-    if 'Aryabota' in python_program:
-        logging.error(python_program)
     if python_program is None:
         exception_raised = "Syntax Error (check the selected language and the corresponding syntax)"
     else:
@@ -73,8 +71,7 @@ def understand(commands):
         try:
             exec(python_program) # pylint: disable=exec-used
         except Exception as e:
-            #exception_raised = e
-            exception_raised = python_program
+            exception_raised = e
             logging.error(f'Exception while executing Python program, {e}', exc_info=True)
     with open(config["app"]["results"]) as results_file:
         response = json.loads(results_file.read())

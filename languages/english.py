@@ -258,6 +258,7 @@ def p_commands(p):
     global excep
     if excep!= "":
         p[0] = excep
+    logging.error(excep)
 
 def p_command(p):
     '''
