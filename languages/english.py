@@ -9,7 +9,7 @@ from services.coin_sweeper import CoinSweeper
 
 bot = CoinSweeper.get_instance()
 grid = Grid.get_instance()
-error_flag = 0
+excep = ""
 
 class LexerError(Exception): pass
 
@@ -255,10 +255,6 @@ def p_commands(p):
     expr : expr expr
     '''
     p[0] = p[1] + "\n" + p[2]
-    global error_flag
-    if error_flag ==1 :
-        p[0] = None
-        error_flag = 0
 
 def p_command(p):
     '''
@@ -392,8 +388,8 @@ def p_submit_expr(p):
     
 def p_error(p):
     """Error in parsing command"""
-    global error_flag
-    error_flag = 1
-    logging.error(f'Syntax error in input: {str(p)}')
+    global excep
+    excep = "Aryabota doesn't recognize "+ str(p.value)
+    logging.error(f'Syntax error in input: {str(p.value)}')
 
 english_parser = yacc.yacc()
