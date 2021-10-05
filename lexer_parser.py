@@ -65,17 +65,14 @@ def understand(commands):
             logging.error(f'Exception occured', exc_info=True)
             return []
     if python_program is None:
-        exception_raised = "Syntax Error"
+        exception_raised = "Aryabota doesn't understand you. There might be a syntax error"
     else:
         exception_raised = None
         try:
             exec(python_program) # pylint: disable=exec-used
         except Exception as e:
-            if 'Aryabota' in python_program:
-                exception_raised = python_program
-            else:
-                exception_raised = e
-                logging.error(f'Exception while executing Python program, {e}', exc_info=True)
+            exception_raised = e
+            logging.error(f'Exception while executing Python program, {e}', exc_info=True)
     with open(config["app"]["results"]) as results_file:
         response = json.loads(results_file.read())
     if exception_raised is not None:
