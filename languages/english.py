@@ -260,6 +260,7 @@ def p_commands(p):
     else:
         global excep
         p[0] = excep
+        excep = ""
 
 def p_command(p):
     '''
@@ -293,6 +294,7 @@ def p_command(p):
     else:
         global excep
         p[0] = excep
+        excep = ""
 
 def p_print_expr(p):
     '''
