@@ -251,15 +251,6 @@ def t_error(t):
 
 english_lexer = lex.lex()
 
-start = 'aryabota'
-
-def p_aryabota(p):
-    '''
-    aryabota : expr
-    '''
-    p[0] = p[1]
-    logging.error("Aryabota")
-
 def p_commands(p):
     '''
     expr : expr expr
