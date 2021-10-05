@@ -259,6 +259,7 @@ def p_commands(p):
         p[0] = p[1] + "\n" + p[2]
     else:
         global excep
+        logging.error("Commands")
         if excep not in p[0]:
             p[0] = excep
 
