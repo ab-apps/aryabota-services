@@ -259,7 +259,8 @@ def p_commands(p):
         p[0] = p[1] + "\n" + p[2]
     else:
         global excep
-        p[0] = excep
+        if excep not in p[0]:
+            p[0] = excep
 
 def p_command(p):
     '''
@@ -290,6 +291,9 @@ def p_command(p):
         elif len(p) == 3:
             python_code = convert_english_pseudocode_to_python(p[1], steps = p[2])
             p[0] = python_code
+    else:
+        global excep
+        p[0] = excep
 
 def p_print_expr(p):
     '''
