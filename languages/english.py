@@ -329,15 +329,20 @@ def p_operand(p):
                | OBSTACLEBEHIND
                | OBSTACLELEFT
     '''
-    if (p[1] in ['MYROW', 'MYCOLUMN', 'OBSTACLEAHEAD', 'OBSTACLERIGHT', 'OBSTACLEBEHIND', 'OBSTACLELEFT']):
-        python_code = convert_english_pseudocode_to_python(p[1])
-    elif p[1] == 'IDENTIFIER':
-        python_code = convert_english_pseudocode_to_python("IDENTIFIER", variable = p[1])
-    elif p[1] == 'NUMBER_OF_COINS':
-        python_code = convert_english_pseudocode_to_python("GET_COINS")
-    else: # case NUMBER
-        python_code = convert_english_pseudocode_to_python("NUMBER", value = p[1])
-    p[0] = python_code
+    try:
+        if (p[1] in ['MYROW', 'MYCOLUMN', 'OBSTACLEAHEAD', 'OBSTACLERIGHT', 'OBSTACLEBEHIND', 'OBSTACLELEFT']):
+            python_code = convert_english_pseudocode_to_python(p[1])
+        elif p[1] == 'IDENTIFIER':
+            python_code = convert_english_pseudocode_to_python("IDENTIFIER", variable = p[1])
+        elif p[1] == 'NUMBER_OF_COINS':
+            python_code = convert_english_pseudocode_to_python("GET_COINS")
+        else: # case NUMBER
+            python_code = convert_english_pseudocode_to_python("NUMBER", value = p[1])
+        p[0] = python_code
+    except:
+        p[0] = "Syntax error"
+        logging.error("Syntax error")
+        logging.error(p[0])
 
 
 def p_operator(p):
@@ -398,13 +403,13 @@ def p_submit_expr(p):
         python_code = convert_english_pseudocode_to_python("SUBMIT", value = '')
     p[0] = python_code
     
-def p_error(p):
+'''def p_error(p):
     """Error in parsing command"""
     global excep, error_flag
     excep = "Aryabota doesn't recognize '{word}'".format(word = str(p.value))
     error_flag = 1
     logging.error("p_error")
     logging.error(excep)
-    logging.error(f'Syntax error in input: {str(p.value)}') 
+    logging.error(f'Syntax error in input: {str(p.value)}') '''
 
 english_parser = yacc.yacc()
