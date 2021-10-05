@@ -5,9 +5,9 @@ import json
 
 app = Flask(__name__)
 
-def create(record):
-    insert_one("User", record)
+def create(space, record):
+    insert_one(space, "User", record)
     return True
 
-def exists(email):
-    return find("User", email)
+def exists(space, email):
+    return find(space, "User", email)

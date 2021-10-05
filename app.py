@@ -28,13 +28,15 @@ def user_endpoint():
     if request.method == 'GET':
         # Checking if user exists
         email = request.args.get('email')
-        if user.exists(email):
+        space = request.args.get('space')
+        if user.exists(space, email):
             return jsonify(True)
         return jsonify(False)
     if request.method == 'POST':
         # Storing user survey details
         record = json.loads(request.data)
-        return jsonify(user.create(record))
+        space = record["space"]
+        return jsonify(user.create(space, record))
 
 # Problem Endpoint
 @app.route('/api/problem', methods = ['GET', 'POST'])
@@ -47,6 +49,7 @@ def problem_endpoint():
         return jsonify(problem.render(level))
     if request.method == 'POST':
         level = request.json['level']
+        space = request.json['space']
         problem.render(level)
         user_email = request.json['email']
         commands = request.json['commands']
@@ -58,7 +61,7 @@ def problem_endpoint():
             "response": response
         }
         logging.info(f'Received commands and executed to get response: {to_log}')
-        mongodb.insert_one(properties.COMMANDS_COLLECTION, to_log)
+        mongodb.insert_one(space, properties.COMMANDS_COLLECTION, to_log)
         return jsonify(response)
 
 # Level Endpoint
