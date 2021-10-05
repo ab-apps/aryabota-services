@@ -9,55 +9,66 @@ levels:
     name: Go home
     space:   
         - IPS
+        - Test
   '0.2':
     file: resources/problem-grids/L0_P2.json
     name: All homes
     space: 
         - PES
         - IPS
+        - Test
   '0.3':
     file: resources/problem-grids/L0_P3.json
     name: Shortest Path
     space: 
         - PES   
         - IPS
+        - Test
   '1.1':
     file: resources/problem-grids/L1_P1.json
     name: Total coins in grid
     space:   
         - IPS
+        - Test
   '1.2':
     file: resources/problem-grids/L1_P2.json
     name: Difference in coins
     space:   
         - IPS
+        - Test
   '1.5.1':
     file: resources/problem-grids/L1.5_P1.json
     name: Colour boundary
     space:   
         - IPS
+        - Test
   '1.5.2':
     file: resources/problem-grids/L1.5_P2.json
     name: Colour alternate boxes
     space:   
         - IPS
+        - Test
   '1.5.3':
     file: resources/problem-grids/L1.5_P3.json
     name: Colour boxes that has coin stacks
     space:   
         - IPS
+        - Test
   '2.1':
     file: resources/problem-grids/L2_P1.json
     name: Total number of coins in alternate boxes
     space:   
         - IPS
+        - Test
   '2.2':
     file: resources/problem-grids/L2_P2.json
     name: Total number of coins in this grid is greater than 10
     space:   
         - IPS
+        - Test
   '2.3':
     file: resources/problem-grids/L2_P3.json
     name: Total number of coins in this grid is lesser than 30
     space:   
         - IPS
+        - Test
