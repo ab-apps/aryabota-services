@@ -251,20 +251,6 @@ def t_error(t):
 
 english_lexer = lex.lex()
 
-start = 'aryabota'
-
-def p_aryabota(p):
-    '''
-    aryabota : expr
-    '''
-    if error_flag == 0:
-        p[0] = p[1]
-        logging.error("Aryabota")
-    else:
-        global error_flag, excep
-        error_flag = 0
-        p[0] = excep
-
 def p_commands(p):
     '''
     expr : expr expr
@@ -272,8 +258,7 @@ def p_commands(p):
     if error_flag == 0:
         p[0] = p[1] + "\n" + p[2]
     else:
-        global error_flag, excep
-        error_flag = 0
+        global excep
         p[0] = excep
 
 def p_command(p):
@@ -306,8 +291,7 @@ def p_command(p):
             python_code = convert_english_pseudocode_to_python(p[1], steps = p[2])
             p[0] = python_code
     else:
-        global error_flag, excep
-        error_flag = 0
+        global excep
         p[0] = excep
 
 def p_print_expr(p):
@@ -421,8 +405,8 @@ def p_submit_expr(p):
 def p_error(p):
     """Error in parsing command"""
     global excep, error_flag
-    excep = "Aryabota doesn't recognize '{word}'".format(word = str(p.value))
     error_flag = 1
+    excep = "Aryabota doesn't recognize '{word}'".format(word = str(p.value))
     logging.error(f'Syntax error in input: {str(p.value)}')
 
 english_parser = yacc.yacc()
