@@ -258,6 +258,7 @@ def p_commands(p):
     global excep
     if len(excep)>0:
         p[0] = excep
+        excep = ""
 
 def p_command(p):
     '''
