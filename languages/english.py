@@ -10,7 +10,6 @@ from services.coin_sweeper import CoinSweeper
 bot = CoinSweeper.get_instance()
 grid = Grid.get_instance()
 excep = ""
-error_flag = 0
 
 class LexerError(Exception): pass
 
@@ -256,11 +255,9 @@ def p_commands(p):
     expr : expr expr
     '''
     p[0] = p[1] + "\n" + p[2]
-    global excep, error_flag
-    if error_flag == 1:
+    global excep
+    if len(excep)>0:
         p[0] = excep
-        excep = ""
-        error_flag = 0
 
 def p_command(p):
     '''
@@ -290,12 +287,8 @@ def p_command(p):
     elif len(p) == 3:
         python_code = convert_english_pseudocode_to_python(p[1], steps = p[2])
         p[0] = python_code
-    global excep, error_flag
-    if error_flag == 1:
-        p[0] = excep
-        logging.error("Expr")
-        logging.error(excep)
-        logging.error(p[0])
+    global excep
+    p[0] = excep
 
 def p_print_expr(p):
     '''
@@ -329,21 +322,15 @@ def p_operand(p):
                | OBSTACLEBEHIND
                | OBSTACLELEFT
     '''
-    try:
-        if (p[1] in ['MYROW', 'MYCOLUMN', 'OBSTACLEAHEAD', 'OBSTACLERIGHT', 'OBSTACLEBEHIND', 'OBSTACLELEFT']):
-            python_code = convert_english_pseudocode_to_python(p[1])
-        elif p[1] == 'IDENTIFIER':
-            python_code = convert_english_pseudocode_to_python("IDENTIFIER", variable = p[1])
-        elif p[1] == 'NUMBER_OF_COINS':
-            python_code = convert_english_pseudocode_to_python("GET_COINS")
-        else: # case NUMBER
-            python_code = convert_english_pseudocode_to_python("NUMBER", value = p[1])
-        p[0] = python_code
-    except:
-        p[0] = "Syntax error"
-        logging.error("Syntax error")
-        logging.error(p[0])
-
+    if (p[1] in ['MYROW', 'MYCOLUMN', 'OBSTACLEAHEAD', 'OBSTACLERIGHT', 'OBSTACLEBEHIND', 'OBSTACLELEFT']):
+        python_code = convert_english_pseudocode_to_python(p[1])
+    elif p[1] == 'IDENTIFIER':
+        python_code = convert_english_pseudocode_to_python("IDENTIFIER", variable = p[1])
+    elif p[1] == 'NUMBER_OF_COINS':
+        python_code = convert_english_pseudocode_to_python("GET_COINS")
+    else: # case NUMBER
+        python_code = convert_english_pseudocode_to_python("NUMBER", value = p[1])
+    p[0] = python_code
 
 def p_operator(p):
     '''
@@ -403,13 +390,12 @@ def p_submit_expr(p):
         python_code = convert_english_pseudocode_to_python("SUBMIT", value = '')
     p[0] = python_code
     
-'''def p_error(p):
+def p_error(p):
     """Error in parsing command"""
-    global excep, error_flag
+    global excep
     excep = "Aryabota doesn't recognize '{word}'".format(word = str(p.value))
-    error_flag = 1
     logging.error("p_error")
     logging.error(excep)
-    logging.error(f'Syntax error in input: {str(p.value)}') '''
+    logging.error(f'Syntax error in input: {str(p.value)}')
 
 english_parser = yacc.yacc()
