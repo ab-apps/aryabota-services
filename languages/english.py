@@ -255,6 +255,7 @@ def p_commands(p):
     '''
     expr : expr expr
     '''
+    logging.error("Commands")
     if error_flag == 0:
         p[0] = p[1] + "\n" + p[2]
     else:
@@ -277,6 +278,7 @@ def p_command(p):
         | submit_expr
         | PYTHON
     '''
+    logging.error("Command")
     if error_flag == 0:
         if p[1] in ['TURNLEFT', 'TURNRIGHT', 'PENUP', 'PENDOWN']:
             python_code = convert_english_pseudocode_to_python(p[1])
