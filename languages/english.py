@@ -289,8 +289,8 @@ def p_command(p):
     if error_flag == 1:
         p[0] = excep
         logging.error("Expr")
-        logging.error("Excep",excep)
-        logging.error("p[0]",p[0])
+        logging.error(excep)
+        logging.error(p[0])
 
 def p_print_expr(p):
     '''
