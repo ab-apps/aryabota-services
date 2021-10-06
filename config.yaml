@@ -4,6 +4,11 @@ app:
   problem_grid: resources/problem-grids/L2_P3.json
   results: temp_dir/results.json
 levels:
+  '0.0':
+    file: resources/problem-grids/L0_P0.json
+    name: Go home
+    space: 
+        - Test
   '0.1':
     file: resources/problem-grids/L0_P1.json
     name: Go home
