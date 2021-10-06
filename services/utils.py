@@ -135,9 +135,9 @@ def lint_problem_grid(problem_grid):
     # total number of rows and columns cannot be negative
     if rows < 1 or columns < 1:
         return False
-    start_row = problem_grid["coin_sweeper_start"]["row"]
-    start_column = problem_grid["coin_sweeper_start"]["column"]
-    start_dir = problem_grid["coin_sweeper_start"]["dir"]
+    start_row = problem_grid["arya_bota_start"]["row"]
+    start_column = problem_grid["arya_bota_start"]["column"]
+    start_dir = problem_grid["arya_bota_start"]["dir"]
     # CoinSweeper's initial position needs to be somewhere in the grid and direction needs to be correct
     if start_row < 1 or start_row > rows:
         return False

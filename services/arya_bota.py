@@ -1,10 +1,10 @@
-"""the Singleton CoinSweeper robot, its attributes and state"""
+"""the Singleton AryaBota robot, its attributes and state"""
 from services.grid import Grid
 
 GRID = Grid.get_instance()
 
-class CoinSweeper:
-    """CoinSweeper robot class
+class AryaBota:
+    """AryaBota robot class
     Properties:
         row: current row (1-indexed)
         column: current column (1-indexed)
@@ -14,15 +14,15 @@ class CoinSweeper:
     @staticmethod
     def get_instance():
         """Static access method"""
-        if CoinSweeper.__instance is None:
-            CoinSweeper()
-        return CoinSweeper.__instance
+        if AryaBota.__instance is None:
+            AryaBota()
+        return AryaBota.__instance
 
     def __init__(self):
         """Virtually private constructor"""
-        if CoinSweeper.__instance is not None:
+        if AryaBota.__instance is not None:
             raise Exception("This class is a singleton!")
-        CoinSweeper.__instance = self
+        AryaBota.__instance = self
         self.row = 1
         self.column = 1
         self.dir = "down"
@@ -42,11 +42,11 @@ class CoinSweeper:
 
     # utility
     def get_dir(self):
-        """Get current direction the CoinSweeper robot is facing"""
+        """Get current direction the AryaBota robot is facing"""
         return self.dir
 
     def get_state(self):
-        """Get current state of the CoinSweeper robot's position wrapped in a dictionary"""
+        """Get current state of the AryaBota robot's position wrapped in a dictionary"""
         grid_state = GRID.get_instance().get_state()
         return {
             "row": self.row,
@@ -57,7 +57,7 @@ class CoinSweeper:
         }
 
     def get_state_for_answer(self):
-        """Get current state of the CoinSweeper robot's position wrapped in a dictionary"""
+        """Get current state of the AryaBota robot's position wrapped in a dictionary"""
         return {
             "position": {
                 "row": self.row,
@@ -85,16 +85,16 @@ class CoinSweeper:
 
     # ask
     def my_row(self):
-        """Get current row of the CoinSweeper robot"""
+        """Get current row of the AryaBota robot"""
         return self.row
 
     def my_column(self):
-        """Get current column of the CoinSweeper robot"""
+        """Get current column of the AryaBota robot"""
         return self.column
 
     # affect
     def move(self, steps):
-        """Move the CoinSweeper robot in the direction in which it is facing
+        """Move the AryaBota robot in the direction in which it is facing
         steps: specified number of steps to move it by"""
         state = GRID.get_state()
         obstacle_message = "There's an obstacle, cannot move ahead"
@@ -142,7 +142,7 @@ class CoinSweeper:
         return [True, "Moved!"]
 
     def turn_left(self):
-        """Turn the CoinSweeper robot to its left"""
+        """Turn the AryaBota robot to its left"""
         if self.dir == "up":
             self.dir = "left"
         elif self.dir == "down":
@@ -153,7 +153,7 @@ class CoinSweeper:
             self.dir = "down"
 
     def turn_right(self):
-        """Turn the CoinSweeper robot to its right"""
+        """Turn the AryaBota robot to its right"""
         if self.dir == "up":
             self.dir = "right"
         elif self.dir == "down":

@@ -1,17 +1,17 @@
-"""Control Hub that makes changes to the CoinSweeper environment - grid and robot"""
+"""Control Hub that makes changes to the AryaBota environment - grid and robot"""
 # Writes outcomes to a result file
 import json
 import yaml
 
 from services.grid import Grid
-from services.coin_sweeper import CoinSweeper
+from services.arya_bota import AryaBota
 from services.utils import check_answer
 
 # Opening config to read grid attributes
 with open('config.yaml') as f:
     config = yaml.load(f, Loader=yaml.FullLoader)
 
-BOT = CoinSweeper.get_instance()
+BOT = AryaBota.get_instance()
 GRID = Grid.get_instance()
 results_file_path = config["app"]["results"]
 
@@ -231,7 +231,7 @@ def submit(value = None):
         response = check_answer(value)
     else:
         current_state = {
-            "coin_sweeper": BOT.get_state_for_answer(),
+            "arya_bota": BOT.get_state_for_answer(),
             "grid": GRID.get_state_for_answer()
         }
         response = check_answer(current_state)

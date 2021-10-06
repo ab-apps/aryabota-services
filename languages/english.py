@@ -5,9 +5,9 @@ import logging
 from services.utils import convert_english_pseudocode_to_python
 from control_hub import *
 from services.grid import Grid
-from services.coin_sweeper import CoinSweeper
+from services.arya_bota import AryaBota
 
-bot = CoinSweeper.get_instance()
+bot = AryaBota.get_instance()
 grid = Grid.get_instance()
 
 class LexerError(Exception): pass

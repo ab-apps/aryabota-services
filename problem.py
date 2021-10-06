@@ -1,6 +1,6 @@
 """Importing Grid Module"""
 from grid import Grid
-from coin_sweeper import CoinSweeper
+from arya_bota import AryaBota
 
 class DictCompareWrapper:
     """Comparing dictionaries"""
@@ -133,12 +133,12 @@ class Problem:
     def get_initial_state(self):
         """Return intial state of problem"""
         grid = Grid.get_instance()
-        bot = CoinSweeper.get_instance()
+        bot = AryaBota.get_instance()
         grid_state = grid.get_state()
-        coin_sweeper_state = bot.get_state()
-        grid_state.update(coin_sweeper_state)
+        arya_bota_state = bot.get_state()
+        grid_state.update(arya_bota_state)
         grid_state["type"] = self.type
         if self.type == "state_match":
-            if "coin_sweeper" in self.answer["state"]:
-                grid_state["homes"] = [self.answer["state"]["coin_sweeper"]]
+            if "arya_bota" in self.answer["state"]:
+                grid_state["homes"] = [self.answer["state"]["arya_bota"]]
         return grid_state
