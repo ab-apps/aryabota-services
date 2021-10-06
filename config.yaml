@@ -8,8 +8,7 @@ levels:
     file: resources/problem-grids/L0_P0.json
     name: Go home
     space: 
-        - PES  
-        - IPS
+        - Test
   '0.1':
     file: resources/problem-grids/L0_P1.json
     name: Go home
