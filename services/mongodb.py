@@ -1,5 +1,6 @@
 import pymongo
 import urllib
+import ssl
 from flask import Flask, request, jsonify
 
 from services.properties import MONGODB_URL, DB_NAME
@@ -7,7 +8,7 @@ from services.secrets import MONGODB_PASSWORD
 
 """ Service to access Mongo DB Cluster """
 
-client = pymongo.MongoClient(MONGODB_URL.format(password = urllib.parse.quote_plus(MONGODB_PASSWORD)))
+client = pymongo.MongoClient(MONGODB_URL.format(password = urllib.parse.quote_plus(MONGODB_PASSWORD)),ssl_cert_reqs=ssl.CERT_NONE)
 db = client[DB_NAME]
 
 def insert_one(collection, document):
