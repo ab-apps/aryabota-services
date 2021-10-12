@@ -47,8 +47,8 @@ tokens = [
     'GTE',
     'EQUALS',
     'NOTEQUALS',
-    'PYTHON',
     'COMMENT',
+    'PYTHON'
 ]
 
 t_ignore = ' \t'
@@ -56,11 +56,6 @@ t_ignore = ' \t'
 def t_COMMENT(t):
     r'\#(.)*\n'
     pass
-
-def t_PYTHON(t):
-    r'python[ ]*begin(.|\n)*python[ ]*end'
-    t.type = 'PYTHON'
-    return t
 
 def t_PLUS(t):
     r'\+'
@@ -234,13 +229,18 @@ def t_ASSIGN(t):
     return t
 
 def t_IDENTIFIER(t):
-    r'[a-zA-z_][a-zA-Z0-9]*'
+    r'[a-zA-Z_][a-zA-Z0-9_]*'
     t.type = 'IDENTIFIER'
     return t
 
 def t_newline(t):
     r'\n+'
     t.lexer.lineno += len(t.value)
+
+def t_python(t):
+    r'.+'
+    t.type = 'PYTHON'
+    return t
 
 def t_error(t):
     """Error in lexing token"""
@@ -267,19 +267,13 @@ def p_command(p):
         | repeat_expr
         | print_expr
         | submit_expr
-        | PYTHON
+        | python_expr
     '''
     if p[1] in ['TURNLEFT', 'TURNRIGHT', 'PENUP', 'PENDOWN']:
         python_code = convert_english_pseudocode_to_python(p[1])
         p[0] = python_code
     elif len(p) == 2:
-        try:
-            program = p[1]
-            program = program.replace('python begin\n','')
-            program = program.replace('python end','')
-            p[0] = program
-        except:
-            p[0] = p[1]
+        p[0] = p[1]
     elif len(p) == 3:
         python_code = convert_english_pseudocode_to_python(p[1], steps = p[2])
         p[0] = python_code
@@ -384,7 +378,25 @@ def p_submit_expr(p):
     elif len(p) == 2:
         python_code = convert_english_pseudocode_to_python("SUBMIT", value = '')
     p[0] = python_code
-    
+
+def p_python_expr(p):
+    '''
+    python_expr : identifiers PYTHON
+                | MOVE PYTHON
+                | SUBMIT PYTHON
+                | PRINT identifiers PYTHON
+    '''
+    if p[1] in ['MOVE', 'PRINT']:
+        p[1] = p[1].lower()
+    p[0] = ''.join(p[1:])
+
+def p_identifiers(p):
+    '''
+    identifiers : IDENTIFIER
+                | identifiers IDENTIFIER
+    '''
+    p[0] = ' '.join(p[1:])
+
 def p_error(p):
     """Error in parsing command"""
     logging.error(f'Syntax error in input: {str(p)}')
