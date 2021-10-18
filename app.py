@@ -57,6 +57,7 @@ def problem_endpoint():
         to_log = {
             "email": user_email,
             "timestamp": str(time.time()),
+            "level": level,
             "commands": commands,
             "response": response
         }
