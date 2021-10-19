@@ -1,1 +1,1 @@
-[{"stateChanges": [{"row": 1, "column": 2, "dir": "right", "pen": "down", "coloured": [{"position": {"row": 1, "column": 1}}]}]}]
+[{"stateChanges": [{"row": 1, "column": 2, "dir": "right", "pen": "up", "coloured": []}]}, {"stateChanges": [{"row": 1, "column": 4, "dir": "right", "pen": "up", "coloured": []}]}]

@@ -6,7 +6,12 @@ import logging
 
 from control_hub import *
 from services.grid import Grid
+
 from services.arya_bota import AryaBota
+
+
+from services.utils import get_custom_error
+
 from languages.english import english_lexer, english_parser
 
 # utilities
@@ -60,19 +65,22 @@ def understand(commands):
             results_file.write(json.dumps([]))
         try:
             if config["app"]["language"] == "english":
+                commands = commands.replace("    ", "\t")
+                commands = commands.strip("\n")
                 python_program = english_parser.parse(commands, lexer=english_lexer)
+                print(python_program)
         except Exception as exception:
             logging.error(f'Exception occured', exc_info=True)
             return []
     if python_program is None:
-        exception_raised = "Aryabota doesn't understand you. There might be a syntax error"
+        exception_raised = "Aryabota doesn't understand you. There might be a syntax error."
     else:
         exception_raised = None
         try:
             exec(python_program) # pylint: disable=exec-used
         except Exception as e:
-            exception_raised = e
-            logging.error(f'Exception while executing Python program, {e}', exc_info=True)
+            exception_raised = get_custom_error(e)
+            logging.error(f'Exception while executing Python program: {e}', exc_info=True)
     with open(config["app"]["results"]) as results_file:
         response = json.loads(results_file.read())
     if exception_raised is not None:

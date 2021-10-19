@@ -1,7 +1,9 @@
 import pymongo
 import urllib
+
 import ssl
 from flask import Flask, request, jsonify
+
 
 from services.properties import MONGODB_URL
 from services.secrets import MONGODB_PASSWORD
