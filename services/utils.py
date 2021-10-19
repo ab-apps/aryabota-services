@@ -196,7 +196,7 @@ def convert_english_pseudocode_to_python(command, **params):
         "OBSTACLERIGHT": "obstacle_right()",
         "IF": "if {expr}:",
         "ELSE": "else:",
-        "REPEAT": "for repeat in range({times}):",
+        "REPEAT": "for i in range({times}):",
         "IDENTIFIER" : "{variable}",
         "NUMBER" : "{value}",
         "PRINT_VALUE": "print_value({expr})",
@@ -282,3 +282,9 @@ def convert_kanglish_pseudocode_to_python(command, **params):
         "NOTEQUALS": "{variable1}!={variable2}"
     }
     return conversion_table[command].format(**params)
+
+def get_custom_error(python_error):
+    if "indent" in str(python_error):
+        return "Use consistent spacing"
+    return python_error
+

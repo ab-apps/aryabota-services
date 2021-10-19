@@ -48,10 +48,11 @@ tokens = [
     'EQUALS',
     'NOTEQUALS',
     'COMMENT',
+    'TABSPACE',
     'PYTHON'
 ]
 
-t_ignore = ' \t'
+t_ignore = ' '
 
 def t_COMMENT(t):
     r'\#(.)*\n'
@@ -237,6 +238,11 @@ def t_newline(t):
     r'\n+'
     t.lexer.lineno += len(t.value)
 
+def t_TABSPACE(t):
+    r'\t'
+    t.type = 'TABSPACE'
+    return t
+
 def t_python(t):
     r'.+'
     t.type = 'PYTHON'
@@ -254,6 +260,22 @@ def p_commands(p):
     expr : expr expr
     '''
     p[0] = p[1] + "\n" + p[2]
+
+def p_tabspaces(p):
+    '''
+    tabspaces : TABSPACE
+            | TABSPACE tabspaces
+    '''
+    if len(p) == 2:
+        p[0] = "\t"
+    else:
+        p[0] = "\t" + p[2]
+
+def p_tab_commands(p):
+    '''
+    expr : tabspaces expr
+    '''
+    p[0] = p[1] + p[2]
 
 def p_command(p):
     '''
