@@ -65,7 +65,7 @@ def understand(commands):
             logging.error(f'Exception occured', exc_info=True)
             return []
     if python_program is None:
-        exception_raised = "Syntax Error (check the selected language and the corresponding syntax)"
+        exception_raised = "Aryabota doesn't understand you. There might be a syntax error"
     else:
         exception_raised = None
         try:
