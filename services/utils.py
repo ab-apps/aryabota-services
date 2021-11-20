@@ -75,6 +75,9 @@ def compare_states(answer, submitted_answer):
 
 def compare_values(answer, submitted_answer):
     """Comparing values"""
+    if answer["value_type"] == "number":
+        if "comparison_type" in answer and answer["comparison_type"] == "absolute":
+            return abs(answer["value"]) == abs(submitted_answer)
     if answer["value_type"] != "string":
         return answer["value"] == submitted_answer
     else:
