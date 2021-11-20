@@ -220,7 +220,7 @@ def t_EQUALS(t):
     return t
 
 def t_NOTEQUALS(t):
-    r'not equals'
+    r'not[ ]*equals'
     t.value = 'NOTEQUALS'
     return t
 
