@@ -1,0 +1,58 @@
+{
+    "problem": {
+        "problem_type": "state_match",
+        "problem_spec": "Level 4: Problem 3",
+        "statement": "Loop to colour alternate boxes in the row."
+    },
+    "initial_state": {
+        "grid": {
+            "dimensions": {
+                "row": 1,
+                "column": 8
+            }
+        },
+        "coin_sweeper": {
+            "pen": "up",
+            "position": {
+                "row": 1,
+                "column": 1
+            },
+            "dir": "right"
+        }
+    },
+    "answer": {
+        "type": "strict",
+        "state": {
+            "coin_sweeper": {
+            },
+            "grid": {
+                "coloured": [
+                    {
+                        "position": {
+                            "row": 1,
+                            "column": 1
+                        }
+                    },
+                    {
+                        "position": {
+                            "row": 1,
+                            "column": 3
+                        }
+                    },
+                    {
+                        "position": {
+                            "row": 1,
+                            "column": 5
+                        }
+                    },
+                    {
+                        "position": {
+                            "row": 1,
+                            "column": 7
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}
