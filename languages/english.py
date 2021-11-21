@@ -54,6 +54,8 @@ tokens = [
     'COINS',
     'WHILE',
     'NO',
+    'TRUE',
+    'FALSE'
 ]
 
 t_ignore = ' '
@@ -253,6 +255,16 @@ def t_NO(t):
     t.value = 'NO'
     return t
 
+def t_TRUE(t):
+    r'true'
+    t.value = 'TRUE'
+    return t
+
+def t_FALSE(t):
+    r'false'
+    t.value = 'FALSE'
+    return t
+
 def t_IDENTIFIER(t):
     r'[a-zA-Z_][a-zA-Z0-9_]*'
     t.type = 'IDENTIFIER'
@@ -344,7 +356,7 @@ def p_print_expr(p):
 def p_value_expr(p):
     '''
     value_expr : value_expr operator value_expr
-                | operator value_expr
+                | unary_operator value_expr
                 | operand
     '''
     if len(p) == 4:
@@ -356,6 +368,13 @@ def p_value_expr(p):
     else:
         python_code = p[1]
     p[0] = python_code
+
+def p_unary_operator(p):
+    '''
+    unary_operator : NO
+    '''
+    if p[1] == 'NO':
+        p[0] = "not"
 
 def p_operand(p):
     '''
@@ -369,8 +388,10 @@ def p_operand(p):
                | OBSTACLEBEHIND
                | OBSTACLELEFT
                | STRINGS
+               | FALSE
+               | TRUE
     '''
-    if (p[1] in ['MYROW', 'MYCOLUMN', 'OBSTACLEAHEAD', 'OBSTACLERIGHT', 'OBSTACLEBEHIND', 'OBSTACLELEFT']):
+    if (p[1] in ['MYROW', 'MYCOLUMN', 'OBSTACLEAHEAD', 'OBSTACLERIGHT', 'OBSTACLEBEHIND', 'OBSTACLELEFT', 'TRUE', 'FALSE']):
         python_code = convert_english_pseudocode_to_python(p[1])
     elif p[1] == 'IDENTIFIER' or p[1] == 'STRINGS':
         python_code = convert_english_pseudocode_to_python("IDENTIFIER", variable = p[1])
@@ -394,12 +415,8 @@ def p_operator(p):
                | GTE
                | EQUALS
                | NOTEQUALS
-               | NO
     '''
-    if p[1] == 'NO':
-        p[0] = "not"
-    else:
-        p[0] = p[1]
+    p[0] = p[1]
 
 def p_selection_expr(p):
     '''
