@@ -344,7 +344,7 @@ def p_print_expr(p):
 def p_value_expr(p):
     '''
     value_expr : value_expr operator value_expr
-                | value_expr operand
+                | operator value_expr
                 | operand
     '''
     if len(p) == 4:
@@ -353,7 +353,6 @@ def p_value_expr(p):
         python_code = convert_english_pseudocode_to_python(p[2], variable1 = var1, variable2 = var2)
     elif len(p) == 3:
         python_code = p[1] + " " + p[2]
-        print(python_code)
     else:
         python_code = p[1]
     p[0] = python_code
@@ -370,7 +369,6 @@ def p_operand(p):
                | OBSTACLEBEHIND
                | OBSTACLELEFT
                | STRINGS
-               | NO
     '''
     if (p[1] in ['MYROW', 'MYCOLUMN', 'OBSTACLEAHEAD', 'OBSTACLERIGHT', 'OBSTACLEBEHIND', 'OBSTACLELEFT']):
         python_code = convert_english_pseudocode_to_python(p[1])
@@ -378,8 +376,6 @@ def p_operand(p):
         python_code = convert_english_pseudocode_to_python("IDENTIFIER", variable = p[1])
     elif p[1] == 'NUMBER_OF_COINS':
         python_code = convert_english_pseudocode_to_python("GET_COINS")
-    elif p[1] == 'NO':
-        python_code = "not"
     else: # case NUMBER
         python_code = convert_english_pseudocode_to_python("NUMBER", value = p[1])
     p[0] = python_code
@@ -398,8 +394,12 @@ def p_operator(p):
                | GTE
                | EQUALS
                | NOTEQUALS
+               | NO
     '''
-    p[0] = p[1]
+    if p[1] == 'NO':
+        p[0] = "not"
+    else:
+        p[0] = p[1]
 
 def p_selection_expr(p):
     '''
