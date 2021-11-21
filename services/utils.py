@@ -210,7 +210,9 @@ def convert_english_pseudocode_to_python(command, **params):
         "LTE": "{variable1}<={variable2}",
         "GTE": "{variable1}>={variable2}",
         "EQUALS": "{variable1}=={variable2}",
-        "NOTEQUALS": "{variable1}!={variable2}"
+        "NOTEQUALS": "{variable1}!={variable2}",
+        "TRUE": "true",
+        "FALSE": "false",
     }
     return conversion_table[command].format(**params)
 
