@@ -1,0 +1,107 @@
+{
+    "problem": {
+        "problem_type": "state_match",
+        "problem_spec": "Level 4: Problem 2",
+        "statement": "Loop through the grid to get home."
+    },
+    "initial_state": {
+        "grid": {
+            "dimensions": {
+                "row": 3,
+                "column": 9
+            },
+            "obstacles": [
+                {
+                    "position": {
+                        "row": 1,
+                        "column": 3
+                    }
+                },
+                {
+                    "position": {
+                        "row": 1,
+                        "column": 7
+                    }
+                },
+                {
+                    "position": {
+                        "row": 2,
+                        "column": 3
+                    }
+                },
+                {
+                    "position": {
+                        "row": 2,
+                        "column": 5
+                    }
+                },
+                {
+                    "position": {
+                        "row": 2,
+                        "column": 7
+                    }
+                },
+                {
+                    "position": {
+                        "row": 2,
+                        "column": 9
+                    }
+                },
+                {
+                    "position": {
+                        "row": 3,
+                        "column": 5
+                    }
+                },
+                {
+                    "position": {
+                        "row": 3,
+                        "column": 9
+                    }
+                },
+                {
+                    "position": {
+                        "row": 2,
+                        "column": 1
+                    }
+                },
+                {
+                    "position": {
+                        "row": 3,
+                        "column": 1
+                    }
+                }
+            ],
+            "homes": [
+                {
+                    "position": {
+                        "row": 1,
+                        "column": 9
+                    }
+                }
+            ]    
+        },
+        "coin_sweeper": {
+            "pen": "up",
+            "position": {
+                "row": 1,
+                "column": 1
+            },
+            "dir": "down"
+        }
+    },
+    "answer": {
+        "type": "strict",
+        "state": {
+            "coin_sweeper": {
+                "position": {
+                    "row": 1,
+                    "column": 8
+                }
+            }
+        }
+   },
+    "custom_answer": {
+        "message": "To join our discord server, go to https://discord.gg/nEHKaXBn!"
+    }
+}

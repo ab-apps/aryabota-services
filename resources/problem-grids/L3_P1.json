@@ -1,0 +1,56 @@
+{
+    "problem": {
+        "problem_type": "value_match",
+        "problem_spec": "Level 3: Problem 1",
+        "statement": "Check if the total number of coins in alternate boxes of this grid is greater than 10."
+    },
+    "initial_state": {
+        "grid": {
+            "dimensions": {
+                "row": 1,
+                "column": 8
+            },
+            "coins": [
+                {
+                    "position": {
+                        "row": 1,
+                        "column": 3
+                    },
+                    "number": 1
+                },
+                {
+                    "position": {
+                        "row": 1,
+                        "column": 5
+                    },
+                    "number": 2
+                },
+                {
+                    "position": {
+                        "row": 1,
+                        "column": 7
+                    },
+                    "number": 1
+                },
+                {
+                    "position": {
+                        "row": 1,
+                        "column": 8
+                    },
+                    "number": 5
+                }
+            ]
+        },
+        "coin_sweeper": {
+            "position": {
+                "row": 1,
+                "column": 1
+            },
+            "dir": "right"
+        }
+    },
+    "answer": {
+        "value_type": "bool",
+        "value": false
+    }
+}
