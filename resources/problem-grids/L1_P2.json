@@ -136,6 +136,7 @@
     },
     "answer": {
         "value_type": "number",
+        "comparison_type": "absolute",
         "value": 3
     }
 }

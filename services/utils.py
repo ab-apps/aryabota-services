@@ -75,6 +75,9 @@ def compare_states(answer, submitted_answer):
 
 def compare_values(answer, submitted_answer):
     """Comparing values"""
+    if answer["value_type"] == "number":
+        if "comparison_type" in answer and answer["comparison_type"] == "absolute":
+            return abs(answer["value"]) == abs(submitted_answer)
     if answer["value_type"] != "string":
         return answer["value"] == submitted_answer
     else:
@@ -207,7 +210,9 @@ def convert_english_pseudocode_to_python(command, **params):
         "LTE": "{variable1}<={variable2}",
         "GTE": "{variable1}>={variable2}",
         "EQUALS": "{variable1}=={variable2}",
-        "NOTEQUALS": "{variable1}!={variable2}"
+        "NOTEQUALS": "{variable1}!={variable2}",
+        "TRUE": "true",
+        "FALSE": "false",
     }
     return conversion_table[command].format(**params)
 

@@ -49,7 +49,13 @@ tokens = [
     'NOTEQUALS',
     'COMMENT',
     'TABSPACE',
-    'PYTHON'
+    'PYTHON',
+    'STRINGS',
+    'COINS',
+    'WHILE',
+    'NO',
+    'TRUE',
+    'FALSE'
 ]
 
 t_ignore = ' '
@@ -169,6 +175,11 @@ def t_OBSTACLERIGHT(t):
     t.value = 'OBSTACLERIGHT'
     return t
 
+def t_COINS(t):
+    r'=[ ]*number[ ]*of[ ]*coins'
+    t.value = 'COINS'
+    return t
+
 def t_NUMBER_OF_COINS(t):
     r'number[ ]*of[ ]*coins'
     t.value = 'NUMBER_OF_COINS'
@@ -220,13 +231,38 @@ def t_EQUALS(t):
     return t
 
 def t_NOTEQUALS(t):
-    r'not equals'
+    r'not[ ]*equals'
     t.value = 'NOTEQUALS'
     return t
 
 def t_ASSIGN(t):
     r'is'
     t.value = 'ASSIGN'
+    return t
+
+def t_WHILE(t):
+    r'while'
+    t.value = 'WHILE'
+    return t
+
+def t_STRINGS(t):
+    r'\".*\"'
+    t.type = 'STRINGS'
+    return t
+
+def t_NO(t):
+    r'no'
+    t.value = 'NO'
+    return t
+
+def t_TRUE(t):
+    r'true'
+    t.value = 'TRUE'
+    return t
+
+def t_FALSE(t):
+    r'false'
+    t.value = 'FALSE'
     return t
 
 def t_IDENTIFIER(t):
@@ -290,6 +326,7 @@ def p_command(p):
         | print_expr
         | submit_expr
         | python_expr
+        | while_expr
     '''
     if p[1] in ['TURNLEFT', 'TURNRIGHT', 'PENUP', 'PENDOWN']:
         python_code = convert_english_pseudocode_to_python(p[1])
@@ -299,6 +336,15 @@ def p_command(p):
     elif len(p) == 3:
         python_code = convert_english_pseudocode_to_python(p[1], steps = p[2])
         p[0] = python_code
+
+def p_while_expr(p):
+    '''
+    while_expr : WHILE value_expr BEGIN expr END
+    '''
+    p[4] = '\n\t' + p[4].replace('\n', '\n\t')
+    python_code = "while(" + p[2] + "):" + p[4]
+    print("While :", python_code)
+    p[0] = python_code
 
 def p_print_expr(p):
     '''
@@ -310,15 +356,25 @@ def p_print_expr(p):
 def p_value_expr(p):
     '''
     value_expr : value_expr operator value_expr
+                | unary_operator value_expr
                 | operand
     '''
     if len(p) == 4:
         var1 = p[1]
         var2 = p[3]
         python_code = convert_english_pseudocode_to_python(p[2], variable1 = var1, variable2 = var2)
+    elif len(p) == 3:
+        python_code = p[1] + " " + p[2]
     else:
         python_code = p[1]
     p[0] = python_code
+
+def p_unary_operator(p):
+    '''
+    unary_operator : NO
+    '''
+    if p[1] == 'NO':
+        p[0] = "not"
 
 def p_operand(p):
     '''
@@ -331,10 +387,13 @@ def p_operand(p):
                | OBSTACLERIGHT
                | OBSTACLEBEHIND
                | OBSTACLELEFT
+               | STRINGS
+               | FALSE
+               | TRUE
     '''
-    if (p[1] in ['MYROW', 'MYCOLUMN', 'OBSTACLEAHEAD', 'OBSTACLERIGHT', 'OBSTACLEBEHIND', 'OBSTACLELEFT']):
+    if (p[1] in ['MYROW', 'MYCOLUMN', 'OBSTACLEAHEAD', 'OBSTACLERIGHT', 'OBSTACLEBEHIND', 'OBSTACLELEFT', 'TRUE', 'FALSE']):
         python_code = convert_english_pseudocode_to_python(p[1])
-    elif p[1] == 'IDENTIFIER':
+    elif p[1] == 'IDENTIFIER' or p[1] == 'STRINGS':
         python_code = convert_english_pseudocode_to_python("IDENTIFIER", variable = p[1])
     elif p[1] == 'NUMBER_OF_COINS':
         python_code = convert_english_pseudocode_to_python("GET_COINS")
@@ -386,8 +445,12 @@ def p_repeat_expr(p):
 def p_assign_expr(p):
     '''
     assign_expr : IDENTIFIER ASSIGN value_expr
+                | IDENTIFIER COINS
     '''
-    python_code = convert_english_pseudocode_to_python("ASSIGNMENT", variable = p[1], expr = p[3])
+    if len(p) == 3:
+        python_code = convert_english_pseudocode_to_python("ASSIGNMENT", variable = p[1], expr = "get_number_of_coins()")
+    elif len(p) == 4:
+        python_code = convert_english_pseudocode_to_python("ASSIGNMENT", variable = p[1], expr = p[3])
     p[0] = python_code
 
 def p_submit_expr(p):
@@ -407,8 +470,9 @@ def p_python_expr(p):
                 | MOVE PYTHON
                 | SUBMIT PYTHON
                 | PRINT identifiers PYTHON
+                | WHILE PYTHON
     '''
-    if p[1] in ['MOVE', 'PRINT']:
+    if p[1] in ['MOVE', 'PRINT', 'WHILE']:
         p[1] = p[1].lower()
     p[0] = ''.join(p[1:])
 
