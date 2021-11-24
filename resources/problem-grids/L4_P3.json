@@ -1,8 +1,8 @@
 {
     "problem": {
         "problem_type": "state_match",
-        "problem_spec": "Level 1.5: Problem 2",
-        "statement": "Colour alternate boxes in the row."
+        "problem_spec": "Level 4: Problem 3",
+        "statement": "Loop to colour alternate boxes in the row."
     },
     "initial_state": {
         "grid": {
