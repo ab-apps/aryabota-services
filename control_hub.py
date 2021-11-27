@@ -214,6 +214,22 @@ def obstacle_right(row = None, column = None):
             return 1
     return 0
 
+def home():
+    state = GRID.get_state()
+    row = BOT.my_row()
+    column = BOT.my_column()
+    pos = {
+        "position": {
+            "row": row,
+            "column": column
+        }
+    }
+    if pos in state["homes"]:
+        print("At home, yes")
+        return True
+    return False
+
+
 def print_value(expr):
     """print value"""
     with open(results_file_path) as results_file:

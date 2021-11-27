@@ -2,7 +2,7 @@
     "problem": {
         "problem_type": "state_match",
         "problem_spec": "Level 1.5: Problem 3",
-        "statement": "Colour the boxes where there are coin stacks."
+        "statement": "Colour the boxes where there are coin bags."
     },
     "initial_state": {
         "grid": {

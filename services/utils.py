@@ -197,6 +197,7 @@ def convert_english_pseudocode_to_python(command, **params):
         "OBSTACLEBEHIND": "obstacle_behind()",
         "OBSTACLELEFT": "obstacle_left()",
         "OBSTACLERIGHT": "obstacle_right()",
+        "HOME": "home()",
         "IF": "if {expr}:",
         "ELSE": "else:",
         "REPEAT": "for i in range({times}):",
