@@ -62,7 +62,7 @@ levels:
         - Test
   '2.3':
     file: resources/problem-grids/L2_P3.json
-    name: Colour boxes that has coin stacks
+    name: Colour boxes that have coin bags
     space:   
         - IPS
         - Test

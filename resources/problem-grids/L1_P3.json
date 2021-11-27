@@ -2,7 +2,7 @@
     "problem": {
         "problem_type": "value_match",
         "problem_spec": "Level 1: Problem 3",
-        "statement": "Divide the total coins by two"
+        "statement": "AryaBota wants to share all the coins in this grid with their friend, equally. How many coins does each of them get?"
     },
     "initial_state": {
         "grid": {

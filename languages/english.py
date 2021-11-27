@@ -21,6 +21,7 @@ tokens = [
     'MODULO',
     'MYROW',
     'MYCOLUMN',
+    'HOME',
     'MOVE',
     'TURNLEFT',
     'TURNRIGHT',
@@ -107,6 +108,11 @@ def t_TURNLEFT(t):
 def t_TURNRIGHT(t):
     r'turn[ ]*right'
     t.value = 'TURNRIGHT'
+    return t
+
+def t_HOME(t):
+    r'home'
+    t.value = 'HOME'
     return t
 
 def t_PENUP(t):
@@ -387,11 +393,12 @@ def p_operand(p):
                | OBSTACLERIGHT
                | OBSTACLEBEHIND
                | OBSTACLELEFT
+               | HOME
                | STRINGS
                | FALSE
                | TRUE
     '''
-    if (p[1] in ['MYROW', 'MYCOLUMN', 'OBSTACLEAHEAD', 'OBSTACLERIGHT', 'OBSTACLEBEHIND', 'OBSTACLELEFT', 'TRUE', 'FALSE']):
+    if (p[1] in ['MYROW', 'MYCOLUMN', 'HOME', 'OBSTACLEAHEAD', 'OBSTACLERIGHT', 'OBSTACLEBEHIND', 'OBSTACLELEFT', 'TRUE', 'FALSE']):
         python_code = convert_english_pseudocode_to_python(p[1])
     elif p[1] == 'IDENTIFIER' or p[1] == 'STRINGS':
         python_code = convert_english_pseudocode_to_python("IDENTIFIER", variable = p[1])

@@ -2,7 +2,7 @@
     "problem": {
         "problem_type": "value_match",
         "problem_spec": "Level 3: Problem 2",
-        "statement": "Find if the total number of coins in this grid is greater than 10."
+        "statement": "Are there more than 10 coins in this grid?"
     },
     "initial_state": {
         "grid": {
