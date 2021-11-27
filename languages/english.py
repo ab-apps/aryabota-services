@@ -348,7 +348,7 @@ def p_while_expr(p):
     while_expr : WHILE value_expr BEGIN expr END
     '''
     p[4] = '\n\t' + p[4].replace('\n', '\n\t')
-    python_code = "while(" + p[2] + "):" + p[4]
+    python_code = "while " + p[2] + ":" + p[4]
     print("While :", python_code)
     p[0] = python_code
 
