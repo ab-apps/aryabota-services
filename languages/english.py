@@ -56,7 +56,8 @@ tokens = [
     'WHILE',
     'NO',
     'TRUE',
-    'FALSE'
+    'FALSE',
+    'EQUAL',
 ]
 
 t_ignore = ' '
@@ -189,6 +190,11 @@ def t_COINS(t):
 def t_NUMBER_OF_COINS(t):
     r'number[ ]*of[ ]*coins'
     t.value = 'NUMBER_OF_COINS'
+    return t
+
+def t_EQUAL(t):
+    r'='
+    t.value = 'EQUAL'
     return t
 
 def t_PRINT(t):
@@ -452,6 +458,7 @@ def p_repeat_expr(p):
 def p_assign_expr(p):
     '''
     assign_expr : IDENTIFIER ASSIGN value_expr
+                | IDENTIFIER EQUAL value_expr
                 | IDENTIFIER COINS
     '''
     if len(p) == 3:
