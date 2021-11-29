@@ -116,6 +116,16 @@ def t_HOME(t):
     t.value = 'HOME'
     return t
 
+def t_EQUALS(t):
+    r'(equals | ==)'
+    t.value = 'EQUALS'
+    return t
+
+def t_NOTEQUALS(t):
+    r'(not[ ]*equals | !=)'
+    t.value = 'NOTEQUALS'
+    return t
+
 def t_PENUP(t):
     r'pen[ ]*up'
     t.value = 'PENUP'
@@ -218,33 +228,23 @@ def t_TIMES(t):
     return t
 
 def t_LTE(t):
-    r'is[ ]*lesser[ ]*than[ ]*or[ ]*equal[ ]*to'
+    r'<[ ]*='
     t.value = 'LTE'
     return t
 
 def t_GTE(t):
-    r'is[ ]*greater[ ]*than[ ]*or[ ]*equal[ ]*to'
+    r'>[ ]*='
     t.value = 'GTE'
     return t
 
 def t_LT(t):
-    r'is[ ]*lesser[ ]*than'
+    r'<'
     t.value = 'LT'
     return t
 
 def t_GT(t):
-    r'is[ ]*greater[ ]*than'
+    r'>'
     t.value = 'GT'
-    return t
-
-def t_EQUALS(t):
-    r'equals'
-    t.value = 'EQUALS'
-    return t
-
-def t_NOTEQUALS(t):
-    r'not[ ]*equals'
-    t.value = 'NOTEQUALS'
     return t
 
 def t_ASSIGN(t):
