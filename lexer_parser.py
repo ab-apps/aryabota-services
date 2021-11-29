@@ -63,6 +63,7 @@ def understand(commands):
             if config["app"]["language"] == "english":
                 commands = commands.replace("    ", "\t")
                 commands = commands.strip("\n")
+                commands = commands.replace("\r"," ")
                 python_program = english_parser.parse(commands, lexer=english_lexer)
                 print(python_program)
         except Exception as exception:
