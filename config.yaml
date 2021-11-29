@@ -9,6 +9,7 @@ levels:
     name: Go home
     space: 
         - Test
+        - IPS678
   '0.1':
     file: resources/problem-grids/L0_P1.json
     name: Go home
@@ -16,6 +17,7 @@ levels:
         - PES  
         - IPS
         - Test
+        - IPS678
   '0.2':
     file: resources/problem-grids/L0_P2.json
     name: All homes
@@ -23,6 +25,7 @@ levels:
         - PES
         - IPS
         - Test
+        - IPS678
   '0.3':
     file: resources/problem-grids/L0_P3.json
     name: Shortest Path
@@ -30,11 +33,13 @@ levels:
         - PES   
         - IPS
         - Test
+        - IPS678
   '1.1':
     file: resources/problem-grids/L1_P1.json
     name: Total coins in grid
     space:   
         - IPS
+        - IPS678
         - Test
   '1.2':
     file: resources/problem-grids/L1_P2.json
@@ -42,48 +47,56 @@ levels:
     space:   
         - IPS
         - Test
+        - IPS678
   '1.3': 
     file: resources/problem-grids/L1_P3.json
     name: Divide the total coins by two
     space:   
         - IPS
         - Test
+        - IPS678
   '2.1':
     file: resources/problem-grids/L2_P1.json
     name: Colour boundary
     space:   
         - IPS
         - Test
+        - IPS678
   '2.2':
     file: resources/problem-grids/L2_P2.json
     name: Colour alternate boxes
     space:   
         - IPS
         - Test
+        - IPS678
   '2.3':
     file: resources/problem-grids/L2_P3.json
     name: Colour boxes that has coin stacks
     space:   
         - IPS
         - Test
+        - IPS678
   '3.1':
     file: resources/problem-grids/L3_P1.json
     name: Total number of coins in alternate boxes
     space:   
         - IPS
         - Test
+        - IPS678
   '3.2':
     file: resources/problem-grids/L3_P2.json
     name: Total number of coins in this grid is greater than 10
     space:   
         - IPS
         - Test
+        - IPS678
   '3.3':
     file: resources/problem-grids/L3_P3.json
     name: Total number of coins in this grid is lesser than 30
     space:   
         - IPS
         - Test
+        - IPS678
   '4.1': 
     file: resources/problem-grids/L4_P1.json
     name: Loop to colour the boundary of the grid
