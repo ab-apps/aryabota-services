@@ -1,32 +1,44 @@
 {
     "problem": {
         "problem_type": "state_match",
-        "problem_spec": "Level 0: Problem 2",
-        "statement": "Colour all the boxes with houses in the grid."
+        "problem_spec": "Level 0: Problem 3",
+        "statement": "Take the shortest route home."
     },
     "initial_state": {
         "grid": {
             "dimensions": {
-                "row": 4,
-                "column": 5
+                "row": 6,
+                "column": 8
             },
             "obstacles": [
                 {
                     "position": {
-                        "row": 2,
-                        "column": 1
-                    }
-                },
-                {
-                    "position": {
-                        "row": 2,
+                        "row": 1,
                         "column": 2
                     }
                 },
                 {
                     "position": {
+                        "row": 1,
+                        "column": 3
+                    }
+                },
+                {
+                    "position": {
+                        "row": 1,
+                        "column": 8
+                    }
+                },
+                {
+                    "position": {
                         "row": 2,
-                        "column": 4
+                        "column": 5
+                    }
+                },
+                {
+                    "position": {
+                        "row": 2,
+                        "column": 6
                     }
                 },
                 {
@@ -46,13 +58,11 @@
                         "row": 3,
                         "column": 4
                     }
-                }
-            ],
-            "homes": [
+                },
                 {
                     "position": {
-                        "row": 1,
-                        "column": 5
+                        "row": 3,
+                        "column": 7
                     }
                 },
                 {
@@ -64,7 +74,63 @@
                 {
                     "position": {
                         "row": 4,
+                        "column": 3
+                    }
+                },
+                {
+                    "position": {
+                        "row": 4,
+                        "column": 4
+                    }
+                },
+                {
+                    "position": {
+                        "row": 4,
+                        "column": 7
+                    }
+                },
+                {
+                    "position": {
+                        "row": 5,
+                        "column": 7
+                    }
+                },
+                {
+                    "position": {
+                        "row": 6,
+                        "column": 1
+                    }
+                },
+                {
+                    "position": {
+                        "row": 6,
+                        "column": 2
+                    }
+                },
+                {
+                    "position": {
+                        "row": 6,
+                        "column": 3
+                    }
+                },
+                {
+                    "position": {
+                        "row": 6,
+                        "column": 4
+                    }
+                },
+                {
+                    "position": {
+                        "row": 6,
                         "column": 5
+                    }
+                }
+            ],
+            "homes": [
+                {
+                    "position": {
+                        "row": 6,
+                        "column": 8
                     }
                 }
             ]
@@ -79,28 +145,86 @@
         }
     },
     "answer": {
-        "type": "lenient",
+        "type": "strict",
         "state": {
             "coin_sweeper": {
+                "position": {
+                    "row": 6,
+                    "column": 8
+                }
             },
             "grid": {
                 "coloured": [
                     {
                         "position": {
                             "row": 1,
-                            "column": 5
-                        }
-                    },
-                    {
-                        "position": {
-                            "row": 4,
                             "column": 1
                         }
                     },
                     {
                         "position": {
+                            "row": 2,
+                            "column": 1
+                        }
+                    },
+                    {
+                        "position": {
+                            "row": 2,
+                            "column": 2
+                        }
+                    },
+                    {
+                        "position": {
+                            "row": 3,
+                            "column": 2
+                        }
+                    },
+                    {
+                        "position": {
                             "row": 4,
+                            "column": 2
+                        }
+                    },
+                    {
+                        "position": {
+                            "row": 5,
+                            "column": 2
+                        }
+                    },
+                    {
+                        "position": {
+                            "row": 5,
+                            "column": 3
+                        }
+                    },
+                    {
+                        "position": {
+                            "row": 5,
+                            "column": 4
+                        }
+                    },
+                    {
+                        "position": {
+                            "row": 5,
                             "column": 5
+                        }
+                    },
+                    {
+                        "position": {
+                            "row": 5,
+                            "column": 6
+                        }
+                    },
+                    {
+                        "position": {
+                            "row": 6,
+                            "column": 6
+                        }
+                    },
+                    {
+                        "position": {
+                            "row": 6,
+                            "column": 7
                         }
                     }
                 ]
