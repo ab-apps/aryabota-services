@@ -1,47 +1,18 @@
 {
     "problem": {
-        "problem_type": "value_match",
+        "problem_type": "state_match",
         "problem_spec": "Level 3: Problem 1",
-        "statement": "Check if the total number of coins in alternate boxes of this grid is greater than 10."
+        "statement": "Colour the boundary of the grid."
     },
     "initial_state": {
         "grid": {
             "dimensions": {
-                "row": 1,
-                "column": 8
-            },
-            "coins": [
-                {
-                    "position": {
-                        "row": 1,
-                        "column": 3
-                    },
-                    "number": 1
-                },
-                {
-                    "position": {
-                        "row": 1,
-                        "column": 5
-                    },
-                    "number": 2
-                },
-                {
-                    "position": {
-                        "row": 1,
-                        "column": 7
-                    },
-                    "number": 1
-                },
-                {
-                    "position": {
-                        "row": 1,
-                        "column": 8
-                    },
-                    "number": 5
-                }
-            ]
+                "row": 4,
+                "column": 4
+            }
         },
         "coin_sweeper": {
+            "pen": "down",
             "position": {
                 "row": 1,
                 "column": 1
@@ -50,7 +21,89 @@
         }
     },
     "answer": {
-        "value_type": "bool",
-        "value": false
+        "type": "strict",
+        "state": {
+            "coin_sweeper": {
+            },
+            "grid": {
+                "coloured": [
+                    {
+                        "position": {
+                            "row": 1,
+                            "column": 1
+                        }
+                    },
+                    {
+                        "position": {
+                            "row": 1,
+                            "column": 2
+                        }
+                    },
+                    {
+                        "position": {
+                            "row": 1,
+                            "column": 3
+                        }
+                    },
+                    {
+                        "position": {
+                            "row": 1,
+                            "column": 4
+                        }
+                    },
+                    {
+                        "position": {
+                            "row": 2,
+                            "column": 4
+                        }
+                    },
+                    {
+                        "position": {
+                            "row": 3,
+                            "column": 4
+                        }
+                    },
+                    {
+                        "position": {
+                            "row": 4,
+                            "column": 4
+                        }
+                    },
+                    {
+                        "position": {
+                            "row": 4,
+                            "column": 3
+                        }
+                    },
+                    {
+                        "position": {
+                            "row": 4,
+                            "column": 2
+                        }
+                    },
+                    {
+                        "position": {
+                            "row": 4,
+                            "column": 1
+                        }
+                    },
+                    {
+                        "position": {
+                            "row": 3,
+                            "column": 1
+                        }
+                    },
+                    {
+                        "position": {
+                            "row": 2,
+                            "column": 1
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "custom_answer": {
+        "message": "To join our discord server, go to https://discord.gg/nEHKaXBn!"
     }
 }

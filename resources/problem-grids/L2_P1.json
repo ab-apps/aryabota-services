@@ -1,18 +1,47 @@
 {
     "problem": {
-        "problem_type": "state_match",
+        "problem_type": "value_match",
         "problem_spec": "Level 2: Problem 1",
-        "statement": "Colour the boundary of the grid."
+        "statement": "Are there exactly 5 coins in this grid?"
     },
     "initial_state": {
         "grid": {
             "dimensions": {
-                "row": 4,
-                "column": 4
-            }
+                "row": 1,
+                "column": 6
+            },
+            "coins": [
+                {
+                    "position": {
+                        "row": 1,
+                        "column": 2
+                    },
+                    "number": 3
+                },
+                {
+                    "position": {
+                        "row": 1,
+                        "column": 4
+                    },
+                    "number": 1
+                },
+                {
+                    "position": {
+                        "row": 1,
+                        "column": 6
+                    },
+                    "number": 2
+                },
+                {
+                    "position": {
+                        "row": 5,
+                        "column": 1
+                    },
+                    "number": 2
+                }
+            ]
         },
         "coin_sweeper": {
-            "pen": "up",
             "position": {
                 "row": 1,
                 "column": 1
@@ -21,89 +50,7 @@
         }
     },
     "answer": {
-        "type": "strict",
-        "state": {
-            "coin_sweeper": {
-            },
-            "grid": {
-                "coloured": [
-                    {
-                        "position": {
-                            "row": 1,
-                            "column": 1
-                        }
-                    },
-                    {
-                        "position": {
-                            "row": 1,
-                            "column": 2
-                        }
-                    },
-                    {
-                        "position": {
-                            "row": 1,
-                            "column": 3
-                        }
-                    },
-                    {
-                        "position": {
-                            "row": 1,
-                            "column": 4
-                        }
-                    },
-                    {
-                        "position": {
-                            "row": 2,
-                            "column": 4
-                        }
-                    },
-                    {
-                        "position": {
-                            "row": 3,
-                            "column": 4
-                        }
-                    },
-                    {
-                        "position": {
-                            "row": 4,
-                            "column": 4
-                        }
-                    },
-                    {
-                        "position": {
-                            "row": 4,
-                            "column": 3
-                        }
-                    },
-                    {
-                        "position": {
-                            "row": 4,
-                            "column": 2
-                        }
-                    },
-                    {
-                        "position": {
-                            "row": 4,
-                            "column": 1
-                        }
-                    },
-                    {
-                        "position": {
-                            "row": 3,
-                            "column": 1
-                        }
-                    },
-                    {
-                        "position": {
-                            "row": 2,
-                            "column": 1
-                        }
-                    }
-                ]
-            }
-        }
-    },
-    "custom_answer": {
-        "message": "To join our discord server, go to https://discord.gg/nEHKaXBn!"
+        "value_type": "bool",
+        "value": false
     }
 }
