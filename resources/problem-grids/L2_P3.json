@@ -7,8 +7,8 @@
     "initial_state": {
         "grid": {
             "dimensions": {
-                "row": 5,
-                "column": 5
+                "row": 3,
+                "column": 4
             },
             "coins": [
                 {
@@ -17,6 +17,13 @@
                         "column": 4
                     },
                     "number": 5
+                },
+                {
+                    "position": {
+                        "row": 3,
+                        "column": 1
+                    },
+                    "number": 7
                 },
                 {
                     "position": {
@@ -31,27 +38,6 @@
                         "column": 2
                     },
                     "number": 3
-                },
-                {
-                    "position": {
-                        "row": 5,
-                        "column": 5
-                    },
-                    "number": 2
-                }
-            ],
-            "obstacles": [
-                {
-                    "position": {
-                        "row": 2,
-                        "column": 1
-                    }
-                },
-                {
-                    "position": {
-                        "row": 2,
-                        "column": 2
-                    }
                 }
             ]
         },
