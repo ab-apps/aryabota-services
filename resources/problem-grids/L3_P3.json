@@ -1,8 +1,8 @@
 {
     "problem": {
-        "problem_type": "value_match",
+        "problem_type": "state_match",
         "problem_spec": "Level 3: Problem 3",
-        "statement": "Are there lesser than 30 coins in this grid?"
+        "statement": "Colour the boxes where there are coin bags."
     },
     "initial_state": {
         "grid": {
@@ -11,62 +11,77 @@
                 "column": 5
             },
             "coins": [
-                {
-                    "position": {
-                        "row": 2,
-                        "column": 4
-                    },
-                    "number": 5
+            {
+                "position": {
+                    "row": 3,
+                    "column": 3
                 },
-                {
-                    "position": {
-                        "row": 3,
-                        "column": 2
-                    },
-                    "number": 3
+                "number": 1
+            },
+            {
+                "position": {
+                    "row": 1,
+                    "column": 5
                 },
-                {
-                    "position": {
-                        "row": 4,
-                        "column": 3
-                    },
-                    "number": 4
+                "number": 3
+            },
+            {
+                "position": {
+                    "row": 3,
+                    "column": 5
                 },
-                {
-                    "position": {
-                        "row": 5,
-                        "column": 1
-                    },
-                    "number": 2
-                }
-            ],
-            "obstacles": [
-                {
-                    "position": {
-                        "row": 2,
-                        "column": 1
-                    }
-                }
-            ],
-            "homes": [
-                {
-                    "position": {
-                        "row": 5,
-                        "column": 5
-                    }
-                }
-            ]
+                "number": 2
+            },
+            {
+                "position": {
+                    "row": 4,
+                    "column": 2
+                },
+                "number": 5
+            }]
         },
         "coin_sweeper": {
+            "pen": "up",
             "position": {
                 "row": 1,
                 "column": 1
             },
-            "dir": "down"
+            "dir": "right"
         }
     },
     "answer": {
-        "value_type": "bool",
-        "value": false
+        "type": "strict",
+        "state": {
+            "coin_sweeper": {
+            },
+            "grid": {
+                "coloured": [
+                    {
+                        "position": {
+                            "row": 3,
+                            "column": 3
+                        }
+                    },
+                    {
+                        "position": {
+                            "row": 3,
+                            "column": 5
+                        }
+                    },
+                    {
+                        "position": {
+                            "row": 1,
+                            "column": 5
+                        }
+                    },
+                    {
+                        "position": {
+                            "row": 4,
+                            "column": 2
+                        }
+                    }
+                ]
+            }
+        }
     }
 }

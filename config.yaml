@@ -57,46 +57,44 @@ levels:
         - IPS678
   '2.1':
     file: resources/problem-grids/L2_P1.json
-    name: Colour boundary
+    name: Total number of coins equals 5
     space:   
         - IPS
         - Test
         - IPS678
   '2.2':
     file: resources/problem-grids/L2_P2.json
-    name: Colour alternate boxes
+    name: Total number of coins greater than or equal to 10
     space:   
         - IPS
         - Test
         - IPS678
   '2.3':
     file: resources/problem-grids/L2_P3.json
-    name: Colour boxes that have coin bags
+    name: Total number of coins lesser than 30
     space:   
         - IPS
         - Test
         - IPS678
   '3.1':
     file: resources/problem-grids/L3_P1.json
-    name: Total number of coins in alternate boxes
+    name: Colour boundary
     space:   
         - IPS
         - Test
         - IPS678
   '3.2':
     file: resources/problem-grids/L3_P2.json
-    name: Total number of coins in this grid is greater than 10
+    name: Colour alternate boxes
     space:   
         - IPS
         - Test
-        - IPS678
   '3.3':
     file: resources/problem-grids/L3_P3.json
-    name: Total number of coins in this grid is lesser than 30
+    name: Colour boxes that have coin bags
     space:   
         - IPS
         - Test
-        - IPS678
   '4.1': 
     file: resources/problem-grids/L4_P1.json
     name: Loop to colour the boundary of the grid
