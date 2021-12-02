@@ -25,16 +25,16 @@ all_users = dict()
 '''To find all unique users'''
 records = client[db]['User'].find()
 for record in records:
-    if record["email"] not in  ["Prerna", "demo", "teacher"]:
+    if record["email"] not in  ["Prerna", "demo", "teacher", "teacher 1", "teacher1"]:
         if record["email"] not in all_users:
             all_users[record["email"]] = record
         else:
             print(record)
             print(all_users[record["email"]])
-            if record['email'] == 'attyaksh676320':
+            if record['email'] == 'attyaksh676320' or "sakshamlohan" in record["email"]:
                 all_users[record['email']] = record
             if record['email'] == '7519':
-                all_users[record['email']]['skills'] = record['skills']      
+                all_users[record['email']]['skills'] = record['skills']
 for email in all_users:
     client['IPS678']['CleanedUser'].insert_one(all_users[email])
 
