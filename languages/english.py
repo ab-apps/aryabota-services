@@ -53,8 +53,6 @@ tokens = [
     'PYTHON',
     'STRINGS',
     'COINS',
-    'WHILE',
-    'NO',
     'TRUE',
     'FALSE',
     'EQUAL',
@@ -252,19 +250,9 @@ def t_ASSIGN(t):
     t.value = 'ASSIGN'
     return t
 
-def t_WHILE(t):
-    r'while'
-    t.value = 'WHILE'
-    return t
-
 def t_STRINGS(t):
     r'\".*\"'
     t.type = 'STRINGS'
-    return t
-
-def t_NO(t):
-    r'no'
-    t.value = 'NO'
     return t
 
 def t_TRUE(t):
@@ -338,7 +326,6 @@ def p_command(p):
         | print_expr
         | submit_expr
         | python_expr
-        | while_expr
     '''
     if p[1] in ['TURNLEFT', 'TURNRIGHT', 'PENUP', 'PENDOWN']:
         python_code = convert_english_pseudocode_to_python(p[1])
@@ -348,15 +335,6 @@ def p_command(p):
     elif len(p) == 3:
         python_code = convert_english_pseudocode_to_python(p[1], steps = p[2])
         p[0] = python_code
-
-def p_while_expr(p):
-    '''
-    while_expr : WHILE value_expr BEGIN expr END
-    '''
-    p[4] = '\n\t' + p[4].replace('\n', '\n\t')
-    python_code = "while " + p[2] + ":" + p[4]
-    print("While :", python_code)
-    p[0] = python_code
 
 def p_print_expr(p):
     '''
@@ -368,7 +346,6 @@ def p_print_expr(p):
 def p_value_expr(p):
     '''
     value_expr : value_expr operator value_expr
-                | unary_operator value_expr
                 | operand
     '''
     if len(p) == 4:
@@ -380,13 +357,6 @@ def p_value_expr(p):
     else:
         python_code = p[1]
     p[0] = python_code
-
-def p_unary_operator(p):
-    '''
-    unary_operator : NO
-    '''
-    if p[1] == 'NO':
-        p[0] = "not"
 
 def p_operand(p):
     '''
@@ -484,9 +454,11 @@ def p_python_expr(p):
                 | MOVE PYTHON
                 | SUBMIT PYTHON
                 | PRINT identifiers PYTHON
-                | WHILE PYTHON
+                | identifiers value_expr PYTHON
     '''
-    if p[1] in ['MOVE', 'PRINT', 'WHILE']:
+    if len(p) == 4 and p[0] != 'PRINT':
+        p[1] = p[1] + ' '
+    if p[1] in ['MOVE', 'PRINT']:
         p[1] = p[1].lower()
     p[0] = ''.join(p[1:])
 
