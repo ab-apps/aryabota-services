@@ -25,7 +25,7 @@ records = client[db]['Commands'].find()
 for record in records:
     if record["commands"].strip() == "":
         print(record["email"])
-    elif record["email"] in ["Prerna", "demo", "teacher"]:
+    elif record["email"] in ["Prerna", "demo", "teacher", "teacher1", "teacher 1"]:
         print(record["email"])
     else:
         total+=1
