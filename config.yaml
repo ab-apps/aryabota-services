@@ -83,7 +83,7 @@ levels:
         - IPS
         - Test
         - IPS678
-  '3.2':
+  '3.2.0':
     file: resources/problem-grids/L3_P2.json
     name: Colour alternate boxes
     space:   
@@ -113,3 +113,10 @@ levels:
     space:   
         - IPS
         - Test
+  '3.2': 
+    file: resources/problem-grids/L4_P4.json
+    name: Loop to count the total number of coins in the grid.
+    space:   
+        - IPS
+        - Test
+        - IPS678
