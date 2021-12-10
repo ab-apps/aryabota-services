@@ -32,14 +32,31 @@ for level in levels:
         "obstacle error": 0,
         "unexpected error": 0,
         "not submitted": 0,
-        "correct_answers_by": []
+        "correct_answers_by": [],
+        "is": 0,
+        "=": 0,
+        "(": 0,
+        ")": 0
     }
     for record in records:
-        print(record["email"])
         details[record["type"]] += 1
+        commands = record["commands"]
+        details["is"] += commands.count(" is ")
+        details["="] += commands.count("=")
+        details["("] += commands.count("(")
+        details[")"] += commands.count(")")
+        bracket_exists = False
+        if commands.count("("):
+            bracket_exists = True
+        if commands.count(")"):
+            bracket_exists = True
+        if bracket_exists:
+            print(record["email"])
+            print(commands)
+            print("--------------")
         if record["type"] == "correct" and record["email"] not in details["correct_answers_by"]:
             details["correct_answers_by"].append(record["email"])
             
-    client[db]['LevelWiseDetails'].insert_one(details)
+    # client[db]['LevelWiseDetails'].insert_one(details)
         
 
