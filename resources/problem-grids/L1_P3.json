@@ -1,7 +1,6 @@
 {
     "problem": {
         "problem_type": "value_match",
-        "problem_spec": "Level 1: Problem 3",
         "statement": "AryaBota wants to equally share all the coins in this grid with a friend. How many coins does each one get?"
     },
     "initial_state": {

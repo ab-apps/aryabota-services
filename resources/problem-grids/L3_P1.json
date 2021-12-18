@@ -1,7 +1,6 @@
 {
     "problem": {
         "problem_type": "state_match",
-        "problem_spec": "Level 3: Problem 1",
         "statement": "Loop to colour the boundary of the grid."
     },
     "initial_state": {

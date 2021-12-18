@@ -1,7 +1,6 @@
 {
     "problem": {
         "problem_type": "state_match",
-        "problem_spec": "Level 3: Problem 2",
         "statement": "Colour alternate boxes in the row."
     },
     "initial_state": {

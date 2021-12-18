@@ -25,7 +25,6 @@ def setup_grid_and_bot(problem):
     problem_details = problem["problem"]
     problem_type = problem_details["problem_type"]
     statement = problem_details["statement"]
-    problem_spec = problem_details["problem_spec"]
     state = problem["initial_state"]
     bot = CoinSweeper.get_instance()
     coin_sweeper_state = state["coin_sweeper"]
@@ -49,7 +48,7 @@ def setup_grid_and_bot(problem):
         grid_state["obstacles"] = None
     if not "homes" in grid_state:
         grid_state["homes"] = None
-    grid.configure(rows, columns, grid_state["coins"], coins_per_position, grid_state["obstacles"], obstacles_per_position, grid_state["homes"], statement, problem_spec, problem_type, answer)
+    grid.configure(rows, columns, grid_state["coins"], coins_per_position, grid_state["obstacles"], obstacles_per_position, grid_state["homes"], statement, problem_type, answer)
 
 def initialise(problem_file_path):
     """Initialises chosen problem"""

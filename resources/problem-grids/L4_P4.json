@@ -1,7 +1,6 @@
 {
     "problem": {
         "problem_type": "value_match",
-        "problem_spec": "Level 3: Problem 2",
         "statement": "Loop to count the total number of coins in the grid"
     },
     "initial_state": {

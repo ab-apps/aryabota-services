@@ -1,7 +1,6 @@
 {
     "problem": {
         "problem_type": "value_match",
-        "problem_spec": "Level 2: Problem 1",
         "statement": "Are there exactly 5 coins in this grid?"
     },
     "initial_state": {
