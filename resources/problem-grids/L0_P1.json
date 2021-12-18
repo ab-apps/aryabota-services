@@ -1,7 +1,6 @@
 {
     "problem": {
         "problem_type": "state_match",
-        "problem_spec": "Level 0: Problem 1",
         "statement": "Navigate the bot through a maze of obstacles and reach home."
     },
     "initial_state": {

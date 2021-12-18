@@ -1,7 +1,6 @@
 {
     "problem": {
         "problem_type": "state_match",
-        "problem_spec": "Level 0: Problem 2",
         "statement": "Colour all the boxes with houses in the grid."
     },
     "initial_state": {

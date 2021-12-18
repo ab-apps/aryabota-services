@@ -1,7 +1,6 @@
 {
     "problem": {
         "problem_type": "value_match",
-        "problem_spec": "Level 2: Problem 3",
         "statement": "Are there less than 30 coins in this grid?"
     },
     "initial_state": {

@@ -22,9 +22,9 @@ class Grid:
         self.rows = 1
         self.columns = 1
         self.homes = self.coins = self.coloured = self.coins_per_position = self.obstacles = self.obstacles_per_position = []
-        self.statement = self.problem_spec = ""
+        self.statement = ""
 
-    def configure(self, rows, columns, coins = None, coins_per_position = None, obstacles = None, obstacles_per_position = None, homes = None, statement = None, problem_spec = None, problem_type = None, answer = None):
+    def configure(self, rows, columns, coins = None, coins_per_position = None, obstacles = None, obstacles_per_position = None, homes = None, statement = None, problem_type = None, answer = None):
         """Configure attributes"""
         self.rows = rows
         self.columns = columns
@@ -33,7 +33,6 @@ class Grid:
         self.coins = self.coins_per_position = self.obstacles = self.obstacles_per_position = zero_coins
         self.coloured = []
         self.statement = statement
-        self.problem_spec = problem_spec
         self.answer = answer
         self.problem_type = problem_type
         if coins is not None:
@@ -79,7 +78,6 @@ class Grid:
                 "obstacles_per_position": self.obstacles_per_position,
                 "homes": self.homes,
                 "statement": self.statement,
-                "problem_spec": self.problem_spec,
                 "coloured": self.coloured
             }
         return {}

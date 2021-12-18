@@ -1,7 +1,6 @@
 {
     "problem": {
         "problem_type": "state_match",
-        "problem_spec": "Level 4: Problem 2",
         "statement": "Loop through the grid to get home."
     },
     "initial_state": {

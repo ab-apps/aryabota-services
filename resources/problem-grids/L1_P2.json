@@ -1,7 +1,6 @@
 {
     "problem": {
         "problem_type": "value_match",
-        "problem_spec": "Level 1: Problem 2",
         "statement": "On Monday, the robot takes the shorter path home, and counts the number of coins along the way as C1. On Tuesday, the robot takes the longer path home, and counts the number of coins as C2. What is the difference between C1 and C2?"
     },
     "initial_state": {
