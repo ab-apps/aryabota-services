@@ -39,10 +39,12 @@ class_mappings = {
     },
     "initial_state.aryabota.dir": {
         "class": "aryabota",
-        "attribute_name": "dir"
+        "attribute_name": "dir",
+        "default": "down"
     },
     "initial_state.aryabota.pen": {
         "class": "aryabota",
-        "attribute_name": "pen"
+        "attribute_name": "pen",
+        "default": "down"
     }
 }
