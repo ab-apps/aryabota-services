@@ -6,7 +6,7 @@ import logging
 
 from control_hub import *
 from services.grid import Grid
-from services.coin_sweeper import CoinSweeper
+from services.arya_bota import AryaBota
 from services.utils import get_custom_error
 from languages.english import english_lexer, english_parser
 
@@ -48,7 +48,7 @@ def make_command(command, value = None):
             ]
         }
 
-bot = CoinSweeper.get_instance()
+bot = AryaBota.get_instance()
 grid = Grid.get_instance()
 
 def understand(commands):

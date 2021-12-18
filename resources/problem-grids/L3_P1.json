@@ -10,7 +10,7 @@
                 "column": 4
             }
         },
-        "coin_sweeper": {
+        "arya_bota": {
             "pen": "down",
             "position": {
                 "row": 1,
@@ -22,7 +22,7 @@
     "answer": {
         "type": "strict",
         "state": {
-            "coin_sweeper": {
+            "arya_bota": {
             },
             "grid": {
                 "coloured": [
