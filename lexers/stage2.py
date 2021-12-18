@@ -12,6 +12,8 @@ tokens = [
     'SUBMIT',
     'PRINT',
     'NEWLINE',
+    'BEGIN',
+    'END',
     'OTHERS'
 ]
 
@@ -55,6 +57,12 @@ def t_PRINT(t):
     t.value = "print({value})".format(value=value)
     return t
 
+def t_REPEAT(t):
+    r'repeat[ ]*.*'
+    times=t.split(' ')[1]
+    t.value = "for repeat in range({times}):"
+    return t
+
 def t_NEWLINE(t):
     r'\n+'
     t.value = "\n"
@@ -63,6 +71,18 @@ def t_NEWLINE(t):
 def t_OTHERS(t):
     r'.'
     t.type = 'OTHERS'
+    return t
+
+def t_BEGIN(t):
+    r'begin'
+    t.type='BEGIN'
+    t.value='   '
+    return t
+
+def t_END(t):
+    r'end'
+    t.type='END'
+    t.value=''
     return t
 
 def t_error(t):
