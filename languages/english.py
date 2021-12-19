@@ -4,8 +4,8 @@ import logging
 
 from services.utils import convert_english_pseudocode_to_python
 from control_hub import *
-from services.grid import Grid
-from services.arya_bota import AryaBota
+from services.singleton_classes import Grid
+from services.singleton_classes import AryaBota
 
 bot = AryaBota.get_instance()
 grid = Grid.get_instance()

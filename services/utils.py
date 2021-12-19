@@ -1,5 +1,6 @@
 import json
-from services.grid import Grid
+from services.mappings import ANSWER, PROBLEM_TYPE
+from services.singleton_classes import Problem
 from copy import deepcopy
 from jsonschema import RefResolver, Draft7Validator
 
@@ -61,17 +62,19 @@ def wrap(obj, compare_type):
             obj[key] = wrap(obj[key], compare_type)
         obj = DictCompareWrapper(obj)
     elif isinstance(obj, list):
-        for i in range(len(obj)): #pylint: disable=consider-using-enumerate
-            obj[i] = wrap(obj[i], compare_type)
+        # TODO: Check this!!
+        obj = [wrap(item, compare_type) for item in obj]
+        # for i in range(len(obj)): #pylint: disable=consider-using-enumerate
+        #     obj[i] = wrap(obj[i], compare_type)
         obj = ListCompareWrapper(obj, compare_type)
     return obj
 
 def compare_states(answer, submitted_answer):
-        """Comparing states"""
-        reqd_state = deepcopy(answer["state"])
-        submitted_state = deepcopy(submitted_answer)
-        compare_type = answer["type"]
-        return wrap(reqd_state, compare_type) == wrap(submitted_state, compare_type)
+    """Comparing states"""
+    reqd_state = deepcopy(answer["state"])
+    submitted_state = deepcopy(submitted_answer)
+    compare_type = answer["type"]
+    return wrap(reqd_state, compare_type) == wrap(submitted_state, compare_type)
 
 def compare_values(answer, submitted_answer):
     """Comparing values"""
@@ -87,9 +90,9 @@ def compare_values(answer, submitted_answer):
 
 def check_answer(submitted_answer):
     """Check Answer"""
-    grid = Grid.get_instance()
-    answer = grid.get_answer()
-    problem_type = grid.get_problem_type()
+    problem = Problem.get_instance()
+    problem_type = problem.get(PROBLEM_TYPE)
+    answer = problem.get(ANSWER)
     succeeded = False
     message = "Not implemented yet!"
     if problem_type == "value_match":
@@ -99,13 +102,13 @@ def check_answer(submitted_answer):
     if succeeded:
         message = 'Correct answer!'
     else:
-        message = 'Wrong answer, please try again'
+        message = 'Wrong answer, please try again.'
     return {
         "succeeded": succeeded,
         "message": message
     }
 
-# Utils
+# Schema Linting Utils
 def build_schema_and_store():
     """Build the JSON Schema and Store for Resolver and Draft7Validator"""
     schema_file = open("resources/schema/problem.json")

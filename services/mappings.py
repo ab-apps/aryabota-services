@@ -1,50 +1,81 @@
-class_mappings = {
+# Attribute Constants
+PROBLEM_TYPE = "problem_type"
+STATEMENT = "statement"
+ANSWER = "answer"
+ROWS = "rows"
+COLUMNS = "columns"
+HOMES = "homes"
+OBSTACLES = "obstacles"
+COINS = "coins"
+COLOURED = "coloured"
+ROW = "row"
+COLUMN = "column"
+DIR = "dir"
+PEN = "pen"
+
+# Schema Constants
+POSITION = "position"
+NUMBER = "number"
+
+# Attribute Mappings
+attributes = {
     "problem.problem_type": {
-        "class": "problem",
-        "attribute_name": "type"
+        "class": "Problem",
+        "attribute_name": PROBLEM_TYPE
     },
     "problem.statement": {
-        "class": "problem",
-        "attribute_name": "statement"
+        "class": "Problem",
+        "attribute_name": STATEMENT
     },
     "problem.answer": {
-        "class": "problem",
-        "attribute_name": "answer"
+        "class": "Problem",
+        "attribute_name": ANSWER,
+        "default": None
     },
     "initial_state.grid.dimensions.row": {
-        "class": "grid",
-        "attribute.name": "rows"
+        "class": "Grid",
+        "attribute_name": ROWS
     },
     "initial_state.grid.dimensions.column": {
-        "class": "grid",
-        "attribute.name": "columns"
+        "class": "Grid",
+        "attribute_name": COLUMNS
     },
     "initial_state.grid.homes": {
-        "class": "grid",
-        "attribute.name": "homes",
+        "class": "Grid",
+        "attribute_name": HOMES,
         "default": []
     },
     "initial_state.grid.obstacles": {
-        "class": "grid",
-        "attribute.name": "obstacles",
+        "class": "Grid",
+        "attribute_name": OBSTACLES,
         "default": []
     },
-    "initial_state.aryabota.position.row": {
-        "class": "aryabota",
-        "attribute_name": "row"
+    "initial_state.grid.coins": {
+        "class": "Grid",
+        "attribute_name": COINS,
+        "default": []
     },
-    "initial_state.aryabota.position.column": {
-        "class": "aryabota",
-        "attribute_name": "column"
+    "initial_state.grid.coloured": {
+        "class": "Grid",
+        "attribute_name": COLOURED,
+        "default": []
     },
-    "initial_state.aryabota.dir": {
-        "class": "aryabota",
-        "attribute_name": "dir",
+    "initial_state.arya_bota.position.row": {
+        "class": "AryaBota",
+        "attribute_name": ROW
+    },
+    "initial_state.arya_bota.position.column": {
+        "class": "AryaBota",
+        "attribute_name": COLUMN
+    },
+    "initial_state.arya_bota.dir": {
+        "class": "AryaBota",
+        "attribute_name": DIR,
         "default": "down"
     },
-    "initial_state.aryabota.pen": {
-        "class": "aryabota",
-        "attribute_name": "pen",
+    "initial_state.arya_bota.pen": {
+        "class": "AryaBota",
+        "attribute_name": PEN,
         "default": "down"
     }
 }

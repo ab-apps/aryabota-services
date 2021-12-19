@@ -2,64 +2,52 @@ import yaml
 import json
 import logging
 
-from services.arya_bota import AryaBota
-from services.grid import Grid
-from services.utils import get_for_every_position
+from services.singleton_classes import AryaBota, Problem
+from services.singleton_classes import Grid
+from services.mappings import attributes
 
 """ Problem Service """
 
-def get_initial_state(problem):
+def get_initial_state():
     """Return intial state of problem"""
-    problem_details = problem["problem"]
-    grid = Grid.get_instance()
-    bot = AryaBota.get_instance()
-    grid_state = grid.get_state()
-    arya_bota_state = bot.get_state()
-    grid_state.update(arya_bota_state)
-    problem_type = problem_details["problem_type"]
-    grid_state["type"] = problem_type
-    return grid_state
+    state = Problem.get_instance().get_state()
+    state.update(Grid.get_instance().get_state())
+    state.update(AryaBota.get_instance().get_state())
+    return state
 
-def setup_grid_and_bot(problem):
-    """Initialise the state of the grid"""
-    problem_details = problem["problem"]
-    problem_type = problem_details["problem_type"]
-    statement = problem_details["statement"]
-    state = problem["initial_state"]
-    bot = AryaBota.get_instance()
-    arya_bota_state = state["arya_bota"]
-    if "pen" in arya_bota_state:
-        bot.configure(arya_bota_state["position"]["row"], arya_bota_state["position"]["column"], arya_bota_state["dir"], arya_bota_state["pen"])
-    else:
-        bot.configure(arya_bota_state["position"]["row"], arya_bota_state["position"]["column"], arya_bota_state["dir"], "down")
-    answer = problem["answer"]
-    grid = Grid.get_instance()
-    grid_state = state["grid"]
-    rows = grid_state["dimensions"]["row"]
-    columns = grid_state["dimensions"]["column"]
-    coins_per_position = obstacles_per_position = None
-    if "coins" in grid_state:
-        coins_per_position = get_for_every_position(grid_state["coins"], rows, columns)
-    else:
-        grid_state["coins"] = None
-    if "obstacles" in grid_state:
-        obstacles_per_position = get_for_every_position(grid_state["obstacles"], rows, columns, False)
-    else:
-        grid_state["obstacles"] = None
-    if not "homes" in grid_state:
-        grid_state["homes"] = None
-    grid.configure(rows, columns, grid_state["coins"], coins_per_position, grid_state["obstacles"], obstacles_per_position, grid_state["homes"], statement, problem_type, answer)
+def set_up(problem):
+    """Initialise the state of the programming environment"""
+    attributes_per_class = {
+        "Problem": {},
+        "Grid": {},
+        "AryaBota": {}
+    }
+    for path in attributes:
+        value = None
+        try:
+            path_string = "problem" + "".join(["['" + key + "']" for key in path.split('.')])
+            value = eval(path_string)
+        except KeyError:
+            if "default" in attributes[path]:
+                value = attributes[path]["default"]
+            else:
+                raise KeyError("Check the Problem Schema, required field(s) missing!")
+        attributes_per_class[attributes[path]["class"]][attributes[path]["attribute_name"]] = value
+
+    Grid.get_instance().configure(attributes_per_class["Grid"])
+    AryaBota.get_instance().configure(attributes_per_class["AryaBota"])
+    Problem.get_instance().configure(attributes_per_class["Problem"])            
 
 def initialise(problem_file_path):
     """Initialises chosen problem"""
     # Read problem
     with open(problem_file_path) as problem_file:
         problem = json.loads(problem_file.read())
-    setup_grid_and_bot(problem)
-    return get_initial_state(problem)
+    set_up(problem)
+    return get_initial_state()
 
 def render(level):
-    """ Renders selected problem grid """
+    """Renders selected problem"""
     with open('config.yaml') as config_file:
         config = yaml.load(config_file, Loader=yaml.FullLoader)
         problem_file_path = config['levels'][level]['file']
