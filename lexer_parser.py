@@ -88,6 +88,8 @@ def understand(commands):
         exception_raised = None
         try:
             exec(python_program) # pylint: disable=exec-used
+            if "print_value(" in python_program:
+                python_program = python_program.replace("print_value(","print(")
         except Exception as e:
             exception_raised = get_custom_error(e)
             logging.error(f'Exception while executing Python program: {e}', exc_info=True)

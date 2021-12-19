@@ -52,7 +52,7 @@ def t_SUBMIT(t):
 def t_PRINT(t):
     r'print[ ]*.*'
     value = ''.join(t.value.split('print')).strip()
-    t.value = "print({value})".format(value=value)
+    t.value = "print_value({value})".format(value=value)
     return t
 
 def t_NEWLINE(t):
