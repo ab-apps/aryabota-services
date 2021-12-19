@@ -110,7 +110,7 @@
                 }
             ]    
         },
-        "coin_sweeper": {
+        "arya_bota": {
             "pen": "up",
             "position": {
                 "row": 1,
@@ -122,7 +122,7 @@
     "answer": {
         "type": "strict",
         "state": {
-            "coin_sweeper": {
+            "arya_bota": {
                 "position": {
                     "row": 9,
                     "column": 1

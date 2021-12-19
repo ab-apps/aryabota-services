@@ -2,7 +2,7 @@ import yaml
 import json
 import logging
 
-from services.coin_sweeper import CoinSweeper
+from services.arya_bota import AryaBota
 from services.grid import Grid
 from services.utils import get_for_every_position
 
@@ -12,10 +12,10 @@ def get_initial_state(problem):
     """Return intial state of problem"""
     problem_details = problem["problem"]
     grid = Grid.get_instance()
-    bot = CoinSweeper.get_instance()
+    bot = AryaBota.get_instance()
     grid_state = grid.get_state()
-    coin_sweeper_state = bot.get_state()
-    grid_state.update(coin_sweeper_state)
+    arya_bota_state = bot.get_state()
+    grid_state.update(arya_bota_state)
     problem_type = problem_details["problem_type"]
     grid_state["type"] = problem_type
     return grid_state
@@ -26,12 +26,12 @@ def setup_grid_and_bot(problem):
     problem_type = problem_details["problem_type"]
     statement = problem_details["statement"]
     state = problem["initial_state"]
-    bot = CoinSweeper.get_instance()
-    coin_sweeper_state = state["coin_sweeper"]
-    if "pen" in coin_sweeper_state:
-        bot.configure(coin_sweeper_state["position"]["row"], coin_sweeper_state["position"]["column"], coin_sweeper_state["dir"], coin_sweeper_state["pen"])
+    bot = AryaBota.get_instance()
+    arya_bota_state = state["arya_bota"]
+    if "pen" in arya_bota_state:
+        bot.configure(arya_bota_state["position"]["row"], arya_bota_state["position"]["column"], arya_bota_state["dir"], arya_bota_state["pen"])
     else:
-        bot.configure(coin_sweeper_state["position"]["row"], coin_sweeper_state["position"]["column"], coin_sweeper_state["dir"], "down")
+        bot.configure(arya_bota_state["position"]["row"], arya_bota_state["position"]["column"], arya_bota_state["dir"], "down")
     answer = problem["answer"]
     grid = Grid.get_instance()
     grid_state = state["grid"]

@@ -104,7 +104,7 @@
                 }
             ]
         },
-        "coin_sweeper": {
+        "arya_bota": {
             "pen": "down",
             "position": {
                 "row": 1,
@@ -117,7 +117,7 @@
         "type": "strict",
         "state": {
             "grid": {},
-            "coin_sweeper": {
+            "arya_bota": {
                 "position": {
                     "row": 7,
                     "column": 7
