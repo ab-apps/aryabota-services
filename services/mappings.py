@@ -27,7 +27,7 @@ attributes = {
         "class": "Problem",
         "attribute_name": STATEMENT
     },
-    "problem.answer": {
+    "answer": {
         "class": "Problem",
         "attribute_name": ANSWER,
         "default": None
