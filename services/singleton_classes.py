@@ -1,15 +1,69 @@
-"""the Singleton AryaBota robot, its attributes and state"""
-from services.grid import Grid
+"""The state of the Programming Environment is maintained through these Singleton classes"""
 
-GRID = Grid.get_instance()
+from services.mappings import ANSWER, COINS, COLOURED, COLUMN, COLUMNS, DIR, HOMES, NUMBER, OBSTACLES, PEN, POSITION, PROBLEM_TYPE, ROW, ROWS, STATEMENT
+
+
+class Grid:
+    """ Grid class and its attributes """
+    __instance = None
+    @staticmethod
+    def get_instance():
+        """Static access method"""
+        if Grid.__instance is None:
+            Grid()
+        return Grid.__instance
+
+    def __init__(self):
+        """Virtually private constructor"""
+        if Grid.__instance is not None:
+            raise Exception("This class is a Singleton!")
+        Grid.__instance = self 
+        
+    def configure(self, attributes):
+        # to deal with, coins and obstacles per position
+        for key in attributes:
+            setattr(self, key, attributes[key])
+        self.coloured = []
+
+    def colour(self, pos):
+        """Colouring the trail as required"""
+        if pos not in self.coloured:
+            self.coloured.append(pos)
+
+    def get_number_of_coins_at_pos(self, row, column):
+        """Get number of coins at a given position in the grid, ie, (row, column)"""
+        if row <= self.get(ROWS) and column <= self.get(COLUMNS):
+            for i in self.get(COINS):
+                if i[POSITION][ROW] == row and i[POSITION][COLUMN] == column:
+                    return i[NUMBER]
+        # TODO design choice: if row and column are outside the grid, do we want to raise an exception?
+        return 0
+
+    def get(self, key):
+        return getattr(self, key)
+
+    def get_state(self):
+        state = {}
+        for attribute in [ROWS, COLUMNS, COINS, OBSTACLES, HOMES, COLOURED]:
+            state[attribute] = self.get(attribute)
+        return state
+
+    def get_state_for_answer(self):
+        """Returning state for answer check"""
+        if self.__instance:
+            return {
+                "dimensions": {
+                    "row": self.rows,
+                    "column": self.columns
+                },
+                "coins": self.coins,
+                "obstacles": self.obstacles,
+                "coloured": self.coloured
+            }
+        return {}
 
 class AryaBota:
-    """AryaBota robot class
-    Properties:
-        row: current row (1-indexed)
-        column: current column (1-indexed)
-        dir: current direction the robot is facing (can be up, left, down, right)
-    """
+    """AryaBota robot and its attributes"""
     __instance = None
     @staticmethod
     def get_instance():
@@ -23,38 +77,21 @@ class AryaBota:
         if AryaBota.__instance is not None:
             raise Exception("This class is a singleton!")
         AryaBota.__instance = self
-        self.row = 1
-        self.column = 1
-        self.dir = "down"
+
+    def configure(self, attributes):
+        for key in attributes:
+            setattr(self, key, attributes[key])
         self.trail = []
-        self.pen = "up"
         self.append_position_to_trail()
 
-    def configure(self, row, column, direction, pen = None):
-        """Configure attributes"""
-        self.row = row
-        self.column = column
-        self.dir = direction
-        self.trail.clear()
-        self.append_position_to_trail()
-        if pen is not None:
-            self.pen = pen
-
-    # utility
-    def get_dir(self):
-        """Get current direction the AryaBota robot is facing"""
-        return self.dir
+    def get(self, key):
+        return getattr(self, key)
 
     def get_state(self):
-        """Get current state of the AryaBota robot's position wrapped in a dictionary"""
-        grid_state = GRID.get_instance().get_state()
-        return {
-            "row": self.row,
-            "column": self.column,
-            "dir": self.dir,
-            "pen": self.pen,
-            "coloured": grid_state["coloured"]
-        }
+        state = {}
+        for attribute in [ROW, COLUMN, DIR, PEN]:
+            state[attribute] = self.get(attribute)
+        return state
 
     def get_state_for_answer(self):
         """Get current state of the AryaBota robot's position wrapped in a dictionary"""
@@ -66,6 +103,7 @@ class AryaBota:
         }
 
     def append_position_to_trail(self, row = None, column = None):
+        GRID = Grid.get_instance()
         """Append current position to trail"""
         if row is None and column is None:
             pos = {
@@ -96,6 +134,7 @@ class AryaBota:
     def move(self, steps):
         """Move the AryaBota robot in the direction in which it is facing
         steps: specified number of steps to move it by"""
+        GRID = Grid.get_instance()
         state = GRID.get_state()
         obstacle_message = "There's an obstacle, cannot move ahead"
         boundary_message = "This position does not exist on the grid!"
@@ -166,3 +205,34 @@ class AryaBota:
     def set_pen(self, status = "up"):
         """Toggle the status of pen"""
         self.pen = status
+
+class Problem:
+    """Problem and its attributes"""
+    __instance = None
+    @staticmethod
+    def get_instance():
+        """Static access method"""
+        if Problem.__instance is None:
+            Problem()
+        return Problem.__instance
+
+    def __init__(self):
+        """Virtually private constructor"""
+        if Problem.__instance is not None:
+            raise Exception("This class is a Singleton!")
+        Problem.__instance = self
+    
+    def configure(self, attributes):
+        for key in attributes:
+            setattr(self, key, attributes[key])
+
+    def get(self, key):
+        return getattr(self, key)
+
+    def get_state(self):
+        state = {}
+        for attribute in [PROBLEM_TYPE, STATEMENT]:
+            state[attribute] = self.get(attribute)
+        return state
+
+    

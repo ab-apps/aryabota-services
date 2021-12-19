@@ -1,6 +1,6 @@
 """Importing Grid Module"""
-from grid import Grid
-from arya_bota import AryaBota
+from singleton_classes import Grid
+from singleton_classes import AryaBota
 
 class DictCompareWrapper:
     """Comparing dictionaries"""

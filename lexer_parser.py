@@ -5,8 +5,8 @@ import yaml
 import logging
 
 from control_hub import *
-from services.grid import Grid
-from services.arya_bota import AryaBota
+from services.singleton_classes import Grid
+from services.singleton_classes import AryaBota
 from services.utils import get_custom_error
 from languages.english import english_lexer, english_parser
 

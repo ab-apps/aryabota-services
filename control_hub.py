@@ -2,9 +2,9 @@
 # Writes outcomes to a result file
 import json
 import yaml
-
-from services.grid import Grid
-from services.arya_bota import AryaBota
+from services.mappings import DIR
+from services.singleton_classes import Grid
+from services.singleton_classes import AryaBota
 from services.utils import check_answer
 
 # Opening config to read grid attributes
@@ -76,7 +76,7 @@ def get_number_of_coins(row = None, column = None):
         row = BOT.my_row()
     if column is None:
         column = BOT.my_column()
-    return GRID.get_number_of_coins(row,column)
+    return GRID.get_number_of_coins_at_pos(row,column)
 
 def obstacle_ahead(row = None, column = None):
     """return if obstacle ahead"""
@@ -85,7 +85,7 @@ def obstacle_ahead(row = None, column = None):
     if column is None:
         column = BOT.my_column()
     state = GRID.get_state()
-    direction = BOT.get_dir()
+    direction = BOT.get(DIR)
     if direction == "down":
         if row+1 <= GRID.rows:
             if({'position': {'row': row+1, 'column': column}} in state['obstacles']):
@@ -119,7 +119,7 @@ def obstacle_behind(row = None, column = None):
     if column is None:
         column = BOT.my_column()
     state = GRID.get_state()
-    direction = BOT.get_dir()
+    direction = BOT.get(DIR)
     if direction == "up":
         if row+1 <= GRID.rows:
             if({'position': {'row': row+1, 'column': column}} in state['obstacles']):
@@ -153,7 +153,7 @@ def obstacle_left(row = None, column = None):
     if column is None:
         column = BOT.my_column()
     state = GRID.get_state()
-    direction = BOT.get_dir()
+    direction = BOT.get(DIR)
     if direction == "left":
         if row+1 <= GRID.rows:
             if({'position': {'row': row+1, 'column': column}} in state['obstacles']):
@@ -187,7 +187,7 @@ def obstacle_right(row = None, column = None):
     if column is None:
         column = BOT.my_column()
     state = GRID.get_state()
-    direction = BOT.get_dir()
+    direction = BOT.get(DIR)
     if direction == "right":
         if row+1 <= GRID.rows:
             if({'position': {'row': row+1, 'column': column}} in state['obstacles']):
