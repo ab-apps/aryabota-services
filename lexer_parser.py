@@ -3,6 +3,8 @@
 import json
 import yaml
 import logging
+import multiprocessing
+import time
 
 from control_hub import *
 from services.grid import Grid
@@ -50,6 +52,12 @@ def make_command(command, value = None):
 
 bot = AryaBota.get_instance()
 grid = Grid.get_instance()
+python_program = None
+
+def execute():
+    global python_program
+    #exec(str(python_program))
+    exec("while 1: turn()")
 
 def understand(commands):
     """Convert pseudo-code to Python code to execute"""
@@ -64,6 +72,7 @@ def understand(commands):
                 commands = commands.replace("    ", "\t")
                 commands = commands.strip("\n")
                 commands = commands.replace("\r"," ")
+                global python_program
                 python_program = english_parser.parse(commands, lexer=english_lexer)
                 print(python_program)
         except Exception as exception:
@@ -74,7 +83,14 @@ def understand(commands):
     else:
         exception_raised = None
         try:
-            exec(python_program) # pylint: disable=exec-used
+            #exec(python_program) # pylint: disable=exec-used
+            p = multiprocessing.Process(target=execute)
+            p.start()
+            p.join(10)
+            if p.is_alive():
+                print("running... let's kill it...")
+                p.kill()
+                p.join()
         except Exception as e:
             exception_raised = get_custom_error(e)
             logging.error(f'Exception while executing Python program: {e}', exc_info=True)
