@@ -3,7 +3,6 @@ import urllib
 import ssl
 import datetime
 import pytz
-import json
 
 MONGODB_URL = "mongodb+srv://admin:{password}@aryabota-db-cluster.kbxud.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
 MONGODB_PASSWORD = "stressbots@123"
@@ -25,7 +24,7 @@ right = []
 def check_answer(record):
     if record["type"] == "correct":
         commands = record["commands"]
-        if "/2" in commands:
+        if "/" in commands:
             right.append(record["email"])
             print("---------")
             return True
@@ -37,7 +36,12 @@ records = client[db]['CleanedCommands'].find({ "level": "1.3" })
 records = list(records)
 correct = sum(check_answer(record) for record in records)
 print(correct)
-
 print(wrong)
 print(right)
+
+# for record in records:
+#     if record["type"] == "syntax error":
+#         print(record["email"])
+#         print(record["commands"])
+#         print("-------")
     

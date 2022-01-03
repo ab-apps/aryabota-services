@@ -8,7 +8,8 @@ from control_hub import *
 from services.grid import Grid
 from services.arya_bota import AryaBota
 from services.utils import get_custom_error
-from languages.english import english_lexer, english_parser
+from lexers.stage1 import stage1_lexer
+from lexers.stage2 import stage2_lexer
 
 # utilities
 class LexerError(Exception):
@@ -51,6 +52,16 @@ def make_command(command, value = None):
 bot = AryaBota.get_instance()
 grid = Grid.get_instance()
 
+def run_lexer(commands, lexer):
+    tokens = []
+    lexer.input(commands)
+    token = lexer.token()
+    while token is not None:
+        tokens.append(token.value)
+        token = lexer.token()
+    commands = "".join(tokens)
+    return commands
+
 def understand(commands):
     """Convert pseudo-code to Python code to execute"""
     # reinitialize response file
@@ -64,7 +75,9 @@ def understand(commands):
                 commands = commands.replace("    ", "\t")
                 commands = commands.strip("\n")
                 commands = commands.replace("\r"," ")
-                python_program = english_parser.parse(commands, lexer=english_lexer)
+                print(commands)
+                post_stage1_commands = run_lexer(commands, stage1_lexer)
+                python_program = run_lexer(post_stage1_commands, stage2_lexer)
                 print(python_program)
         except Exception as exception:
             logging.error(f'Exception occured', exc_info=True)

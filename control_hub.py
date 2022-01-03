@@ -230,7 +230,7 @@ def home():
     return False
 
 
-def print_value(expr):
+def print(expr):
     """print value"""
     with open(results_file_path) as results_file:
         results = json.loads(results_file.read())
