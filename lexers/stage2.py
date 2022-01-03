@@ -12,12 +12,11 @@ tokens = [
     'SUBMIT',
     'PRINT',
     'NEWLINE',
-    'BEGIN',
-    'END',
+    'REPEAT',
     'OTHERS'
 ]
 
-t_ignore = ' '
+#t_ignore = ' '
 
 def t_MOVE(t):
     r'move[ ]*[0-9]+'
@@ -59,8 +58,14 @@ def t_PRINT(t):
 
 def t_REPEAT(t):
     r'repeat[ ]*.*'
-    times=t.split(' ')[1]
-    t.value = "for repeat in range({times}):"
+    substr1 = "repeat"
+    substr2 = "times"
+    index1 = t.value.index(substr1)
+    index2 = t.value.index(substr2)
+    times = ""
+    for i in range(index1 + len(substr1), index2):
+        times = times + t.value[i]
+    t.value = "for i in range({value}):".format(value=int(times))
     return t
 
 def t_NEWLINE(t):
@@ -71,18 +76,6 @@ def t_NEWLINE(t):
 def t_OTHERS(t):
     r'.'
     t.type = 'OTHERS'
-    return t
-
-def t_BEGIN(t):
-    r'begin'
-    t.type='BEGIN'
-    t.value='   '
-    return t
-
-def t_END(t):
-    r'end'
-    t.type='END'
-    t.value=''
     return t
 
 def t_error(t):

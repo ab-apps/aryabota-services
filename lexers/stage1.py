@@ -17,7 +17,7 @@ tokens = [
     'OTHERS'
 ]
 
-t_ignore = ' '
+#t_ignore = ' '
 
 def t_COMMENT(t):
     r'\#(.)*\n'
