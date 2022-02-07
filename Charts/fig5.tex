@@ -1,0 +1,31 @@
+% This file was created with tikzplotlib v0.10.1.
+\begin{tikzpicture}
+
+\definecolor{dimgray85}{RGB}{85,85,85}
+\definecolor{gray}{RGB}{128,128,128}
+\definecolor{limegreen2517876}{RGB}{25,178,76}
+
+\begin{axis}[
+axis line style={white},
+tick align=outside,
+tick pos=left,
+x grid style={gray},
+xlabel=\textcolor{dimgray85}{Number of Users},
+xmajorgrids,
+xmin=0, xmax=11.55,
+xtick style={color=dimgray85},
+y grid style={gray},
+ylabel=\textcolor{dimgray85}{Grade},
+ymajorgrids,
+ymin=-0.59, ymax=3.59,
+ytick style={color=dimgray85},
+ytick={0,1,2,3},
+yticklabels={6,7,8,Unknown}
+]
+\draw[draw=none,fill=limegreen2517876,very thin] (axis cs:0,-0.4) rectangle (axis cs:9,0.4);
+\draw[draw=none,fill=limegreen2517876,very thin] (axis cs:0,0.6) rectangle (axis cs:4,1.4);
+\draw[draw=none,fill=limegreen2517876,very thin] (axis cs:0,1.6) rectangle (axis cs:11,2.4);
+\draw[draw=none,fill=limegreen2517876,very thin] (axis cs:0,2.6) rectangle (axis cs:9,3.4);
+\end{axis}
+
+\end{tikzpicture}
