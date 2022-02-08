@@ -1,0 +1,4409 @@
+----
+1
+syntax error
+Turn Right
+----
+2
+syntax error
+go right
+
+----
+3
+syntax error
+go left
+----
+4
+syntax error
+go left;
+----
+5
+syntax error
+3 times right 
+4 times down
+3 times left
+2 times down
+----
+6
+syntax error
+right
+----
+7
+syntax error
+move right 
+----
+8
+syntax error
+move right 4
+
+----
+9
+syntax error
+Turn Right
+Move 3 Steps
+Turn Right
+Move 4 Steps
+Turn Left 
+Move 3 Steps 
+Turn Right
+Move 2 Steps
+----
+10
+syntax error
+turn right
+move 4
+turn down
+
+----
+11
+syntax error
+Go 2 steps left
+Go 1 step 
+----
+12
+syntax error
+turn=right
+----
+13
+syntax error
+turn right
+move 4
+turn down
+
+----
+14
+syntax error
+turn Right
+move 3 Steps
+turn Right
+move 4 Steps
+turn Left 
+move 3 Steps 
+turn Right
+move 2 Steps
+----
+15
+syntax error
+TURN LEFT
+MOVE 3
+TURN RIGHT
+
+----
+16
+syntax error
+TURN LEFT
+MOVE 3
+TURN RIGHT
+
+----
+17
+syntax error
+turn left
+move3tiles
+turn right 
+go 4 tiles
+----
+18
+syntax error
+TURN LEFT
+MOVE 3
+TURN RIGHT
+
+----
+19
+syntax error
+
+turn right 
+go 4 tiles
+----
+20
+syntax error
+turn right
+move 3 steps
+turn right
+move 4 steps
+turn left 
+move 3 steps 
+turn right
+move 2 steps
+----
+21
+syntax error
+TURN RIGHT
+TURN DOWN
+TURN RIGHT
+TURN DOWN
+
+
+----
+22
+syntax error
+turn right
+move 3 steps
+turn right
+move 4 steps
+turn left 
+move 3 steps 
+turn right
+move 2 steps
+----
+23
+syntax error
+turn left
+move 3 
+turn south 
+move 4 
+----
+24
+syntax error
+turn left
+move 3
+turn right
+move 4
+turn left
+move 3
+turn right 
+move 2
+sumbit
+----
+25
+unexpected error
+turn left
+move 3
+turn right
+move 4
+turn left
+move 3 
+turn right
+move 2
+submit
+----
+26
+syntax error
+turn right
+move 3 steps
+turn right
+move 4 steps
+turn left 
+move 3 steps 
+turn right
+move 2 steps
+submit
+----
+27
+syntax error
+turn right
+ move by 3
+ turn down
+ 
+----
+28
+syntax error
+turn right
+ move 3
+ turn down
+ 
+----
+29
+syntax error
+turn left
+move 3
+turn right
+move 4
+turn left
+move 3
+turn right 
+move 2
+sumbit 
+----
+30
+syntax error
+turn left
+move 3
+turn right
+move 4
+turn left
+move 3
+turn right 
+move 2
+sumbit
+----
+31
+syntax error
+turn left
+move 3
+turn right
+move 4
+turn left
+move 3 
+turn right
+move 2
+sumbmit
+----
+32
+syntax error
+turn left
+move 3
+turn right
+move 4
+turn left
+move 3 
+turn down
+----
+33
+syntax error
+turn right
+move 3 step
+turn right
+move 4 steps
+turn left
+move 3 steps
+turn right
+move 2 steps
+sumbbit
+----
+34
+syntax error
+turn right
+move 3 step
+turn right
+move 4 steps
+turn left
+move 3 steps
+turn right
+move 2 steps
+submit
+----
+35
+syntax error
+turn left
+move 3
+turn right
+move 4
+turn left
+move 3 
+turn right
+move 2 
+sumbit
+----
+36
+syntax error
+turn right
+move 3 step
+turn right
+move 4 steps
+turn left
+move 3 steps
+turn right
+move 2 steps
+submit
+----
+37
+syntax error
+turn left
+move 3
+turn right
+move 4
+turn left
+move 3 
+turn right
+move 2 
+sumbit
+----
+38
+syntax error
+turn left
+move 3
+turn right
+move 4
+turn left
+move 3 
+turn right
+move 2 
+sumbit
+----
+39
+syntax error
+turn left 
+move 2
+turn right
+move 2
+sumbit
+----
+40
+syntax error
+turn left 
+move 2
+turn  rigth 
+move 1
+
+
+----
+41
+syntax error
+turn left
+move 4
+sumbit
+----
+42
+unexpected error
+move 1
+turn left
+move 1 
+turn right
+move 3 
+turn left
+move 4 
+turn right
+move 1
+turn left 
+move 2
+submit
+----
+43
+syntax error
+move 1
+turn left
+move 3
+turn left
+move 1
+turn right
+move 
+----
+44
+syntax error
+move 1
+turn left
+move 3
+turn left
+move 1
+turn right
+move 
+----
+45
+syntax error
+move 1
+turn left
+move 3
+turn left
+move 1
+turn right
+move 
+----
+46
+syntax error
+move left
+move 4 steps
+----
+47
+syntax error
+move 7
+submit
+
+----
+48
+syntax error
+move 7
+submit
+
+----
+49
+syntax error
+turn left 
+move 4 
+turn right 
+move 3
+trun left
+move 4
+----
+50
+syntax error
+turn
+move(1)
+
+
+
+----
+51
+syntax error
+turn
+move 1
+
+
+
+----
+52
+syntax error
+turn left
+move 4
+turn right
+move 3
+turn right
+move 4
+sumit
+----
+53
+syntax error
+move 1 
+count
+----
+54
+syntax error
+trun right 
+move 3 
+trun right 
+move 4
+
+----
+55
+syntax error
+trun right 
+move 3 
+trun right 
+move 4
+
+----
+56
+syntax error
+mmove 2
+
+----
+57
+syntax error
+move 2
+trun left 
+----
+58
+syntax error
+move 2
+trun right 
+
+
+----
+59
+syntax error
+print hello
+----
+60
+syntax error
+move 5 
+trun right 
+
+----
+61
+syntax error
+move 2
+trun right 
+move 2 
+
+----
+62
+syntax error
+move 8
+print all of the coins
+----
+63
+syntax error
+move 1
+print the number of coins
+----
+64
+syntax error
+move 1 
+print the number of coins
+move 2 
+print the number of coins
+move 3
+print the number of coins
+----
+65
+syntax error
+move 1
+print number in coins
+----
+66
+syntax error
+move 1
+print the number of coins
+move 2 
+print the number of coins
+move 3 
+print the number of coins
+
+----
+67
+syntax error
+move 1
+print number in coins
+----
+68
+syntax error
+move 1 
+print the number of coins
+move 2 
+print the number of coins
+move 3
+print the number of coins
+----
+69
+syntax error
+move 1
+print number of coins
+move 2 
+print number of coins
+move 3
+print number of coins
+sumbit
+----
+70
+syntax error
+move 3 steps
+print number of coins
+----
+71
+syntax error
+move 3 steps
+print number of coins
+----
+72
+syntax error
+move 1
+print number of coins
+move 2 
+print number of coins
+move 3 
+print number of coins 
+sumbit 10
+----
+73
+syntax error
+move 1
+print number of coins
+move 2 
+print number of coins
+move 3 
+print number of coins 
+sumbit 10
+----
+74
+syntax error
+move 1
+print number of coins
+move 2
+print number of coin
+----
+75
+syntax error
+move 1
+print number of coins
+move 2
+print number of coin
+----
+76
+syntax error
+move 1
+print number of coins 
+move 2
+print number of coins 
+move 3
+print number of coin 
+
+
+
+
+----
+77
+syntax error
+move 1
+print number of coins 
+move 2
+print number of coins 
+move 3
+print number of coin 
+
+
+
+
+----
+78
+syntax error
+turn lift
+move 3
+turn right
+move 4
+turn lift
+move 4
+turn lift
+----
+79
+syntax error
+turn lift
+move 3
+turn right
+move 4
+turn lift
+move 4
+turn lift
+----
+80
+syntax error
+move 3 
+trun right
+move 3 
+trun right
+----
+81
+syntax error
+x is 10 
+print x
+move 2 
+x is x + number of coind
+----
+82
+syntax error
+move 1
+x is number of coins 
+print x
+move 2
+x is number of coins 
+print x
+move 3
+x is the number of coins 
+print x
+move 1
+
+----
+83
+syntax error
+Move C1
+
+----
+84
+syntax error
+move 3
+y is number of coins 
+print x
+move 2
+turn right 
+move 1
+----
+85
+syntax error
+sumbit 20
+
+
+
+----
+86
+syntax error
+move 3
+y is number of coins 
+print x
+----
+87
+syntax error
+x is number of coins
+turn left
+move 3
+x is x + number of coins
+print x
+move 2
+turn right
+move 1
+x is x + number of coins
+print x
+move 2
+turn right
+move 1
+x is x + number of coins
+print x
+move 2
+turn left
+move 1
+x is x + number of coins
+print x
+move 1
+x is x + number of coins
+print x
+turn right
+move 2
+x is x + number of coins
+print x
+move 2
+turn right
+move 5
+turn right
+move 4
+turn right
+move 1
+turn left
+move 1
+x is x + number of coins
+print x
+turn right
+turn right
+move 1
+sumbit x
+
+
+
+----
+88
+syntax error
+move 1 
+x is number of coins
+print x
+move 2
+Z is Z+x number of coins
+print z
+move 3
+y is y+Z number of coins
+print y
+move 1
+turn right
+submit y
+
+----
+89
+syntax error
+move 1 
+x is number of coins
+print x
+move 2
+Z is Z+x number of coins
+print z
+move 3
+y is y+Z number of coins
+print y
+move 1
+turn right
+submit y
+
+----
+90
+syntax error
+Move 1
+----
+91
+syntax error
+move 1 
+x is number of coins
+print x
+move 2
+x is x+x number of coins
+print z
+move 3
+x is x+x number of coins
+print x
+move 1
+turn right
+submit x
+
+----
+92
+syntax error
+move 1
+x is number of coins 
+print x
+move 2
+x is number of coins 
+print x
+move 3
+x is the number of coins 
+print x
+move 1
+
+----
+93
+syntax error
+print "the shorter path home"
+turn left
+move 3 
+C1 is the number of coins
+print C1
+move 2
+turn right
+move 1 
+C1 is C1+number of coins
+print C1
+move 3 
+print "I got ", C1"coins today"
+----
+94
+syntax error
+turn left
+move 3
+C1 is number of coins
+print C1
+move 2
+turn right
+C1+ number of coins
+print C1
+move 3
+
+
+
+
+----
+95
+syntax error
+print "the shorter path home"
+turn left
+move 3 
+C1 is the number of coins
+print C1
+move 2
+turn right
+move 1 
+C1 is C1+number of coins
+print C1
+move 3 
+print "I got ", C1"coins today"
+----
+96
+syntax error
+Print C1
+
+----
+97
+syntax error
+print "the shorter path home"
+turn left
+move 3 
+C1 is the number of coins
+print C1
+move 2
+turn right
+move 1 
+C1 is C1+number of coins
+print C1
+move 3 
+----
+98
+syntax error
+Turn left 
+
+----
+99
+unexpected error
+move 1
+print number of coins
+move 2 
+print number of coins
+move 3 
+print number of coins
+
+----
+100
+syntax error
+print "the shorter path home"
+turn left
+move 3 
+x is the number of coins
+print x
+move 2
+turn right
+move 1 
+x is x+number of coins
+print x
+move 3 
+----
+101
+syntax error
+turn left
+move 3
+x is number of coins
+print x
+move 2
+turn right
+x number of coins
+print x
+move 3
+
+
+
+
+----
+102
+syntax error
+Print C
+
+
+----
+103
+syntax error
+move 1 
+x is number of coins
+print x
+move 2
+x is x+x number of coins
+print x
+move 3
+x is x+x number of coins
+print x
+move 1
+turn right
+submit x
+
+----
+104
+syntax error
+print "the shorter path home"
+turn left
+move 3 
+x is number of coins
+print x
+move 2
+turn right
+move 1 
+x is x+number of coins
+print x
+move 3 
+print "i got",x"coins today"
+----
+105
+syntax error
+Move 2
+
+
+
+----
+106
+syntax error
+trun left 
+move 2 
+trun right 
+ sumbit 
+ 
+----
+107
+syntax error
+turn left 
+move 2 
+turn right 
+move 2
+ sumbit 
+ 
+----
+108
+syntax error
+print x
+x+number of coins
+
+
+----
+109
+syntax error
+move 3
+y is number of coins 
+print y
+move 1
+y is y+ number of coins 
+print y
+turn left
+move 1 
+y is y+ number of coins 
+print y
+move 1
+turn left
+move 1
+turn right 
+move 3
+y is y+number of coins
+print y
+turn right
+move 1
+submit x
+
+
+
+----
+110
+syntax error
+turn left 
+move 2 
+turn right 
+move 2
+ sumbit 
+ 
+----
+111
+syntax error
+TURN LEFT
+MOVE 2
+TURN RIGHT
+MOVE 2 
+SUBMIT
+
+----
+112
+syntax error
+turn left
+move 3
+x is number of coins 
+print x
+move 2
+turn right
+move 1
+x is number of cions 
+print x
+move 3
+
+
+----
+113
+syntax error
+turn left
+move 3
+x is number of coins 
+print x
+move 2
+turn right
+move 1
+x is number of cions 
+print x
+move 3
+
+
+----
+114
+syntax error
+turn left 
+move 2 
+turn right 
+move 2
+ sumbit 
+ 
+----
+115
+syntax error
+move 2 
+c1 is number of coins 
+move 2 
+c1 is cl +number of coins 
+turn left 
+move 1 
+c1 is cl +number of coins 
+move 1 
+turn right 
+
+
+----
+116
+syntax error
+move 2 
+c1 is number of coins 
+move 2 
+c1 is cl +number of coins 
+turn left 
+move 1 
+c1 is cl +number of coins 
+move 1 
+turn right 
+
+
+----
+117
+syntax error
+turn left
+move 5
+x is number of coins 
+print x
+turn right
+move 4
+xis x+number of coins \
+print x
+submit x
+
+
+
+----
+118
+syntax error
+move 2
+move 2
+turn left 
+move 1
+turn up
+
+----
+119
+syntax error
+print "the shorter path home"
+turn left
+move 3 
+C1 is number of coins
+print C1
+move 2
+turn right
+move 1 
+C1 is C1+number of coins
+print C1
+move 3 
+turn right
+move 1
+C2 is number of coins
+print C2
+turn right
+move 1 
+C2 is C2+number of coins
+turn left
+move 2
+turn left
+move 1
+turn right
+move 1
+C2 is C2+number of coins
+print C2
+move 1
+C2 is C2+number of coins
+print C2
+turn right
+move 2
+C2 is C2 + number of coins
+print C2 
+C1-C2 is C3
+print C3
+submit C3
+
+----
+120
+syntax error
+x is number of coins
+turn left
+move 3
+x is x + number of coins
+print x
+move 2
+turn right
+move 1
+x is x + number of coins
+print x
+move 2
+turn right
+move 1
+x is x + number of coins
+print x
+move 2
+turn left
+move 1
+turn right
+move 1
+x is x + number of coins
+print x
+move 1
+x is x + number of coins
+print x
+turn right
+move 2
+x is x + number of coins
+print x
+move 2
+turn right
+move 5
+
+turn right
+move 3
+turn right
+move 1
+turn left
+move 1
+x is x + number of coins
+print x 
+turn left
+move 1
+submit (x)
+
+----
+121
+syntax error
+x is number of coins
+turn left
+move 3
+x is x + number of coins
+print x
+move 2
+turn right
+move 1
+x is x + number of coins
+print x
+move 2
+turn right
+move 1
+x is x + number of coins
+print x
+move 2
+turn left
+move 1
+turn right
+move 1
+x is x + number of coins
+print x
+move 1
+x is x + number of coins
+print x
+turn right
+move 2
+x is x + number of coins
+print x
+move 2
+turn right
+move 5
+
+turn right
+move 3
+turn right
+move 1
+turn left
+move 1
+x is x + number of coins
+print x 
+turn left
+move 1
+submit (x)
+
+----
+122
+syntax error
+x is number of coins
+turn left
+move 3
+x is x + number of coins
+print x
+move 2
+turn right
+move 1
+x is x + number of coins
+print x
+move 2
+turn right
+move 1
+x is x + number of coins
+print x
+move 2
+turn left
+move 1
+turn right
+move 1
+x is x + number of coins
+print x
+move 1
+x is x + number of coins
+print x
+turn right
+move 2
+x is x + number of coins
+print x
+move 2
+turn right
+move 5
+
+turn right
+move 3
+turn right
+move 1
+turn left
+move 1
+x is x + number of coins
+print x 
+turn left
+move 1
+submit (x)
+
+----
+123
+syntax error
+move 1
+tuen lift
+move 4
+turn lift
+move 1
+turn lift
+move 4
+turn lift
+move 1
+
+
+----
+124
+syntax error
+move 1
+tuen lift
+move 4
+turn lift
+move 1
+turn lift
+move 4
+turn lift
+move 1
+
+
+----
+125
+syntax error
+move 1
+turn lift
+
+
+
+
+----
+126
+syntax error
+move 1
+turn lift
+
+
+
+
+----
+127
+syntax error
+move 2 
+x is number of coins 
+print x
+move 2
+x + number of coins
+print x
+move 1 
+x + number of coins
+print x
+move 2
+x + number of coins
+print x
+move 1
+x + number of coins
+print x
+move 2
+x + number of coins
+print x
+move 
+----
+128
+syntax error
+move 2 
+x is number of coins 
+print x
+move 2
+x + number of coins
+print x
+move 1 
+x + number of coins
+print x
+move 2
+x + number of coins
+print x
+move 1
+
+----
+129
+syntax error
+move 2 
+x is number of coins 
+print x
+move 2
+x + number of coins
+print x
+move 1 
+x + number of coins
+print x
+move 2
+x + number of coins
+print x
+move 1
+
+----
+130
+syntax error
+turn left 
+move 3
+turn right
+move 4
+turn left
+move 3
+turn right
+2
+
+
+
+
+----
+131
+syntax error
+move 4
+x is number of coins 
+print x
+turn right 
+move 2
+x is x+number of coins
+print x
+turn right
+move 2
+x is x+number of coins
+print x
+move 1
+turn left
+move 1 
+x is x+number of coins
+print x
+print (' I have 4 friends')
+print (' So each of them will get'))
+print x/4
+print ('coins each')
+
+----
+132
+syntax error
+move 4
+x is number of coins 
+print x
+turn right 
+move 2
+x is x+number of coins
+print x
+turn right
+move 2
+x is x+number of coins
+print x
+move 1
+turn left
+move 1 
+x is x+number of coins
+print x
+2x is x/4
+print 2x
+
+----
+133
+syntax error
+move 4
+x is number of coins 
+print x
+turn right 
+move 2
+x is x+number of coins
+print x
+turn right
+move 2
+x is x+number of coins
+print x
+move 1
+turn left
+move 1 
+x is x+number of coins
+print x
+2x is x/4
+print 2x
+
+----
+134
+syntax error
+move 1
+turn 
+
+
+
+
+----
+135
+syntax error
+move 2 
+x is number of coins
+print x
+move 2
+x is x + number of coins
+print x
+turn left 
+move 1
+x is x + nuber of coins
+----
+136
+syntax error
+move 2 
+x is number of coins
+print x
+move 2
+x is x + number of coins
+print x
+turn left 
+move 1
+x is x + nuber of coins
+----
+137
+syntax error
+move 2 
+x is number of coins
+print x
+move 2
+x is x + number of coins
+print x
+turn left 
+move 1
+x is x + number of coins
+print x
+move 1
+turn left
+move 1 
+turn right
+move 2
+x is x + number of coins 
+print x
+turn right 
+move 1 
+x is x + number of  coins
+turn back 
+
+----
+138
+syntax error
+move 2 
+x is number of coins
+print x
+move 2
+x is x + number of coins
+print x
+turn left 
+move 1
+x is x + number of coins
+print x
+move 1
+turn left
+move 1 
+turn right
+move 2
+x is x + number of coins 
+print x
+turn right 
+move 1 
+x is x + number of  coins
+print 
+
+----
+139
+syntax error
+move 2 
+x is number of coins
+print x
+move 2
+x is x + number of coins
+print x
+turn left 
+move 1
+x is x + number of coins
+print x
+move 1
+turn left
+move 1 
+turn right
+move 2
+x is x + number of coins 
+print x
+turn right 
+move 1 
+x is x + number of  coins
+print x
+turn right
+turn right 
+move 1
+turn right
+move 1 
+turn move
+
+
+----
+140
+syntax error
+turn left
+move 3 
+x is the number of coins
+print x
+move 2 
+turn right
+move 1
+x is the number of coins
+print x
+move 3 
+
+----
+141
+syntax error
+turn left
+move 3 
+x is the number of coins
+print 
+move 2 
+turn right
+move 1
+x is the number of coins
+print 
+move 3 
+
+----
+142
+syntax error
+move 1 
+restart
+
+----
+143
+syntax error
+turn left
+move 3
+x is the number of coins
+count x
+move 2
+turn right
+move 1
+x is the number of coins
+count x
+move 3
+----
+144
+syntax error
+turn left
+move 3
+x is the number of coins
+count x
+move 2
+turn right
+move 1
+x is the number of coins
+count x
+move 3
+----
+145
+syntax error
+turn left
+move 3
+x is the number of coins
+count x
+move 2
+turn right
+move 1
+x is the number of coins
+count x
+move 3
+----
+146
+syntax error
+move 4
+ bag 1 =number of coins
+ move 2 
+ bag2 + number of coins
+ turn 
+----
+147
+syntax error
+move 4
+x = number of coins
+print x
+turn right
+move 2
+x = x+number of coins
+print x
+turn right
+move 2 
+x = x+number of coins
+print x
+move 1 
+turn left
+move 1 
+x = x+number of coins
+print x
+2x = x/2
+print 2x
+submit 2x
+----
+148
+syntax error
+move 4
+bag 1 =number of coins
+move 2 
+bag2 + number of coins
+turn 
+----
+149
+syntax error
+bag 1 = number of coins
+
+----
+150
+syntax error
+turn left
+move 3
+x is number of coins
+count x
+move 2
+turn right
+move 1
+x is  number of coins
+count x
+move 3
+----
+151
+syntax error
+bag 1 = number of coins
+bag 2 = number of coins
+bag 3 = number of couins
+----
+152
+syntax error
+turn left
+move 3
+x is number of coins
+count x
+move 2
+turn right
+move 1
+x is number of coins
+count x
+move 3
+----
+153
+syntax error
+move 4
+bag 1 + number of coins
+turn right
+bag2 + number of coins
+turn 
+----
+154
+syntax error
+move 4
+bag1 = number of coins
+turn right
+move 2
+bag2 = number of coins
+turn left
+move 2
+bag3 = number of coins
+turn left
+move 1
+turn right
+move 1 
+bag4
+----
+155
+syntax error
+move 4
+bag1 = number of coins
+turn right
+bag 2 = number of coins
+turn left
+move 2
+bag 3 = number of coins
+move 1
+turn left move 1 
+bag 4 = number of coins
+submit bag1 + bag 2 + bag  3 +  bag  4
+----
+156
+syntax error
+move 4
+bag1 = number of coins
+turn right
+move 2
+bag2 = number of coins
+turn right 
+move 2
+bag3 = number of coins
+turn left
+move 1
+turn right
+move 1
+bag4 = number of coins
+submit bag1 + bag2 + bag3 +  bag44
+----
+157
+syntax error
+move 4
+bag1= number of coins
+turn right
+move 2
+bag2=number of coins
+turn right
+move 2
+bag3=number of coins
+move 1
+turn left
+bag4= number of coins 
+submit bag1 bag2 bag3 bag4
+
+----
+158
+syntax error
+move 4
+b1 = Number of coins
+turn right
+move 2
+b2 = Number of coins
+turn right
+move 2
+b3 = Number of coins
+
+
+
+submit b1+b2+b3
+
+----
+159
+syntax error
+move 4
+bag1 = number of coins
+turn right
+move 2
+bag2 = number of coins
+turn right 
+move 2
+bag3 = number of coins
+turn left
+move 1
+turn right
+move 1
+bag4 = number of coins
+submit bag1 + bag2 + bag3 +  bag44
+----
+160
+syntax error
+move 4
+b1 = Number of coins
+turn right
+move 2
+b2 = Number of coins
+turn right
+move 2
+b3 = Number of coins
+submit b1+b2+b3
+----
+161
+syntax error
+move 4 
+bag1 = number of coins
+turn left
+move 2
+turn right 
+bag2 = number of coins 
+turn left 
+move 2 
+bag 3 = number of coins 
+move 1
+turn left
+move 1 
+bag 4 = number of coins
+submit = bag1 + bag2 +  bag3  + bag4
+----
+162
+syntax error
+move 4
+bag1 = number of coins
+turn right
+move 2
+bag2 = number of coins
+turn left
+move 2
+bag3 = number of coins
+turn left
+move 1
+turn right
+move 1 
+bag4
+print bag1 + bag2 + bag3+ bag4 
+----
+163
+syntax error
+move 4 
+bag1 = number of coins
+turn left
+move 2
+turn right 
+bag2 = number of coins 
+turn left 
+move 2 
+bag 3 = number of coins 
+move 1
+turn left
+move 1 
+bag 4 = number of coins
+submit = bag1 + bag2 +  bag3  + bag44
+----
+164
+syntax error
+bag1=number of coins
+move4
+turn right
+move 2
+bag 2= number of coins
+turn right
+move 2
+bag 3=number of coins
+move 1
+turn left
+move 1
+bag 4= number of coins
+----
+165
+syntax error
+move 4 
+bag1 = number of coins
+turn left
+move 2
+turn right 
+bag2 = number of coins 
+turn left 
+move 2 
+bag 3 = number of coins 
+move 1
+turn left
+move 1 
+bag 4 = number of coins
+submit bag1 + bag2 +  bag3  + bag44
+----
+166
+syntax error
+move 4
+bag1 = number of coins
+turn right
+move 2
+bag2 = number of coins
+turn left
+move 2
+bag3 = number of coins
+turn left
+move 1
+turn right
+move 1 
+bag4
+submit bag1+bag2+bag3+bag4 
+----
+167
+syntax error
+move 4 
+bag1 = number of coins
+turn left
+move 2
+turn right 
+bag2 = number of coins 
+turn left 
+move 2 
+bag 3 = number of coins 
+move 1
+turn left
+move 1 
+bag 4 = number of coins
+submit bag1 + bag2 +  bag3  + bag44
+----
+168
+syntax error
+move 4 
+bag1 = number of coins
+turn left
+move 2
+turn right 
+bag2 = number of coins 
+turn left 
+move 2 
+bag 3 = number of coins 
+move 1
+turn left
+move 1 
+bag 4 = number of coins
+submit bag1 + bag2 +  bag3  + bag44
+----
+169
+syntax error
+move 4
+bag1 = number of coins
+turn right
+move 2
+bag2 = number of coins
+turn left
+move 2
+bag3 = number of coins
+turn left
+move 1
+turn right
+move 1 
+bag4
+submitbag1+bag2+bag3+bag4 
+----
+170
+syntax error
+move 4
+bag 1 = number of coins
+turn right
+move 2
+bag 2 = number of coins
+turn right
+move 3
+bag 3 = number of coins
+turn left
+move 2
+bag 4 = number of coins
+submit(bag 1 + bag 2 + bag 3 +  bag 44 b
+----
+171
+syntax error
+move 3
+x is number of coins
+print x
+move 2
+x is number of coins
+print x
+turn left
+move 1
+x is the number of coins
+print x
+turn right 
+move 1
+turn left 
+move 2
+x is number of coins
+print x
+
+----
+172
+syntax error
+move 3
+x is number of coins
+print x
+move 2
+x is number of coins
+print x
+turn left
+move 1
+x is the number of coins
+print x
+turn right 
+move 1
+turn left 
+move 2
+x is number of coins
+print x
+
+----
+173
+syntax error
+
+move4
+bag1=number of coins
+turn right
+move 2
+bag 2= number of coins
+turn right
+move 2
+bag 3=number of coins
+move 1
+turn left
+move 1
+bag 4= number of coins
+----
+174
+syntax error
+move 4
+bag 1 = number of coins
+turn right
+move 2
+bag 2 = number of coins
+turn right
+move 3
+bag 3 = number of coins
+turn left
+move 2
+bag 4 = number of coins
+submit(bag 1 + bag 2 + bag 3 +  bag 44 b
+----
+175
+syntax error
+move 4
+bag 1 = number of coins
+turn right
+move 2
+bag 2 = number of coins
+turn right
+move 3
+bag 3 = number of coins
+turn left
+move 2
+bag 4 = number of coins
+submit(bag 1 + bag 2 + bag 3 +  bag 44 b
+----
+176
+syntax error
+move 3
+x is number of coins
+print x
+move 2
+x is number of coins
+print x
+turn left
+move 1
+x is the number of coins
+print x
+turn right 
+move 1
+turn left 
+move 2
+x is number of coins
+print x
+
+----
+177
+syntax error
+move 2
+x is number of coins
+print x
+move 2
+x is number of coins
+print x
+turn left
+move 1
+x is the number of coins
+print x
+turn right 
+move 1
+turn left 
+move 2
+x is number of coins
+print x
+
+----
+178
+syntax error
+move 4
+x is number of coins
+print x
+x is x+number of coins
+turn right
+move 2
+x is number of coins
+print x
+x is x+number of coins
+turn right
+move 2
+x is x+number of coins
+print x
+move 1
+x is number of coins
+print x
+x is x+number of coins
+turn left
+move 1
+submit bag1+bag2+bag3+bag4
+----
+179
+syntax error
+move move 4
+bag 1 = number of coins
+turn right
+move 2
+bag 2 = number of coins
+turn right
+move 3
+bag 3 = number of coins
+turn left
+move 2
+bag 4 = number of coins
+submit(bag 1 + bag 2 + bag 3 +  bag 44 b
+----
+180
+syntax error
+move 4 
+bag1 = number of coins
+turn left
+bag2 = number of coins 
+turn left 
+move 2 
+bag3 = number of coins 
+move 1
+turn left
+move 1 
+bag4 = number of coins
+submit bag1 + bag2 +  bag3  + bag44
+----
+181
+unexpected error
+move 4
+bag1 = number of coins
+turn left
+move 2
+bag2 = number of coins
+turn right
+move 3
+bag3 = number of coins
+turn left
+move 2
+bag4 = number of coins
+submit(bag1 + bag2 + bag3+  bag4
+----
+182
+unexpected error
+move 4
+bag1 = number of coins
+turn left
+move 2
+bag2 = number of coins
+turn right
+move 3
+bag3 = number of coins
+turn left
+move 2
+bag4 = number of coins
+submit bag1 + bag2 + bag3+  bag4
+----
+183
+syntax error
+[17:43] Akanksha Mishra
+move4
+bag1=number of coins
+turn right
+move 2
+bag2=number of coins
+turn right
+move 2
+bag3=number of coins
+move 1
+turn left
+bag4= number of coins
+submit bag1+bag2+bag3+bag4
+
+[17:43] Akanksha Mishra
+sir this is working
+
+
+
+
+----
+184
+unexpected error
+move 1
+x is number of coins
+print x
+move 2
+x is number of coins 
+print x
+move 2
+x is number of coins
+print x
+----
+185
+unexpected error
+move 3
+x is number of coins
+print x
+
+
+
+move 2
+x is number of coins
+print x
+----
+186
+unexpected error
+
+move 5
+x is number of coins
+print x
+----
+187
+unexpected error
+move 1
+x is number of coins 
+move 2
+y is number of conins
+move 2 
+z is number of coins
+----
+188
+unexpected error
+move 1
+x = number of coins
+move 2 
+y = number of coins
+move 2
+z = number of coins
+----
+189
+unexpected error
+move 1 
+x is number of coins 
+move 2 
+y is number of coins
+move 2
+z is number of coins 
+submit x+y+z
+----
+190
+syntax error
+move 1
+x=number of coins
+print number of coins
+move 2
+y=number of coins
+print number of coins
+move 2
+z=number of coins
+print number of coins
+h=x+y+z
+print h
+if h==5
+true
+elif
+false
+
+
+----
+191
+syntax error
+move 1
+x=number of coins
+print number of coins
+move 2
+y=number of coins
+print number of coins
+move 2
+z=number of coins
+print number of coins
+h=x+y+z
+print h
+if h==5
+print true
+
+
+
+----
+192
+unexpected error
+move 1 
+x = number of coins 
+move 2 
+y = number of coins
+move 2
+z = number of coins 
+submit x+y+z
+----
+193
+unexpected error
+move 1
+x is number of coins
+move 2
+y is number of coins
+move 3
+z is number of coins
+r = x + y +  z
+submit r
+----
+194
+unexpected error
+move 1
+x=number of coins
+print number of coins
+move 2
+y=number of coins
+print number of coins
+move 2
+z=number of coins
+print number of coins
+h=x+y+z
+print h
+
+
+
+
+----
+195
+unexpected error
+move 1
+x=number of coins
+print number of coins
+move 2
+y=number of coins
+print number of coins
+move 2
+z=number of coins
+print number of coins
+h=x+y+z
+print h
+
+
+
+
+----
+196
+syntax error
+turn left
+move 3
+x is number of coins
+print x
+turn right
+move 1
+turn left
+move 1
+x is number of coins
+print x
+move 1
+x is number of coins
+pritn x
+move 1
+
+
+
+----
+197
+syntax error
+turn left
+move 3
+x is number of coins
+print x
+turn right
+move 1
+turn left
+move 1
+x is number of coins
+print x
+move 1
+x is number of coins
+pritn x
+move 1
+
+
+
+----
+198
+syntax error
+turn left
+move 3
+x is number of coins
+print x
+turn right
+move 1
+turn left
+move 1
+x is number of coins
+print x
+move 1
+x is number of coins
+pritn x
+move 1
+
+
+
+----
+199
+syntax error
+move 2
+x is number of coins
+turn left 
+move 1
+turn left
+move 1
+y is number of coins
+turn right 
+move 1 
+z is number of coins 
+move 1 
+turn left 
+move 1 
+a is number of coins
+print x+y+z+a
+submit answer lesser than 30
+
+
+
+----
+200
+syntax error
+move 2
+x is number of coins
+turn left
+move 1
+turn left 
+move 1 
+x is x+number of coins
+turn right
+move 1
+x is x+number of coins
+move 1
+turn left 
+move 1
+x is x=number of coins 
+print x 
+submit answer < 30
+----
+201
+syntax error
+move 2
+x is number of coins
+turn left 
+move 1
+turn left
+move 1
+y is number of coins
+turn right 
+move 1 
+z is number of coins 
+move 1 
+turn left 
+move 1 
+a is number of coins
+print x+y+z+a
+submit answer < 30
+
+
+
+----
+202
+syntax error
+move 2
+x is number of coins
+turn left
+move 1
+turn left 
+move 1 
+x is x+number of coins
+turn right
+move 1
+x is x+number of coins
+move 1
+turn left 
+move 1
+x is x+number of coins 
+print x 
+submit answer < 30
+----
+203
+syntax error
+move 2
+x is number of coins
+turn left 
+move 1
+turn left
+move 1
+y is number of coins
+turn right 
+move 1 
+z is number of coins 
+move 1 
+turn left 
+move 1 
+a is number of coins
+print x+y+z+a
+submit answer = 1 < 30
+
+
+
+----
+204
+syntax error
+move 2
+x is number of coins
+turn left 
+move 1
+turn left
+move 1
+y is number of coins
+turn right 
+move 1 
+z is number of coins 
+move 1 
+turn left 
+move 1 
+a is number of coin
+submit x+y+z+a < 30
+
+
+
+
+----
+205
+syntax error
+move 2
+x is number of coins
+turn left 
+move 1
+turn left
+move 1
+y is number of coins
+turn right 
+move 1 
+z is number of coins 
+move 1 
+turn left 
+move 1 
+a is number of coin
+submit x+y+z+a < 30
+
+
+
+
+----
+206
+syntax error
+move 2
+x is number of coins
+turn left 
+move 1
+turn left
+move 1
+y is number of coins
+turn right 
+move 1 
+z is number of coins 
+move 1 
+turn left 
+move 1 
+a is number of coin
+submit < 30
+
+
+
+----
+207
+syntax error
+move 2
+x is number of coins
+turn left
+move 1
+turn left
+move 1
+y is number of coins
+turn right
+move 1
+z is number of coins
+move 1
+turn left
+move 1
+a is number of coins
+print xyza
+
+
+
+
+----
+208
+syntax error
+turn left
+move 3
+x is number of coins
+print x
+x is x+number of coins
+turn right
+move 1
+x is number of coins
+print x
+x is x+number of coins
+turn right
+move 1
+x is x+number of coins
+print x
+move 1
+x is number of coins
+print x
+x is x+number of coins
+move 1
+turn right
+x is number of coins
+print x
+x is x+number of coins
+submit x+y+z+a<30
+----
+209
+syntax error
+move 2
+x is number of coins
+turn left 
+move 1
+turn left
+move 1
+y is number of coins
+turn right 
+move 1 
+z is number of coins 
+move 1 
+turn left 
+move 1 
+submit total sum < 30
+----
+210
+syntax error
+turn left
+move 3
+x is number of coins
+print x
+x is x+number of coins
+turn right
+move 1
+x is number of coins
+print x
+x is x+number of coins
+turn right
+move 1
+x is x+number of coins
+print x
+move 1
+x is number of coins
+print x
+x is x+number of coins
+move 1
+turn left
+x is number of coins
+print x
+x is x+number of coins
+submit x+y+z+a<30
+----
+211
+syntax error
+move(2)
+x=get_number_of_coins()
+turn()
+move(1)
+turn()
+move(1)
+y=get_number_of_coins()
+turn('right')
+move(1)
+z=get_number_of_coins()
+move(1)
+turn()
+move(1)
+a=get_number_of_coins()
+print_value(x+y+z+a)
+submit(answer<30)
+----
+212
+syntax error
+move 3
+turn right
+move 3
+turn right
+move 3 
+turn right
+move 2
+turn
+
+----
+213
+syntax error
+turn left
+move 3
+x is number of coins
+print number of coins
+turn right
+move 1
+turn right
+y is number of coins
+print number of coins
+move 1
+z is number of coins
+move 1
+turn left
+move 1
+turn right
+move 1
+n is number of coins
+print number of coins
+h=x+y+z+n
+print h
+print total sum h<=30
+
+----
+214
+syntax error
+turn left
+move 3
+x is number of coins
+print number of coins
+turn right
+move 1
+turn right
+y is number of coins
+print number of coins
+move 1
+z is number of coins
+move 1
+turn left
+move 1
+turn right
+move 1
+n is number of coins
+print number of coins
+h=x+y+z+n
+print h
+print total sum h<=30
+
+----
+215
+syntax error
+turn left
+move 3
+x is number of coins
+print number of coins
+turn right
+move 1
+turn right
+y is number of coins
+print number of coins
+move 1
+z is number of coins
+move 1
+turn left
+move 1
+turn right
+move 1
+n is number of coins
+print number of coins
+h=x+y+z+n
+print h
+print total sum h<=30
+
+----
+216
+syntax error
+turn left
+move 1
+bag1 = number of coins
+move 2
+turn right
+move 1
+bag2 = number of coins
+move 2
+turn right
+move 1
+bag3 = number of coins
+turn right
+move 1
+turn left 
+move 1
+bag4 = number of coins
+sum = bag1+bag2+bag3+bag4
+submit sum=10coins
+----
+217
+syntax error
+turn
+
+
+
+
+
+----
+218
+syntax error
+turn
+
+
+
+
+
+----
+219
+syntax error
+turn()
+move '1'
+
+
+
+
+
+----
+220
+syntax error
+turn()
+move(1)
+move(2)
+turn(left)
+
+
+
+
+
+----
+221
+syntax error
+move 2
+x is number of coins
+turn left
+move 1
+turn left
+move 1
+y is  number of coins
+turn right
+move 1
+z is number of coins
+move 1
+submit x+y+z+a
+
+
+
+
+----
+222
+syntax error
+move 2
+x is number of coins
+turn left
+move 1
+turn left
+move 1
+y is  number of coins
+turn right
+move 1
+z is number of coins
+move 1
+turn left
+move 1
+a is number of coins
+submit d= x+y+z+a
+if d<30
+
+
+
+
+----
+223
+syntax error
+move 2
+x is number of coins
+turn left
+move 1
+turn left
+move 1
+y is  number of coins
+turn right
+move 1
+z is number of coins
+move 1
+turn left
+move 1
+a is number of coins
+submit d= x+y+z+a
+
+
+
+
+----
+224
+syntax error
+move 2
+x is number of coins
+turn left
+move 1
+turn left
+move 1
+y is  number of coins
+turn right
+move 1
+z is number of coins
+move 1
+turn left
+move 1
+a is number of coins
+submit x+y+z+a
+d=x+y+z+a
+if d<30
+true
+
+
+
+----
+225
+syntax error
+turn left
+move 1
+x is the number of coins
+print x
+move 2
+turn right 
+move 1
+x is x+number of coins
+print x
+move 1
+turn right
+move 2
+x is x+number of coins print x
+
+----
+226
+syntax error
+move 1
+x is numbr of coins
+print x
+----
+227
+syntax error
+move 1
+x is numbr of coins
+----
+228
+syntax error
+move 1
+bag1 is number of coins
+print bag1
+move 2
+bag2 is number of coins
+print bag2
+move 2
+bag3 is number of coins
+print bag3
+submit bag+bag2+bag3
+
+
+----
+229
+syntax error
+turn left
+move 3
+bag1=number of coins
+move 2
+turn right
+move 1
+bag2=number of coins
+move 3
+C1=bag1+bag2
+turn right
+turn right
+move 4
+turn left
+move 5
+turn left
+move 2
+bag3=number of coins
+move 2
+bag4=number of coins
+turn left
+move 1 
+bag5=number of coins
+move 1
+turn left
+move 1
+turn right
+move 2
+bag6=number of coins
+turn right
+move 1
+bag7=number of coins
+turn left
+move1
+C2=bag4+bag5+bag6+bag7+bag8
+ans=C2-C1
+submit ans
+
+----
+230
+syntax error
+turn left
+move 4
+color
+----
+231
+syntax error
+turn left
+move 4
+colour
+----
+232
+syntax error
+turn left
+move 4
+house1=blue
+----
+233
+syntax error
+move
+turn right
+move
+turn down
+
+----
+234
+syntax error
+move 3
+turn rigth
+move 3
+turn rigth
+move 3
+turn rigth
+move 3
+sumbit
+
+----
+235
+syntax error
+move 3
+turn rigth
+move 3
+turn rigth
+move 3
+turn rigth
+move 3
+sumbit
+----
+236
+syntax error
+turn left
+move 4
+turn right
+move 3
+turn right
+move 4
+move back 1
+----
+237
+syntax error
+turn left
+move 4
+turn right
+move 3
+turn right
+move 4
+back 1
+----
+238
+syntax error
+while every bag count
+----
+239
+syntax error
+while every bag count:
+----
+240
+syntax error
+while move 7
+collect bags
+----
+241
+syntax error
+while hehhe
+move 1
+bag1 is number of coins
+move 2
+bag2 is number of coins
+move 3
+bag3 is number of coins
+break:
+
+----
+242
+syntax error
+while hehhe
+move 1
+bag1 is number of coins
+move 2
+bag2 is number of coins
+move 2
+bag3 is number of coins
+break:
+
+----
+243
+syntax error
+while jg:
+move 1
+x is the number of coins
+print number of coins
+move 2
+y is number of coins
+print number of coins
+move 3
+z is number of coins
+print number of coins
+u=x+y+z
+print u
+break
+
+----
+244
+unexpected error
+while true:
+move 1
+----
+245
+syntax error
+while true:
+move 1
+x = number of count of grid
+----
+246
+syntax error
+while jg:
+move 1
+x is the number of coins
+print number of coins
+move 2
+y is number of coins
+print number of coins
+move 3
+z is number of coins
+print number of coins
+u=x+y+z
+print u
+
+
+----
+247
+syntax error
+while true
+   move 7
+   
+----
+248
+unexpected error
+while true :
+move 1
+----
+249
+syntax error
+while jg:
+move 1
+x is the number of coins
+print number of coins
+move 2
+y is number of coins
+print number of coins
+move 3
+z is number of coins
+print number of coins
+u=x+y+z
+print u
+
+
+----
+250
+unexpected error
+while true:
+move1
+----
+251
+syntax error
+while every bag count:
+move 2 
+----
+252
+unexpected error
+while true:
+move 1
+----
+253
+syntax error
+while true
+  move
+  
+   
+----
+254
+syntax error
+while true:
+move 1
+x = number of count of coins
+move 2
+x = number of count of coins
+move 3
+x = number of count of coins
+break 
+----
+255
+syntax error
+b=12
+a=90
+while b<a:
+move 1
+x is the number of coins
+print number of coins
+move 2
+y is number of coins
+print number of coins
+move 3
+z is number of coins
+print number of coins
+u=x+z+y
+print u
+
+
+----
+256
+syntax error
+while counter
+ move 1
+ counter = counter + 1
+----
+257
+syntax error
+counter = 0
+total = 0
+
+while counter >7
+ move 1
+ counter = counter + 1
+----
+258
+unexpected error
+counter = 0
+x = 0
+while counter < 7
+      move 1
+      counter = counter+1
+      total = total + number of coins
+print total 
+submit total
+----
+259
+syntax error
+counter = 0
+x = 0
+while counter < 7:
+      move 1
+      counter = counter+1
+      total =  total + number of coins
+print total 
+submit total
+----
+260
+syntax error
+counter = 0
+x = 0
+while counter < 7:
+      move 1
+      counter = counter+1
+      total = total + number of coins
+print total 
+submit total
+----
+261
+syntax error
+a = count the number of coins
+while : a<7
+    move 1 
+    a=count the number of coins 
+    
+----
+262
+unexpected error
+counter = 0
+total = 0
+
+while counter > 7:
+ move 1
+ counter = counter + 1
+ total = total + number of coins
+print total
+submit total
+----
+263
+syntax error
+counter = 0
+x = 0
+while counter < 7:
+      move 1
+      counter = counter+1
+      total = total + number of coins
+print total 
+submit total
+----
+264
+syntax error
+a = 0
+while : a<7
+    move 1 
+    a = a + 1
+    
+----
+265
+syntax error
+a = 0
+while : a<7
+    move 1 
+    a = a + 1
+    
+----
+266
+syntax error
+counter = 0
+x = 0
+while counter < 7
+counter = counter + 1
+       move 1
+x - x
+total = total + number of coinss
+print total
+submit total
+----
+267
+syntax error
+counter = 0
+x = 0
+while counter < 7
+counter = counter + 1
+       move 1
+x - x
+total = total + number of coinss
+print total
+submit total
+----
+268
+syntax error
+counter = 0
+x = 0
+while counter < 7
+counter = counter + 1
+       move 1
+x - x
+total = total + number of coinss
+print total
+submit total
+----
+269
+syntax error
+counter = 0
+x = 0
+while counter < 7
+counter = counter + 1
+       move 1
+total = total + number of coinss
+print total
+submit total
+----
+270
+syntax error
+counter = 0
+x = 0
+while counter < 7
+counter = counter + 1
+       move 1
+total = total + number of coinss
+print total
+submit total
+----
+271
+syntax error
+counter = 0
+x = 0
+while counter < 7
+counter = counter + 1
+       move 1
+total = total + number of coinss
+print total
+submit total
+----
+272
+syntax error
+counter = 0
+x = 0
+while counter < 7
+counter = counter + 1
+       move 1
+total = total + number of coinss
+print total
+submit total
+----
+273
+unexpected error
+counter = 0
+total = 0
+
+while counter > 7:
+ counter = counter + 1
+ move 1
+ total = total + number of coins
+print total
+submit total
+----
+274
+syntax error
+while true:
+move 1
+x = number of coins
+move 2
+x = number ofcoins
+move 3
+x = number of coins
+break 
+----
+275
+syntax error
+b=1
+a=8
+while b<a:
+move 1
+x is the number of coins
+print number of coins
+move 2
+y is number of coins
+print number of coins
+move 3
+z is number of coins
+print number of coins
+u=x+z+y
+print u
+
+
+----
+276
+syntax error
+b=1
+a=8
+while b<a:
+move 1
+x is the number of coins
+print number of coins
+move 2
+y is number of coins
+print number of coins
+move 3
+z is number of coins
+print number of coins
+u= x+z+y
+print u
+
+
+----
+277
+syntax error
+while true: 
+    move 1  
+   x = number of coins
+    move 2
+   x = number ofcoins
+     move 3
+   x = number of coins
+     break 
+----
+278
+syntax error
+counter = 0
+x = 0
+while: counter < 7
+counter = counter + 1
+       move 1
+total = total + number of coinss
+print total
+submit total
+----
+279
+syntax error
+counter = 0
+x = 0
+while counter < 7:
+counter = counter + 1
+       move 1
+total = total + number of coinss
+print total
+submit total
+----
+280
+syntax error
+counter = 0
+x = 0
+while counter: < 7
+counter = counter + 1
+       move 1
+total = total + number of coinss
+print total
+submit total
+----
+281
+unexpected error
+counter = 0
+total = 0
+while counter > 7:
+ counter = counter + 1
+ move 1
+ total = total + number of coins
+submit total
+----
+282
+unexpected error
+counter = 0
+total = 0
+while counter > 7:
+ counter = counter + 1
+  move 1
+  total = total + number of coins
+submit total
+----
+283
+syntax error
+counter = 0
+x = 0
+while counter < 7:
+counter = counter + 1
+       move 1
+total = total + number of coinss
+print total
+submit total
+----
+284
+syntax error
+b=1
+a=8
+while b<a:
+move 1
+x is the number of coins
+print number of coins
+print x
+
+
+----
+285
+syntax error
+b=1
+a=8
+while b<a:
+move 1
+x=number of coins
+x is the number of coins
+print number of coins
+print x
+
+
+----
+286
+syntax error
+total = 0
+while not obstacle ahead:
+    move 1
+    total = total + number of coins
+print total
+submit no
+----
+287
+syntax error
+total = 0
+while not obstacle ahead;
+move 1
+total = total + number of coins
+print total
+submit total
+----
+288
+syntax error
+total = 0
+
+while not obstacle ahead:
+
+    move 1
+
+    total = total + number of coins
+
+print total
+
+submit total
+----
+289
+syntax error
+total = 0
+while not obstable ahead
+move 1
+total=total+number of coins
+print total
+submit print
+----
+290
+unexpected error
+total = 0
+while not obstacle ahead:
+move 1
+total = total + number of coins
+print total
+submit total
+----
+291
+syntax error
+total = 0
+while not obstacle ahead:
+
+    move 1
+
+    total = total + number of coins
+
+print total
+
+submit total
+----
+292
+syntax error
+total = 0
+while not obstable ahead
+move 1
+total=total+number of coins
+print total
+submit total
+----
+293
+syntax error
+total number of coins= 0
+while not obstacle ahead:
+
+    move 1
+
+    total = total + number of coins
+
+print total
+
+submit total
+----
+294
+unexpected error
+total = 0
+while not obstacle ahead:
+move 1
+total = total + number of coins
+print total
+submit total
+  
+----
+295
+syntax error
+total = 0
+while not obstacle ahead:
+
+    move 1
+
+    total = total + number of coins
+
+print total
+
+submit total
+----
+296
+unexpected error
+total =0
+while not obstacle ahead:
+move 1
+total = total + number of coins
+print total
+submit total
+  
+----
+297
+syntax error
+total = 0
+while not obstacle ahead:
+    move 1
+    total = total + number of coins
+print total
+while total<5
+while total>5
+submit total
+----
+298
+unexpected error
+total = 0
+while not obstable ahead
+move 1
+     total=total+number of coins
+      print total
+submit total
+----
+299
+unexpected error
+total = 0
+while not obstacle ahead:
+    move 1
+    total = total + number of coins
+print total
+submit total
+
+----
+300
+syntax error
+total = 0
+while not obstacle ahead:
+    move 1
+    total = total + number of coins
+print total
+while total <5
+while total >5
+submit total
+----
+301
+unexpected error
+total =0
+while not obstacle ahead:
+move 1
+total = total+number of coins
+print total
+submit total
+  
+----
+302
+syntax error
+a=1
+b=6
+while a>6:
+move 1
+skj=number of coins
+print skj
+if skj=='5'
+print yes they are
+else:
+print no
+
+----
+303
+unexpected error
+total =0
+while not obstacle ahead:
+move 1
+total=total+number of coins
+print total
+submit total
+  
+----
+304
+unexpected error
+total = 0
+while not obstacle ahead:
+move 1
+total = total + number of coins
+print total
+submit total
+----
+305
+unexpected error
+total = 0
+while not obstable ahead
+     move 1
+     total=total+number of coins
+print total
+submit total
+----
+306
+syntax error
+a=1
+b=6
+while a>6:
+move 1
+skj=number of coins
+print skj
+if skj=='5'
+print yes they are
+else:
+print no they arent
+
+
+----
+307
+unexpected error
+total = 0
+while not obstacle ahead:
+move 1
+total = total + number of coins
+print total
+submit total
+  
+----
+308
+syntax error
+counter = 0
+x = 0
+while counter < 5
+ counter = counter + 1
+ x = x+1
+ if x = 5
+print yes
+
+
+----
+309
+syntax error
+total = 0
+while not obstacle ahead:
+    move 1
+    total = total + number of coinss -1
+print total
+submit total
+----
+310
+syntax error
+total = 0
+while not obstacle ahead:
+    move 1
+    total = total + number of coins
+print total
+while total number of coins<5
+while total number of coins>5
+submit total
+----
+311
+unexpected error
+total = 0
+while not obstacle ahead:
+number of coins < 5
+    move 1
+    total = total + number of coins
+print total
+submit total
+----
+312
+unexpected error
+total = 0
+while not obstable ahead
+     move 1
+     total = total+number of coins
+print total
+submit total
+----
+313
+syntax error
+counter = 0
+x = 0
+while counter < 5
+ counter = counter + 1
+ x = x+1
+ if x = 5
+submit x
+
+
+----
+314
+syntax error
+counter = 0
+while counter < 3:
+    move 1
+    counter = counter +1
+    turn left
+    
+----
+315
+syntax error
+a=1
+b=6
+while a>6:
+move 1
+skj=number of coins
+print skj
+if skj=='5'
+print'yes'
+else:
+print 'no'
+
+
+
+----
+316
+unexpected error
+total = 0
+while not obstacle ahead:
+number of coins<5
+    move 1
+    total = total + number of coins
+print total
+submit total
+----
+317
+syntax error
+total = 0
+while not obstacle ahead:
+    move 1
+    total = total + number of coins
+print total
+submit total
+while total number of coins<5
+while total number of coins>5
+----
+318
+syntax error
+counter = 0
+x = 0
+while counter < 5
+ counter = counter + 1
+ x = x+1
+ submit x
+
+
+----
+319
+syntax error
+total = 0
+while not obstacle ahead:
+    move 1
+    total = total + number of coinss - 1
+print total
+submit total
+----
+320
+syntax error
+a=1
+b=6
+while a>6:
+move 1
+skj=number of coins
+print skj
+if skj==5
+print'yes'
+else:
+print 'no'
+
+
+
+----
+321
+syntax error
+:
+    move 1
+    
+
+----
+322
+syntax error
+counter = 0
+while counter < 3:
+    move 1
+    counter = counter +1
+    turn left
+    
+----
+323
+syntax error
+total = 0
+while not obstacle ahead:
+    move 1
+    total = total + number of coins
+print total
+submit total
+while total<5
+while total>5
+----
+324
+syntax error
+counter = 0
+while counter < 3:
+    move 3
+    counter = counter +1
+    turn left
+    
+----
+325
+syntax error
+counter = 0
+while counter < 3:
+    move 3
+    counter = counter +1
+    turn left
+    
+----
+326
+syntax error
+total = 0
+while not obstacle ahead:
+    move 1
+    total = t(otal + number of coins ) 1
+print total
+submit total
+----
+327
+syntax error
+total = 0
+while not obstacle ahead:
+
+    move 1
+
+    total = total + number of coins
+
+print total
+
+submit total
+----
+328
+syntax error
+total = 0
+while not obstacle ahead:
+
+    move 1
+
+    total = total + number of coins
+
+print total
+
+submit total
+----
+329
+syntax error
+total = 0
+while not obstacle ahead:
+
+    move 1
+
+    total = total + number of coins
+
+print total
+
+submit total
+----
+330
+syntax error
+
+while not obstacle ahead:
+    move 3
+    
+    turn left
+    
+----
+331
+unexpected error
+total = 0
+while not obstacle ahead:
+number of coins < 5
+    move 1
+    total = total + number of coins
+print total
+submit total
+----
+332
+unexpected error
+total = 0
+while not obstacle ahead:
+number of coins < 5
+    move 1
+    total = total + number of coins
+print total
+submit total
+----
+333
+syntax error
+while not obstacle ahead:
+    move 3
+    turn left
+    
+----
+334
+syntax error
+total = 0
+while not obstacle ahead:
+    move 1
+    total = total + number of coins
+print total
+submit no
+----
+335
+unexpected error
+total = 0
+while not obstable ahead
+     move 1
+     total = total+number of coins
+print total==5
+submit total==5
+----
+336
+syntax error
+total = 0
+while not obstacle ahead:
+    move 1
+    total = total + number of coins
+print total ==t
+submit total==5
+  
+----
+337
+syntax error
+a=1
+b=6
+while a>6:
+move 1
+total=5
+if total==5
+print true
+else:
+print false
+submit total
+
+
+----
+338
+syntax error
+total = 0
+while not obstable ahead
+move 1
+total = total+number of coins
+print total==5
+submit total==5
+----
+339
+unexpected error
+total = 0
+while not obstacle ahead:
+move 1
+total = total + number of coins
+print total == 5
+submit total == 5
+----
+340
+unexpected error
+total = 0
+while not obstacle ahead:
+move 1
+total = total + number of coins
+print total==5
+
+
+----
+341
+syntax error
+while not obstacle ahead:
+    move 3
+    turn left
+    
+----
+342
+syntax error
+total=0
+while total<5:
+move 1
+total=5
+if total==5
+print true
+else:
+print false
+submit total
+
+
+----
+343
+unexpected error
+total = 0
+while not obstable ahead
+     move 1
+    total = total+number of coins
+print total==5
+submit total==5
+----
+344
+unexpected error
+total = 0
+while not obstable ahead
+    move 1
+    total = total+number of coins
+print total==5
+submit total==5
+----
+345
+unexpected error
+total = 0
+while not obstacle ahead:
+move 1
+total = total + number of coins
+print total ==5
+submit total==5
+  
+----
+346
+syntax error
+total = 0
+while not obstable ahead
+ move 1
+total = total+number of coins
+print total==5
+submit total==5
+----
+347
+unexpected error
+total = 0
+while not obstacle ahead:
+  move 1
+  total = total + number of coins
+ print total == 5
+submit total == 5
+----
+348
+unexpected error
+counter=0
+x = number of coins
+while not obstacle ahead:
+ move 1
+ x = x + number of coins
+ submit x
+
+
+----
+349
+syntax error
+total = 0
+while not obstacle ahead:
+   move 1
+   total = total + number of coins
+ submit == 5
+
+----
+350
+unexpected error
+total=0
+while not obstacle:
+  move 1
+    total = total + number of coins
+print total
+submit total
+----
+351
+syntax error
+total = 0
+while not obstacle ahead
+ move 1
+ total = total + umber of coins
+print total==5
+submit total==5
+----
+352
+syntax error
+total = 0
+while not obstacle ahead
+ move 1
+ total = total + umber of coins
+print total==5
+submit total==5
+----
+353
+syntax error
+total = 0
+while not obstacle ahead:
+ move 1
+ total = total + umber of coins
+print total==5
+submit total==5
+----
+354
+unexpected error
+total = 0
+while not obstacle ahead:
+ move 1
+ total = total + number of coins
+print total==5
+submit total==5
+----
+355
+syntax error
+total = 0
+while not obstacle ahead:
+    move 1
+    total = total + number of coins
+prin total == 5
+submit false
+----
+356
+syntax error
+total = 0
+while not obstacle ahead:
+    move 1
+    total = total + number of coins
+prin total == 5
+submit false
+----
+357
+syntax error
+total = 0
+while not obstacle ahead:
+    move 1
+    total = total + number of coins
+prin total == 5
+submit false
+----
+358
+syntax error
+total = 0
+while not obstacle ahead:
+    move 1
+    total = total + number of coins
+prin total == 5
+submit false
+----
+359
+syntax error
+print (5)
+
