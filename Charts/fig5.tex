@@ -3,27 +3,29 @@
 
 \definecolor{dimgray85}{RGB}{85,85,85}
 \definecolor{gray}{RGB}{128,128,128}
-\definecolor{limegreen2517876}{RGB}{25,178,76}
+\definecolor{teal0121145}{RGB}{0,121,145}
 
 \begin{axis}[
 axis line style={white},
 tick align=outside,
 tick pos=left,
 x grid style={gray},
-xlabel=\textcolor{dimgray85}{Number of Users},
+xlabel=\textcolor{dimgray85}{Grade},
 xmajorgrids,
-xmin=0, xmax=17.85,
+xmin=-0.425, xmax=3.425,
 xtick style={color=dimgray85},
+xtick={0,1,2,3},
+xticklabels={6,7,8,Unknown},
 y grid style={gray},
-ylabel=\textcolor{dimgray85}{Gender},
+ylabel=\textcolor{dimgray85}{Number of Users},
 ymajorgrids,
-ymin=-0.27, ymax=1.27,
-ytick style={color=dimgray85},
-ytick={0,1},
-yticklabels={Male,Female}
+ymin=0, ymax=11.55,
+ytick style={color=dimgray85}
 ]
-\draw[draw=none,fill=limegreen2517876,very thin] (axis cs:0,-0.2) rectangle (axis cs:17,0.2);
-\draw[draw=none,fill=limegreen2517876,very thin] (axis cs:0,0.8) rectangle (axis cs:15,1.2);
+\draw[draw=none,fill=teal0121145,very thin] (axis cs:-0.25,0) rectangle (axis cs:0.25,9);
+\draw[draw=none,fill=teal0121145,very thin] (axis cs:0.75,0) rectangle (axis cs:1.25,4);
+\draw[draw=none,fill=teal0121145,very thin] (axis cs:1.75,0) rectangle (axis cs:2.25,11);
+\draw[draw=none,fill=teal0121145,very thin] (axis cs:2.75,0) rectangle (axis cs:3.25,9);
 \end{axis}
 
 \end{tikzpicture}
