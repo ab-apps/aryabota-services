@@ -1,26 +1,14 @@
-﻿"Level","Legend","Number of Commands"
-"0.0","No Syntax Error","73"
-"0.0","Syntax Error","13"
-"0.1","No Syntax Error","160"
-"0.1","Syntax Error","47"
-"0.2","No Syntax Error","90"
-"0.2","Syntax Error","8"
-"0.3","No Syntax Error","105"
-"0.3","Syntax Error","9"
-"1.1","Syntax Error","77"
-"1.1","No Syntax Error","153"
-"1.2","No Syntax Error","141"
-"1.2","Syntax Error","52"
-"1.3","Syntax Error","33"
-"1.3","No Syntax Error","97"
-"2.1","No Syntax Error","61"
-"2.1","Syntax Error","74"
-"2.2","Syntax Error","6"
-"2.2","No Syntax Error","45"
-"2.3","Syntax Error","23"
-"2.3","No Syntax Error","64"
-"3.1","Syntax Error","16"
-"3.1","No Syntax Error","56"
-"3.2","Syntax Error","1"
-"3.2","No Syntax Error","2"
-"3.3","No Syntax Error","4"
+﻿"Level","No Syntax Error","Syntax Error"
+"0.0", 73, 13
+"0.1", 160, 47
+"0.2", 90, 8
+"0.3", 105, 9
+"1.1", 153, 77
+"1.2", 141, 52
+"1.3", 97, 33
+"2.1", 61, 74
+"2.2", 45, 6
+"2.3", 64, 23
+"3.1", 56, 16
+"3.2", 2, 1
+"3.3", 4, 0
